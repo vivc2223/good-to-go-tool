@@ -265,7 +265,7 @@ const MissionContent = () => {
               autoPlay
             >
               <source
-                src="/videos/Dyna Helping Hands 16X9 V9 Textless Mission.mp4"
+                src="/videos/Dyna-Helping-Hands-16X9-V9-Textless-Mission.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.

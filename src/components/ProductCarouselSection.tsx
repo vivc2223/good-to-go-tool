@@ -23,7 +23,7 @@ const productItems: ProductItem[] = [
     id: 2,
     title: "Complex end-to-end task completion",
     description: "24/7, 100% autonomous. Human-level manipulation.",
-    videoSrc: "/videos/Transistor 2X Speed.mp4",
+    videoSrc: "/videos/Transistor-2X-Speed.mp4",
     thumbnailSrc: "/lovable-uploads/cd31b9c6-ceb0-40d9-baff-99c7b429e6c6.webp",
   },
   {
