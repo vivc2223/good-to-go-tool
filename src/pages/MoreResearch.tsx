@@ -43,7 +43,7 @@ const MoreResearch = () => {
               autoPlay
             >
               <source
-                src="/videos/24-hour eval 4-22 eval (combined) v4 LOGO.mp4"
+                src="/videos/24-hour-eval-4-22-eval-(combined)-v4-LOGO.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
