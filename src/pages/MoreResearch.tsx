@@ -791,17 +791,13 @@ const MoreResearch = () => {
             <div className="flex flex-row items-center gap-4">
               <a href="https://www.linkedin.com/company/dyna-robotics/">
                 <img
-                  src="/lovable-uploads/linkedIn.avif"
+                  src="/lovable-uploads/linkedIn.jpg"
                   alt="LinkedIn"
                   className="w-8 h-8"
                 />
               </a>
               <a href="https://x.com/Dynarobotics">
-                <img
-                  src="/lovable-uploads/X.avif"
-                  alt="X"
-                  className="w-6 h-6"
-                />
+                <img src="/lovable-uploads/X.jpg" alt="X" className="w-6 h-6" />
               </a>
             </div>
           </div>
