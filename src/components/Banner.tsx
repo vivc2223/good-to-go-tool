@@ -34,7 +34,7 @@ const defaultLogos: Logo[] = [
     alt: "UPenn",
   },
   {
-    src: "/cmun.png",
+    src: "/cmus.png",
     alt: "CMU",
   },
 ];
