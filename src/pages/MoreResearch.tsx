@@ -108,7 +108,7 @@ const MoreResearch = () => {
                   autoPlay
                 >
                   <source
-                    src="/videos/Happy Path Apr 28 18F91020-917D-4745-810C-8298Df21e2eb Total1 High Cam 1X F1 Label(Condensed).mp4"
+                    src="/videos/happy-path-apr-28-total1-high-cam-1x-f1-label-condensed.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
