@@ -125,7 +125,7 @@ const MoreResearch = () => {
                   autoPlay
                 >
                   <source
-                    src="/videos/Happy Episode 0003 1745373987.716618 High Label(Condensed).mp4"
+                    src="/videos/HappyEpisode 0003 1745373987.716618 High Label(Condensed).mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
@@ -304,22 +304,6 @@ const MoreResearch = () => {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="flex-shrink-0 w-[26rem] h-64">
-              <video
-                className="w-full h-full "
-                controls
-                loop
-                muted
-                playsInline
-                autoPlay
-              >
-                <source
-                  src="/videos/Ztsm6hsiqqylzyvowegqpvphjc.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-            </div>
           </div>
           <h5 className="text-base font-medium text-[rgb(0,77,191)] mb-6 leading-relaxed font-mono">
             DYNA Reward Model can accurately estimate task progress for
@@ -398,7 +382,7 @@ const MoreResearch = () => {
           <div className="flex justify-center mb-8">
             <div className="max-w-md w-full">
               <img
-                src="/lovable-uploads/MTKJbslH5r2QgWXGCdIgY1HoZ9U.avif"
+                src="/lovable-uploads/MTKJbslH5r2QgWXGCdIgY1HoZ9U.jpg"
                 alt="Progress chart showing DYNA-1 improvement over weeks"
                 className="w-full rounded-t-lg"
               />
