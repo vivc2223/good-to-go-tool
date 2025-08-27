@@ -556,7 +556,7 @@ const MoreResearch = () => {
                   ⬇️ Grade 5 (left) vs. Grade 3 (right)
                 </p>
                 <img
-                  src="/lovable-uploads/gFE1VeOXPWiYfK85eG6ipoDjIY.avif"
+                  src="/lovable-uploads/gFE1VeOXPWiYfK85eG6ipoDjIY.jpg"
                   alt="Grade 5 vs Grade 3 napkin folding comparison"
                   className="h-80 w-56"
                 />
@@ -568,7 +568,7 @@ const MoreResearch = () => {
                   ⬇️ DYNA-1 finished napkins
                 </p>
                 <img
-                  src="/lovable-uploads/soEWXRSGFPz2nJg6aUGhWCi3s4.avif"
+                  src="/lovable-uploads/soEWXRSGFPz2nJg6aUGhWCi3s4.jpg"
                   alt="DYNA-1 finished napkins"
                   className="h-80 w-[26rem]"
                 />
