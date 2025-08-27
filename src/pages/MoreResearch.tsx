@@ -107,10 +107,7 @@ const MoreResearch = () => {
                   playsInline
                   autoPlay
                 >
-                  <source
-                    src="/videos/Happy Path Apr 28 18F91020-917D-4745-810C-8298Df21e2eb Total1 High Cam 1X F1 Label(Condensed).mp4"
-                    type="video/mp4"
-                  />
+                  <source src="/videos/happy-path.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -124,10 +121,7 @@ const MoreResearch = () => {
                   playsInline
                   autoPlay
                 >
-                  <source
-                    src="/videos/HappyEpisode 0003 1745373987.716618 High Label(Condensed).mp4"
-                    type="video/mp4"
-                  />
+                  <source src="/videos/happy-episode3.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -140,10 +134,7 @@ const MoreResearch = () => {
                   playsInline
                   autoPlay
                 >
-                  <source
-                    src="/videos/Happy Episode 0105 1745435355.8029408 High Label(Condensed).mp4"
-                    type="video/mp4"
-                  />
+                  <source src="/videos/happy-episode5.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -156,10 +147,7 @@ const MoreResearch = () => {
                   playsInline
                   autoPlay
                 >
-                  <source
-                    src="/videos/Happy Episode 0146 1745539417.7895224 High Label(Condensed).mp4"
-                    type="video/mp4"
-                  />
+                  <source src="/videos/happy-episode4.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -758,10 +746,7 @@ const MoreResearch = () => {
             playsInline
             autoPlay
           >
-            <source
-              src="/videos/Dyna Helping Hands 16X9 V9.mp4"
-              type="video/mp4"
-            />
+            <source src="/videos/helping-hands.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </section>
