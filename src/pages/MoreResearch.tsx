@@ -107,7 +107,7 @@ const MoreResearch = () => {
                   playsInline
                   autoPlay
                 >
-                  <source src="/videos/happy-path.mp4" type="video/mp4" />
+                  <source src="/videos/happypath.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -121,7 +121,7 @@ const MoreResearch = () => {
                   playsInline
                   autoPlay
                 >
-                  <source src="/videos/happy-episode3.mp4" type="video/mp4" />
+                  <source src="/videos/happyepisode3.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -134,7 +134,7 @@ const MoreResearch = () => {
                   playsInline
                   autoPlay
                 >
-                  <source src="/videos/happy-episode5.mp4" type="video/mp4" />
+                  <source src="/videos/happyepisode5.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -147,7 +147,7 @@ const MoreResearch = () => {
                   playsInline
                   autoPlay
                 >
-                  <source src="/videos/happy-episode4.mp4" type="video/mp4" />
+                  <source src="/videos/happyepisode4.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -746,7 +746,7 @@ const MoreResearch = () => {
             playsInline
             autoPlay
           >
-            <source src="/videos/helping-hands.mp4" type="video/mp4" />
+            <source src="/videos/helpinghands.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </section>
