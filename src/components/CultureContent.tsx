@@ -241,7 +241,7 @@ const CultureContent = () => {
               }}
             >
               <img
-                src="/lovable-uploads/us-team.jpg"
+                src="/lovable-uploads/our-team.JPG"
                 alt="US Team"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
@@ -263,7 +263,7 @@ const CultureContent = () => {
                 }}
               >
                 <img
-                  src="/lovable-uploads/us-team.jpg"
+                  src="/lovable-uploads/our-team.JPG"
                   alt="US Team"
                   className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"

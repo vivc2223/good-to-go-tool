@@ -190,7 +190,7 @@ const Research = () => {
                       color: "white",
                     }}
                   >
-                    Stories
+                    Blog
                   </h1>
                 </div>
               </div>
@@ -600,7 +600,7 @@ const Research = () => {
                     color: "white",
                   }}
                 >
-                  Stories
+                  Blog
                 </h1>
               </div>
 

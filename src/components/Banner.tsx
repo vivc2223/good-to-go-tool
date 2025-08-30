@@ -54,6 +54,16 @@ const Banner: React.FC<BannerProps> = ({ logos = defaultLogos }) => {
             className="h-full w-full"
             loading="lazy"
             decoding="async"
+            style={{
+              // Optimize image rendering during animation
+              imageRendering: "crisp-edges",
+              // Prevent layout shifts during animation
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              // Enable hardware acceleration for images
+              transform: "translateZ(0)",
+              WebkitTransform: "translateZ(0)",
+            }}
           />
         </div>
       ))}
@@ -69,6 +79,16 @@ const Banner: React.FC<BannerProps> = ({ logos = defaultLogos }) => {
             className="h-full w-full"
             loading="lazy"
             decoding="async"
+            style={{
+              // Optimize image rendering during animation
+              imageRendering: "crisp-edges",
+              // Prevent layout shifts during animation
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              // Enable hardware acceleration for images
+              transform: "translateZ(0)",
+              WebkitTransform: "translateZ(0)",
+            }}
           />
         </div>
       ))}
