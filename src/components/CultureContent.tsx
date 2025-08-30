@@ -241,8 +241,8 @@ const CultureContent = () => {
               }}
             >
               <img
-                src="/lovable-uploads/our-team.JPG"
-                alt="US Team"
+                src="/lovable-uploads/d9ffd18f-9824-43f8-a87e-e3afaf759c16.png"
+                alt="DYNA Team"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
@@ -263,8 +263,8 @@ const CultureContent = () => {
                 }}
               >
                 <img
-                  src="/lovable-uploads/our-team.JPG"
-                  alt="US Team"
+                  src="/lovable-uploads/d9ffd18f-9824-43f8-a87e-e3afaf759c16.png"
+                  alt="DYNA Team"
                   className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                   decoding="async"
