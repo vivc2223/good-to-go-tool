@@ -229,7 +229,7 @@ const JobListings = () => {
         <div className="mt-12">
           <button
             onClick={() => {
-              window.location.href = "mailto:careers@dyna.ai";
+              window.location.href = "mailto:careers@dyna.co";
             }}
             className="group inline-flex items-center gap-3 transition-all duration-300 hover:gap-4 text-white"
           >
