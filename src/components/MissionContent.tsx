@@ -66,9 +66,9 @@ const MissionContent = () => {
                     }}
                   >
                     We build high-performance, general-purpose robots designed
-                    to scale across real-world applications. DYNA robots improve
-                    through deployment. Our goal is physical AI that trains in
-                    the field and gets better with use.
+                    to scale across real-world applications DYNA robots improve
+                    through deployment Our goal is physical AI that trains in
+                    the field and gets better with use
                   </p>
                 </div>
               </div>
