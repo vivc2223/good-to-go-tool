@@ -232,6 +232,13 @@ const Navbar = () => {
                     Mission
                   </Link>
                   <Link
+                    to="/blog"
+                    className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    style={{ letterSpacing: "-0.02em" }}
+                  >
+                    Blog
+                  </Link>
+                  <Link
                     to="/culture"
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
@@ -288,6 +295,13 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Mission
+              </Link>
+              <Link
+                to="/blog"
+                className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+                onClick={() => setIsOpen(false)}
+              >
+                Blog
               </Link>
               <Link
                 to="/culture"
