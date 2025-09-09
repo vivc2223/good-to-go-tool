@@ -55,7 +55,7 @@ const JobListings = () => {
       roles: [
         {
           location: "Redwood City, CA",
-          title: "Research Engineer/Scientist",
+          title: "Research Engineer/ Scientist",
         },
       ],
     },
