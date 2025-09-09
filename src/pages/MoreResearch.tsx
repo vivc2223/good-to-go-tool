@@ -1,15 +1,28 @@
-import Navigation from "@/components/Navigation";
-import { Linkedin, X } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 import React from "react";
 
 const MoreResearch = () => {
   return (
-    <div className="bg-white text-black min-h-screen">
-      {/* <Navigation /> */}
-      <div className="max-w-5xl mx-auto px-6 pt-12">
+    <div className="min-h-screen bg-black">
+      <Helmet>
+        <title>DYNA-1 Research - DYNA Robotics</title>
+        <meta
+          name="description"
+          content="Dynamism v1 (DYNA-1) Model: A Breakthrough in Performance and Production-Ready Embodied AI. Learn about our foundation model built for round-the-clock, high-throughput dexterous autonomy."
+        />
+      </Helmet>
+      <Navbar />
+      <div className="max-w-5xl mx-auto px-6 pt-24">
         {/* Main Title */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h1 className="text-4xl  md:text-5xl font-light mb-6 leading-tight text-center">
+          <h1
+            className="text-4xl md:text-5xl font-light mb-6 leading-tight text-center text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             <span className="font-medium">Dynamism v1 (DYNA-1) Model:</span>
             <br /> A Breakthrough in Performance and Production-Ready Embodied
             AI
@@ -17,8 +30,13 @@ const MoreResearch = () => {
         </div>
 
         {/* Introduction */}
-        <div className="prose prose-lg max-w-none mb-12">
-          <p className="text-xl leading-relaxed mb-6">
+        <div className="max-w-none mb-12">
+          <p
+            className="text-xl leading-relaxed mb-6 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             At DYNA, our single mandate is to deliver robot performance in the
             real-world, out-of-the-box. Today we're unveiling Dynamism v1
             (DYNA-1)—our first foundation model built for round-the-clock,
@@ -27,7 +45,12 @@ const MoreResearch = () => {
             viable.
           </p>
 
-          <p className="text-xl leading-relaxed mb-6">
+          <p
+            className="text-xl leading-relaxed mb-6 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             DYNA-1 is battle-tested to upscale-restaurant standards. In a
             24-hour run, it folded 850+ napkins autonomously, sustaining ~60% of
             human speed while holding a 99.4% success rate—zero interventions,
@@ -50,7 +73,13 @@ const MoreResearch = () => {
             </video>
           </div>
           <div className=" mb-6 flex flex-col md:flex-row items-center gap-6">
-            <p className="text-xl leading-relaxed md:w-1/2">
+            <p
+              className="text-xl leading-relaxed md:w-1/2 text-white"
+              style={{
+                fontFamily:
+                  "UntitledSans, system-ui, -apple-system, sans-serif",
+              }}
+            >
               This sustained performance is a step-change for embodied AI.
               Conventional pipelines—bigger models plus broader datasets—still
               stall at ~80% single-episode success on hard dexterity tasks. Most
@@ -76,8 +105,8 @@ const MoreResearch = () => {
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div className="bg-gray-100 p-4 rounded-b-2xl">
-                <h5 className="text-base font-medium text-[rgb(0,77,191)] font-mono">
+              <div className="bg-gray-800 p-4 rounded-b-2xl">
+                <h5 className="text-base font-medium text-blue-400 font-mono">
                   Our best internal VLA baseline quickly encounters catastrophic
                   failure states and fails to make further progress. How can we
                   unlock robot foundation models built for round-the-clock
@@ -87,7 +116,12 @@ const MoreResearch = () => {
             </div>
           </div>
 
-          <p className="text-xl leading-relaxed mb-8">
+          <p
+            className="text-xl leading-relaxed mb-8 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             In this blog, we will present our unique approach and some of our
             results on unlocking real-world robustness and autonomy, with early
             evidence of generalization across skills.
@@ -95,7 +129,7 @@ const MoreResearch = () => {
 
           <div className="mb-8">
             <div
-              className="flex overflow-x-auto gap-4 mb-1 bg-gray-200 border border-border/5 rounded-2xl"
+              className="flex overflow-x-auto gap-4 mb-1 bg-gray-800 border border-gray-600 rounded-2xl"
               style={{ scrollbarWidth: "thin" }}
             >
               <div className="flex-shrink-0 w-[26rem] h-64">
@@ -153,7 +187,7 @@ const MoreResearch = () => {
               </div>
             </div>
 
-            <h5 className="text-base font-medium text-[rgb(0,77,191)] leading-relaxed font-mono">
+            <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
               Representative DYNA-1 execution in 1x speed over the courses of
               24-hr continuous deployment. See below for how DYNA-1 robustly
               handles extremely rare states.
@@ -163,14 +197,29 @@ const MoreResearch = () => {
 
         {/* Our Insights and Approach */}
         <section className="">
-          <h2 className="text-3xl font-normal mb-4">
+          <h2
+            className="text-3xl font-normal mb-4 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             Our Insights and Approach
           </h2>
-          <h4 className="text-xl font-light mb-8 italic">
+          <h4
+            className="text-xl font-light mb-8 italic text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             "Don't practice until you get it right. Practice until you can't get
             it wrong."
           </h4>
-          <p className="text-xl leading-relaxed mb-8">
+          <p
+            className="text-xl leading-relaxed mb-8 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             At Dyna, we have developed a generalizable recipe for unlocking
             robust and autonomous robot foundation models, with a crucial
             component being an accurate <strong>reward model (RM)</strong>{" "}
@@ -179,13 +228,23 @@ const MoreResearch = () => {
             successfully developed the first scalable foundation reward model
             for robotics.
           </p>
-          <p className="text-xl leading-relaxed">
+          <p
+            className="text-xl leading-relaxed text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             This model far outperforms previous approaches and can reliably
             estimate task progress on challenging dexterity tasks, like napkin
             folding. This capability unlocks a host of production-critical
             capabilities, such as:
           </p>
-          <ol className="list-decimal list-outside space-y-2 mb-12 text-xl pl-6">
+          <ol
+            className="list-decimal list-outside space-y-2 mb-12 text-xl pl-6 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             <li>
               <strong className="ml-4">Autonomous Exploration:</strong> Enabling
               the robot to intelligently explore its action space and discover
@@ -205,7 +264,7 @@ const MoreResearch = () => {
             </li>
           </ol>
           <div
-            className="flex overflow-x-auto gap-4 mb-8 bg-gray-200 border border-border/5 rounded-2xl"
+            className="flex overflow-x-auto gap-4 mb-8 bg-gray-800 border border-gray-600 rounded-2xl"
             style={{ scrollbarWidth: "thin" }}
           >
             <div className="flex-shrink-0 w-[26rem] h-64">
@@ -293,7 +352,7 @@ const MoreResearch = () => {
               </video>
             </div>
           </div>
-          <h5 className="text-base font-medium text-[rgb(0,77,191)] mb-6 leading-relaxed font-mono">
+          <h5 className="text-base font-medium text-blue-400 mb-6 leading-relaxed font-mono">
             DYNA Reward Model can accurately estimate task progress for
             challenging bi-manual dexterous tasks like napkin folding.
           </h5>
@@ -314,8 +373,8 @@ const MoreResearch = () => {
                 Your browser does not support the video tag.
               </video>
             </div>{" "}
-            <div className="p-2 h-96 bg-gray-100 rounded-lg flex items-center justify-center md:w-1/2">
-              <h5 className="text-base font-medium text-[rgb(0,77,191)] mb-8 leading-relaxed font-mono">
+            <div className="p-2 h-96 bg-gray-800 rounded-lg flex items-center justify-center md:w-1/2">
+              <h5 className="text-base font-medium text-blue-400 mb-8 leading-relaxed font-mono">
                 A unique challenge we run into at Dyna is how can we make best
                 use of the large amount of data autonomously collected by DYNA-1
                 during deployment? In continuous deployment settings, robot data
@@ -331,16 +390,31 @@ const MoreResearch = () => {
 
         {/* Continual Improvement */}
         <section className="mb-16">
-          <h2 className="text-3xl font-normal mb-8">
+          <h2
+            className="text-3xl font-normal mb-8 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             Continual Improvement, Robustness, and Quality
           </h2>
 
-          <p className="text-xl leading-relaxed mb-2">
+          <p
+            className="text-xl leading-relaxed mb-2 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             By scaling our RM-in-the-loop training, DYNA-1 has leapt forward in
             just a few weeks:
           </p>
 
-          <ul className="space-y-3 list-disc list-inside mb-8 text-xl">
+          <ul
+            className="space-y-3 list-disc list-inside mb-8 text-xl text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             <li>
               <strong>Week 1:</strong> Base model can complete single success,
               but falls apart after 5 minutes
@@ -374,8 +448,8 @@ const MoreResearch = () => {
                 alt="Progress chart showing DYNA-1 improvement over weeks"
                 className="w-full rounded-t-lg"
               />
-              <div className="bg-gray-100 p-4 rounded-b-2xl">
-                <h5 className="text-base font-medium text-[rgb(0,77,191)] leading-relaxed font-mono">
+              <div className="bg-gray-800 p-4 rounded-b-2xl">
+                <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   In continuous deployment settings, robot data does not
                   naturally come with clear episodic boundaries. Our approach
                   can also naturally segment the streaming data and provide
@@ -387,14 +461,26 @@ const MoreResearch = () => {
           </div>
 
           <div className="mb-8">
-            <p className="text-xl leading-relaxed">
+            <p
+              className="text-xl leading-relaxed text-white"
+              style={{
+                fontFamily:
+                  "UntitledSans, system-ui, -apple-system, sans-serif",
+              }}
+            >
               <span className="text-xl font-semibold mb-4">Robustness. </span>
               Over this learning process, DYNA-1 iteratively becomes much better
               at handling extremely difficult and out-of-distribution
               situations. Napkin folding is particularly challenging because:
             </p>
 
-            <ol className="list-decimal list-inside space-y-4 mb-8 text-xl">
+            <ol
+              className="list-decimal list-inside space-y-4 mb-8 text-xl text-white"
+              style={{
+                fontFamily:
+                  "UntitledSans, system-ui, -apple-system, sans-serif",
+              }}
+            >
               <li>
                 <strong>Single-pull precision:</strong> Extracting exactly one
                 napkin from a tall stack demands fine control and rapid
@@ -417,13 +503,19 @@ const MoreResearch = () => {
               </li>
             </ol>
 
-            <p className="text-xl leading-relaxed mb-6">
+            <p
+              className="text-xl leading-relaxed mb-6 text-white"
+              style={{
+                fontFamily:
+                  "UntitledSans, system-ui, -apple-system, sans-serif",
+              }}
+            >
               DYNA-1's ability to handle chaotic scenarios even surprised us.
               There are too many to list, but here are a few highlights:
             </p>
 
             <div
-              className="flex overflow-x-auto gap-4 mb-8 bg-gray-200 rounded-2xl"
+              className="flex overflow-x-auto gap-4 mb-8 bg-gray-800 rounded-2xl"
               style={{ scrollbarWidth: "thin" }}
             >
               <div className="flex-shrink-0 w-96 h-64">
@@ -511,7 +603,7 @@ const MoreResearch = () => {
               </div>
             </div>
 
-            <h5 className="text-base font-medium text-[rgb(0,77,191)] mb-8 leading-relaxed font-mono">
+            <h5 className="text-base font-medium text-blue-400 mb-8 leading-relaxed font-mono">
               DYNA-1 can recover from extremely bad states and progress forward
               with the task. This level of extreme robustness makes DYNA-1
               production-ready.
@@ -519,7 +611,13 @@ const MoreResearch = () => {
           </div>
 
           <div className="mb-8">
-            <p className="text-xl leading-relaxed mb-6">
+            <p
+              className="text-xl leading-relaxed mb-6 text-white"
+              style={{
+                fontFamily:
+                  "UntitledSans, system-ui, -apple-system, sans-serif",
+              }}
+            >
               <span className="text-xl font-bold mb-4">Quality. </span>
               DYNA-1 achieved an unprecedented level of robustness for robot
               foundation models. But at Dyna, we hold ourselves to an even
@@ -529,7 +627,13 @@ const MoreResearch = () => {
               Less than ⅓ inch precision on the initial fold separates
               perfection (grade 5) from near-perfection (grade 3).
             </p>
-            <p className="text-xl leading-relaxed mb-6">
+            <p
+              className="text-xl leading-relaxed mb-6 text-white"
+              style={{
+                fontFamily:
+                  "UntitledSans, system-ui, -apple-system, sans-serif",
+              }}
+            >
               Our customers demand perfection—not near perfection—and we
               deliver. Tiny differences define commercial-grade quality at Dyna.
               This level of precision also raises the bar of our research, as
@@ -540,7 +644,7 @@ const MoreResearch = () => {
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-32 mb-8">
               {/* Left: Grade 5 vs Grade 3 */}
               <div className="flex flex-col items-center">
-                <p className="text-base leading-relaxed mb-4 text-[rgb(0,77,191)] font-mono text-center">
+                <p className="text-base leading-relaxed mb-4 text-blue-400 font-mono text-center">
                   ⬇️ Grade 5 (left) vs. Grade 3 (right)
                 </p>
                 <img
@@ -552,7 +656,7 @@ const MoreResearch = () => {
 
               {/* Right: DYNA-1 finished napkins */}
               <div className="flex flex-col items-center">
-                <p className="text-base leading-relaxed mb-4 text-[rgb(0,77,191)] font-mono text-center">
+                <p className="text-base leading-relaxed mb-4 text-blue-400 font-mono text-center">
                   ⬇️ DYNA-1 finished napkins
                 </p>
                 <img
@@ -567,11 +671,21 @@ const MoreResearch = () => {
 
         {/* Environment Generalization */}
         <section className="mb-16">
-          <h2 className="text-3xl font-normal mb-4">
+          <h2
+            className="text-3xl font-normal mb-4 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             Environment Generalization and Adaptation
           </h2>
 
-          <p className="text-xl leading-relaxed mb-6">
+          <p
+            className="text-xl leading-relaxed mb-6 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             DYNA-1 achieves{" "}
             <strong>
               zero-shot environment generalization for long-horizon dexterity
@@ -602,8 +716,8 @@ const MoreResearch = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="bg-gray-100 p-4 rounded-b-2xl">
-                <h5 className="text-base font-medium text-[rgb(0,77,191)] leading-relaxed font-mono">
+              <div className="bg-gray-800 p-4 rounded-b-2xl">
+                <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   DYNA-1 can out-of-box perform napkin folding on unseen
                   customer environment.
                 </h5>
@@ -625,15 +739,20 @@ const MoreResearch = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="bg-gray-100 p-4 rounded-b-2xl">
-                <h5 className="text-base font-medium text-[rgb(0,77,191)] leading-relaxed font-mono">
+              <div className="bg-gray-800 p-4 rounded-b-2xl">
+                <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   With small amount of on-site learning, DYNA-1 then becomes a
                   fluent continual napkin folder.
                 </h5>
               </div>
             </div>
           </div>
-          <p className="text-xl leading-relaxed mb-8">
+          <p
+            className="text-xl leading-relaxed mb-8 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             That said, zero-shot generalization often sees quality and
             throughput drop. With additional on-site training, DYNA-1 quickly
             improves and becomes adept at continuous folding at a real
@@ -645,9 +764,21 @@ const MoreResearch = () => {
 
         {/* Additional Skills */}
         <section className="mb-16">
-          <h2 className="text-3xl font-normal mb-8">Additional Skills</h2>
+          <h2
+            className="text-3xl font-normal mb-8 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
+            Additional Skills
+          </h2>
 
-          <p className="text-xl leading-relaxed mb-6">
+          <p
+            className="text-xl leading-relaxed mb-6 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
             By focusing on dexterity and real-world robustness, we're seeing
             strong positive transfer to other tough commercial tasks, such as
             laundry folding and, at a client's request, cup-filling. DYNA-1 can
@@ -676,8 +807,8 @@ const MoreResearch = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="bg-gray-100 p-4 rounded-b-2xl md:h-36 h-44">
-                <h5 className="text-base font-medium text-[rgb(0,77,191)] leading-relaxed font-mono">
+              <div className="bg-gray-800 p-4 rounded-b-2xl md:h-36 h-44">
+                <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   DYNA-1 folding many shirts of different fabrics and sizes in a
                   row. Continual deployment and production-grade execution is
                   central to all our development efforts.
@@ -700,8 +831,8 @@ const MoreResearch = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="bg-gray-100 p-4 rounded-b-2xl md:h-36 h-44">
-                <h5 className="text-base font-medium text-[rgb(0,77,191)] leading-relaxed font-mono">
+              <div className="bg-gray-800 p-4 rounded-b-2xl md:h-36 h-44">
+                <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   DYNA-1 attempting the extremely challenging cup-filling tasks;
                   model view perspectives are shown deliberately to better
                   illustrate the fine-grained control aspects of this task.
@@ -711,17 +842,34 @@ const MoreResearch = () => {
           </div>
         </section>
         <section className="">
-          <h2 className="text-3xl font-normal mb-6">Next Steps</h2>
+          <h2
+            className="text-3xl font-normal mb-6 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
+            Next Steps
+          </h2>
 
-          <p className="text-xl leading-relaxed mb-6">
-            DYNA-1 now folds napkins for paying customers, and we’re unlocking
+          <p
+            className="text-xl leading-relaxed mb-6 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
+            DYNA-1 now folds napkins for paying customers, and we're unlocking
             more skills to ship into more commercial environments in the coming
-            weeks & months. Mastering napkin folding won’t transform daily life,
-            but it’s a pivotal step toward making embodied AI commercially
+            weeks & months. Mastering napkin folding won't transform daily life,
+            but it's a pivotal step toward making embodied AI commercially
             viable.
           </p>
-          <p className="text-xl leading-relaxed mb-6">
-            At Dyna, we tackle embodied AI’s toughest problem: scalable,
+          <p
+            className="text-xl leading-relaxed mb-6 text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
+            At Dyna, we tackle embodied AI's toughest problem: scalable,
             production-ready robot foundation models. Our goal is to bring this
             capability to businesses of every size, and unlock embodied AI for
             everyone. If you are obsessed about pushing the boundaries of
@@ -729,7 +877,7 @@ const MoreResearch = () => {
             production, we encourage you to reach out. We are actively{" "}
             <a
               href="https://ats.rippling.com/en-GB/dyna-careers/jobs"
-              className="text-[rgb(0,77,191)]"
+              className="text-blue-400"
             >
               hiring
             </a>{" "}
@@ -750,28 +898,8 @@ const MoreResearch = () => {
             Your browser does not support the video tag.
           </video>
         </section>
-
-        {/* Footer */}
-        <footer className="border-t border-border bg-black/90 py-8 mt-16">
-          <div className="flex flex-col md:flex-row justify-between items-center px-4">
-            <p className="text-base text-white mb-4 md:mb-0">
-              © DYNA Robotics, Inc {new Date().getFullYear()}
-            </p>
-            <div className="flex flex-row items-center gap-4">
-              <a href="https://www.linkedin.com/company/dyna-robotics/">
-                <img
-                  src="/lovable-uploads/linkedIn.jpg"
-                  alt="LinkedIn"
-                  className="w-8 h-8"
-                />
-              </a>
-              <a href="https://x.com/Dynarobotics">
-                <img src="/lovable-uploads/X.jpg" alt="X" className="w-6 h-6" />
-              </a>
-            </div>
-          </div>
-        </footer>
       </div>
+      <Footer />
     </div>
   );
 };
