@@ -25,7 +25,7 @@ const JobListings = () => {
         },
         {
           location: "Redwood City, CA",
-          title: "Senior Robotics Electrical Engineer",
+          title: "Senior Software Engineer, DevOps",
         },
         {
           location: "Redwood City, CA",
