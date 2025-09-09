@@ -229,7 +229,7 @@ const Navbar = () => {
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
-                    Blog
+                    Stories
                   </Link>
                   <Link
                     to="/mission"
