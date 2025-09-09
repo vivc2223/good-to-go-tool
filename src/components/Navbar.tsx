@@ -225,18 +225,18 @@ const Navbar = () => {
                 {/* Right side - Large navigation links closer together */}
                 <div className="flex flex-col space-y-4 pt-16">
                   <Link
-                    to="/mission"
-                    className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
-                    style={{ letterSpacing: "-0.02em" }}
-                  >
-                    Mission
-                  </Link>
-                  <Link
                     to="/blog"
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Blog
+                  </Link>
+                  <Link
+                    to="/mission"
+                    className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    style={{ letterSpacing: "-0.02em" }}
+                  >
+                    Mission
                   </Link>
                   <Link
                     to="/culture"
