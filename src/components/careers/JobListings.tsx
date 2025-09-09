@@ -21,7 +21,7 @@ const JobListings = () => {
       roles: [
         {
           location: "Redwood City, CA",
-          title: "Senior Machine Learning Research Scientist",
+          title: "Senior Software Engineer, Data Platform",
         },
         {
           location: "Redwood City, CA",
