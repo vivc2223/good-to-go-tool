@@ -45,7 +45,7 @@ const JobListings = () => {
         },
         {
           location: "Redwood City, CA",
-          title: "Staff Robotics Software Engineer",
+          title: "Senior Robotics Hardware Engineer",
         },
       ],
     },
