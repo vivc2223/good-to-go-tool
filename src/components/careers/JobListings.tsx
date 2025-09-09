@@ -65,7 +65,7 @@ const JobListings = () => {
       roles: [
         {
           location: "Redwood City, CA",
-          title: "Data Collection Operator",
+          title: "Data Annotation Specialist",
         },
         {
           location: "Redwood City, CA",
