@@ -16,7 +16,9 @@ import SubmissionDetail from "./pages/SubmissionDetail";
 import NotFound from "./pages/NotFound";
 import { HelmetProvider } from "react-helmet-async";
 import MoreResearch from "./pages/MoreResearch";
-
+import Blog from "./pages/Blog";
+import Fundraising from "./pages/Fundraising";
+import DynaResearch from "./pages/DynaResearch";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -33,8 +35,11 @@ const App = () => (
               <Route path="/strategy" element={<Strategy />} />
               <Route path="/mission" element={<Mission />} />
               <Route path="/culture" element={<Culture />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/fundraising" element={<Fundraising />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/dyna-1/research" element={<MoreResearch />} />
+              <Route path="/dyna-2/research" element={<DynaResearch />} />
               <Route path="/admin/login" element={<AdminLogin />} />
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
               <Route
