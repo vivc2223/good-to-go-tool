@@ -178,7 +178,7 @@ const Research = () => {
                 </div>
 
                 {/* Stories Title */}
-                <div className="text-left">
+                {/* <div className="text-left">
                   <h1
                     className="leading-tight"
                     style={{
@@ -192,7 +192,7 @@ const Research = () => {
                   >
                     Blog
                   </h1>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
@@ -200,7 +200,7 @@ const Research = () => {
           {/* Subtitle Section */}
           <section className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="">
                 {/* Research Subtitle */}
                 <div className="text-left">
                   <p
@@ -221,7 +221,7 @@ const Research = () => {
                 </div>
 
                 {/* Stories Subtitle */}
-                <div className="text-left">
+                {/* <div className="text-left">
                   <p
                     className="leading-relaxed"
                     style={{
@@ -235,7 +235,7 @@ const Research = () => {
                   >
                     The people, funding, and real-world ambition behind DYNA.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
@@ -342,7 +342,7 @@ const Research = () => {
                 </div>
 
                 {/* Stories Card */}
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
                     onClick={() =>
@@ -447,7 +447,7 @@ const Research = () => {
                       </div>
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
@@ -588,7 +588,7 @@ const Research = () => {
               </div>
 
               {/* Stories Title */}
-              <div className="text-left mb-6">
+              {/* <div className="text-left mb-6">
                 <h1
                   className="leading-tight"
                   style={{
@@ -604,7 +604,6 @@ const Research = () => {
                 </h1>
               </div>
 
-              {/* Stories Subtitle */}
               <div className="text-left mb-8">
                 <p
                   className="leading-relaxed"
@@ -621,7 +620,6 @@ const Research = () => {
                 </p>
               </div>
 
-              {/* Stories Card */}
               <div className="flex flex-col">
                 <div
                   className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
@@ -712,7 +710,7 @@ const Research = () => {
                     </div>
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
         </div>
