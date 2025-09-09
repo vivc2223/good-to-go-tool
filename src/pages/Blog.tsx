@@ -50,24 +50,7 @@ const Blog = () => {
           {/* Header Section */}
           <section className="w-full pt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-                {/* Research Title */}
-                <div className="text-left">
-                  <h1
-                    className="leading-tight"
-                    style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(28px, 5vw, 41px)",
-                      fontWeight: "normal",
-                      lineHeight: "1.1",
-                      color: "white",
-                    }}
-                  >
-                    Blog
-                  </h1>
-                </div>
-
+              <div className="grid grid-cols-1 gap-12 items-end">
                 {/* Stories Title */}
                 <div className="text-left">
                   <h1
@@ -90,24 +73,7 @@ const Blog = () => {
 
           <section className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                {/* Research Subtitle */}
-                <div className="text-left">
-                  <p
-                    className="leading-relaxed"
-                    style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(16px, 5vw, 20px)",
-                      fontWeight: "normal",
-                      lineHeight: "1.6",
-                      color: "white",
-                    }}
-                  >
-                    News, insights, and updates from the DYNA team.
-                  </p>
-                </div>
-
+              <div className="grid grid-cols-1 gap-12">
                 {/* Stories Subtitle */}
                 <div className="text-left">
                   <p
@@ -129,102 +95,7 @@ const Blog = () => {
           </section>
           <section className="w-full py-0">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                {/* Research Card */}
-                <div className="flex flex-col">
-                  <div
-                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() => navigate("/dyna-2/research")}
-                    style={{
-                      height: "650px",
-                      width: "100%",
-                    }}
-                  >
-                    <img
-                      src="/lovable-uploads/research.jpg"
-                      alt="DYNA Robot Research"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      fetchPriority="high"
-                      decoding="async"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <div className="flex items-center justify-between mb-2">
-                      <h2
-                        style={{
-                          color: "white",
-                          margin: "0px",
-                          fontSize: "clamp(16px, 5vw, 20px)",
-                          fontWeight: "normal",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        DYNA-2 Model
-                      </h2>
-                      <div
-                        style={{
-                          color: "white",
-                          fontSize: "clamp(16px, 5vw, 20px)",
-                          fontWeight: "normal",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        SEP 16 '25
-                      </div>
-                    </div>
-
-                    <p
-                      className="leading-relaxed mb-4"
-                      style={{
-                        color: "white",
-                        fontSize: "clamp(16px, 5vw, 20px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      News, insights, and updates from the DYNA team.
-                    </p>
-
-                    <button
-                      onClick={() => navigate("/dyna-2/research")}
-                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
-                    >
-                      <span
-                        style={{
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(16px, 5vw, 20px)",
-                          textDecoration: "underline",
-                          textUnderlineOffset: "4px",
-                          textDecorationThickness: "1px",
-                        }}
-                      >
-                        Read More
-                      </span>
-                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 3L11 8L6 13"
-                            stroke="white"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-
+              <div className="grid grid-cols-1 gap-16">
                 {/* Stories Card */}
                 <div className="flex flex-col">
                   <div
@@ -329,135 +200,9 @@ const Blog = () => {
 
         {/* Mobile Layout - Hidden on desktop */}
         <div className="block lg:hidden">
-          {/* Blog Section */}
+          {/* Stories Section */}
           <section className="w-full pt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-              {/* Blog Title */}
-              <div className="text-left mb-6">
-                <h1
-                  className="leading-tight"
-                  style={{
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(28px, 5vw, 41px)",
-                    fontWeight: "normal",
-                    lineHeight: "1.1",
-                    color: "white",
-                  }}
-                >
-                  Blog
-                </h1>
-              </div>
-
-              {/* Blog Subtitle */}
-              <div className="text-left mb-8">
-                <p
-                  className="leading-relaxed"
-                  style={{
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(16px, 5vw, 20px)",
-                    fontWeight: "normal",
-                    lineHeight: "1.6",
-                    color: "white",
-                  }}
-                >
-                  News, insights, and updates from the DYNA team.
-                </p>
-              </div>
-
-              {/* Blog Card */}
-              <div className="flex flex-col mb-16">
-                <div
-                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                  onClick={() => navigate("/dyna-2/research")}
-                  style={{
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    src="/lovable-uploads/research.jpg"
-                    alt="DYNA Robot Research"
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                    fetchPriority="high"
-                    decoding="async"
-                  />
-                </div>
-
-                <div className="flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
-                    <h2
-                      className="text-base"
-                      style={{
-                        color: "white",
-                        margin: "0px",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      DYNA-2 Model
-                    </h2>
-                    <div
-                      className="text-xs font-light"
-                      style={{
-                        color: "white",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      SEP 16 '25
-                    </div>
-                  </div>
-
-                  <p
-                    className="leading-relaxed mb-4"
-                    style={{
-                      color: "white",
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(16px, 5vw, 20px)",
-                    }}
-                  >
-                    News, insights, and updates from the DYNA team.
-                  </p>
-
-                  <button
-                    onClick={() => navigate("/dyna-2/research")}
-                    className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
-                  >
-                    <span
-                      className="text-sm font-medium text-white"
-                      style={{
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                        textDecoration: "underline",
-                        textUnderlineOffset: "4px",
-                        textDecorationThickness: "1px",
-                      }}
-                    >
-                      Read More
-                    </span>
-                    <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6 3L11 8L6 13"
-                          stroke="white"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </button>
-                </div>
-              </div>
-
               {/* Stories Title */}
               <div className="text-left mb-6">
                 <h1
