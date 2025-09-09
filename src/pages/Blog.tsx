@@ -152,7 +152,7 @@ const Blog = () => {
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
                     onClick={() =>
                       window.open(
-                        "https://www.fortune.com/2025/03/25/dyna-robotics-founders-future-instacart-self-checkout-robotics-technology/",
+                        "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
                         "_blank"
                       )
                     }
@@ -303,7 +303,7 @@ const Blog = () => {
                   className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
                   onClick={() =>
                     window.open(
-                      "https://www.fortune.com/2025/03/25/dyna-robotics-founders-future-instacart-self-checkout-robotics-technology/",
+                      "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
                       "_blank"
                     )
                   }
@@ -359,7 +359,7 @@ const Blog = () => {
                   <button
                     onClick={() =>
                       window.open(
-                        "https://www.fortune.com/2025/03/25/dyna-robotics-founders-future-instacart-self-checkout-robotics-technology/",
+                        "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
                         "_blank"
                       )
                     }
