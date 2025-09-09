@@ -178,7 +178,7 @@ const Research = () => {
                 </div>
 
                 {/* Stories Title */}
-                {/* <div className="text-left">
+                <div className="text-left">
                   <h1
                     className="leading-tight"
                     style={{
@@ -192,7 +192,7 @@ const Research = () => {
                   >
                     Blog
                   </h1>
-                </div> */}
+                </div>
               </div>
             </div>
           </section>
@@ -200,7 +200,7 @@ const Research = () => {
           {/* Subtitle Section */}
           <section className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-              <div className="">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Research Subtitle */}
                 <div className="text-left">
                   <p
@@ -221,7 +221,7 @@ const Research = () => {
                 </div>
 
                 {/* Stories Subtitle */}
-                {/* <div className="text-left">
+                <div className="text-left">
                   <p
                     className="leading-relaxed"
                     style={{
@@ -235,7 +235,7 @@ const Research = () => {
                   >
                     The people, funding, and real-world ambition behind DYNA.
                   </p>
-                </div> */}
+                </div>
               </div>
             </div>
           </section>
@@ -341,6 +341,113 @@ const Research = () => {
                   </div>
                 </div>
 
+                {/* Stories Card */}
+                <div className="flex flex-col">
+                  <div
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                    onClick={() =>
+                      window.open(
+                        "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
+                        "_blank"
+                      )
+                    }
+                    style={{
+                      height: "650px",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      src="/lovable-uploads/founders-future.jpg"
+                      alt="DYNA Founders"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <div className="flex items-center justify-between mb-2">
+                      <h2
+                        style={{
+                          color: "white",
+                          margin: "0px",
+                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontWeight: "normal",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        DYNA's Founders & Fortune Feature
+                      </h2>
+                      <div
+                        style={{
+                          color: "white",
+                          fontWeight: "normal",
+                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        MAR 25 '25
+                      </div>
+                    </div>
+
+                    <p
+                      className="leading-relaxed mb-4"
+                      style={{
+                        color: "white",
+                        fontWeight: "normal",
+                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      Exclusive: Instacart bought his self-checkout startup for
+                      $350M. Now he's teaming with a Google DeepMind alum to
+                      build low-cost robots.
+                    </p>
+
+                    <button
+                      onClick={() =>
+                        window.open(
+                          "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
+                          "_blank"
+                        )
+                      }
+                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                    >
+                      <span
+                        style={{
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontSize: "clamp(16px, 5vw, 20px)",
+                          textDecoration: "underline",
+                          textUnderlineOffset: "4px",
+                          textDecorationThickness: "1px",
+                        }}
+                      >
+                        Read More
+                      </span>
+                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 3L11 8L6 13"
+                            stroke="white"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -481,7 +588,7 @@ const Research = () => {
               </div>
 
               {/* Stories Title */}
-              {/* <div className="text-left mb-6">
+              <div className="text-left mb-6">
                 <h1
                   className="leading-tight"
                   style={{
@@ -495,10 +602,10 @@ const Research = () => {
                 >
                   Blog
                 </h1>
-              </div> */}
+              </div>
 
               {/* Stories Subtitle */}
-              {/* <div className="text-left mb-8">
+              <div className="text-left mb-8">
                 <p
                   className="leading-relaxed"
                   style={{
@@ -512,8 +619,100 @@ const Research = () => {
                 >
                   The people, funding, and real-world ambition behind DYNA.
                 </p>
-              </div> */}
+              </div>
 
+              {/* Stories Card */}
+              <div className="flex flex-col">
+                <div
+                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                  onClick={() =>
+                    window.open(
+                      "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
+                      "_blank"
+                    )
+                  }
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    src="/lovable-uploads/founders-future.jpg"
+                    alt="DYNA Founders"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <div className="flex items-center justify-between mb-2">
+                    <h2
+                      className="text-base"
+                      style={{ color: "white", margin: "0px" }}
+                    >
+                      DYNA's Founders & Fortune Feature
+                    </h2>
+                    <div
+                      className="text-xs font-light"
+                      style={{ color: "white" }}
+                    >
+                      MAR 25 '25
+                    </div>
+                  </div>
+
+                  <p
+                    className="leading-relaxed mb-4"
+                    style={{
+                      color: "white",
+                      fontSize: "clamp(16px, 5vw, 20px)",
+                    }}
+                  >
+                    Exclusive: Instacart bought his self-checkout startup for
+                    $350M. Now he's teaming with a Google DeepMind alum to build
+                    low-cost robots.
+                  </p>
+
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
+                        "_blank"
+                      )
+                    }
+                    className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                  >
+                    <span
+                      className="text-sm font-medium text-white"
+                      style={{
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        textDecoration: "underline",
+                        textUnderlineOffset: "4px",
+                        textDecorationThickness: "1px",
+                      }}
+                    >
+                      Read More
+                    </span>
+                    <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 3L11 8L6 13"
+                          stroke="white"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
             </div>
           </section>
         </div>
