@@ -61,11 +61,11 @@ const JobListings = () => {
     },
     {
       department: "Operations",
-      count: 3,
+      count: 4,
       roles: [
         {
           location: "Redwood City, CA",
-          title: "Data Annotation Specialist",
+          title: "Data Collection Operator",
         },
         {
           location: "Redwood City, CA",
@@ -74,6 +74,10 @@ const JobListings = () => {
         {
           location: "Redwood City, CA",
           title: "Model Product Manager",
+        },
+        {
+          location: "Redwood City, CA",
+          title: "Strategy & Operations Intern",
         },
       ],
     },
