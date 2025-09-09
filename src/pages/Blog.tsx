@@ -150,7 +150,12 @@ const Blog = () => {
                 <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() => navigate("/fundraising")}
+                    onClick={() =>
+                      window.open(
+                        "https://www.fortune.com/2025/03/25/dyna-robotics-founders-future-instacart-self-checkout-robotics-technology/",
+                        "_blank"
+                      )
+                    }
                     style={{
                       height: "650px",
                       width: "100%",
@@ -208,7 +213,12 @@ const Blog = () => {
                     </p>
 
                     <button
-                      onClick={() => navigate("/fundraising")}
+                      onClick={() =>
+                        window.open(
+                          "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
+                          "_blank"
+                        )
+                      }
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
@@ -291,7 +301,12 @@ const Blog = () => {
               <div className="flex flex-col">
                 <div
                   className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                  onClick={() => navigate("/fundraising")}
+                  onClick={() =>
+                    window.open(
+                      "https://www.fortune.com/2025/03/25/dyna-robotics-founders-future-instacart-self-checkout-robotics-technology/",
+                      "_blank"
+                    )
+                  }
                 >
                   <img
                     src="/lovable-uploads/founders-future.jpg"
@@ -342,7 +357,12 @@ const Blog = () => {
                   </p>
 
                   <button
-                    onClick={() => navigate("/fundraising")}
+                    onClick={() =>
+                      window.open(
+                        "https://www.fortune.com/2025/03/25/dyna-robotics-founders-future-instacart-self-checkout-robotics-technology/",
+                        "_blank"
+                      )
+                    }
                     className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                   >
                     <span
