@@ -97,9 +97,157 @@ const Blog = () => {
         </section>
 
         <div className="hidden lg:block">
-          {/* Header Section */}
           <section className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+                {/* Stories Title */}
+                <div className="text-left">
+                  <h1
+                    className="leading-tight"
+                    style={{
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(28px, 5vw, 41px)",
+                      fontWeight: "normal",
+                      lineHeight: "1.1",
+                      color: "white",
+                    }}
+                  >
+                    Blog
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+              <div className="">
+                {/* Stories Subtitle */}
+                <div className="text-left">
+                  <p
+                    className="leading-relaxed"
+                    style={{
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontWeight: "normal",
+                      lineHeight: "1.6",
+                      color: "white",
+                    }}
+                  >
+                    Insights and updates from the DYNA team
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="w-full py-0">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-2 gap-16">
+                {/* Stories Card */}
+                <div className="flex flex-col">
+                  <div
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                    // onClick={() => navigate("/fundraising")}
+                    style={{
+                      height: "650px",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      src="/lovable-uploads/fundraising.jpg"
+                      alt="DYNA Fundraising"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <div className="flex items-center justify-between mb-2">
+                      <h2
+                        style={{
+                          color: "white",
+                          margin: "0px",
+                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontWeight: "normal",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        Lorem ipsum dolor sit amet
+                      </h2>
+                      <div
+                        style={{
+                          color: "white",
+                          fontWeight: "normal",
+                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        lorem ipsium
+                      </div>
+                    </div>
+
+                    <p
+                      className="leading-relaxed mb-4"
+                      style={{
+                        color: "white",
+                        fontWeight: "normal",
+                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Voluptates nobis aliquid harum fugiat, similique expedita
+                      quibusdam nisi, necessitatibus ipsa itaque ea eum quidem
+                    </p>
+
+                    <button
+                      // onClick={() => navigate("/fundraising")}
+                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                    >
+                      <span
+                        style={{
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontSize: "clamp(16px, 5vw, 20px)",
+                          textDecoration: "underline",
+                          textUnderlineOffset: "4px",
+                          textDecorationThickness: "1px",
+                        }}
+                      >
+                        Read More
+                      </span>
+                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 3L11 8L6 13"
+                            stroke="white"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* Header Section */}
+          <section className="w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
                 {/* Stories Title */}
                 <div className="text-left">
@@ -137,7 +285,7 @@ const Blog = () => {
                       color: "white",
                     }}
                   >
-                    Press features and coverage about DYNA in the world.
+                    Press features and media coverage of DYNA
                   </p>
                 </div>
               </div>
@@ -171,7 +319,7 @@ const Blog = () => {
                   </div>
 
                   <div className="flex flex-col">
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-start justify-between mb-2 h-16">
                       <h2
                         style={{
                           color: "white",
@@ -198,7 +346,7 @@ const Blog = () => {
                     </div>
 
                     <p
-                      className="leading-relaxed mb-4"
+                      className="leading-relaxed mb-4 h-30"
                       style={{
                         color: "white",
                         fontWeight: "normal",
@@ -219,6 +367,104 @@ const Blog = () => {
                           "_blank"
                         )
                       }
+                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                    >
+                      <span
+                        style={{
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontSize: "clamp(16px, 5vw, 20px)",
+                          textDecoration: "underline",
+                          textUnderlineOffset: "4px",
+                          textDecorationThickness: "1px",
+                        }}
+                      >
+                        Read More
+                      </span>
+                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 3L11 8L6 13"
+                            stroke="white"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <div className="flex flex-col">
+                  <div
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                    onClick={() => navigate("/fundraising")}
+                    style={{
+                      height: "650px",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      src="/lovable-uploads/founders-futures.jpg"
+                      alt="DYNA Founders"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <div className="flex items-start justify-between mb-2 h-16 ">
+                      <h2
+                        style={{
+                          color: "white",
+                          margin: "0px",
+                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontWeight: "normal",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        Dyna Robotics Closes $120M Series A:
+                        <br /> How We Scale Robotic Foundation Models
+                      </h2>
+                      <div
+                        style={{
+                          color: "white",
+                          fontWeight: "normal",
+                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        SEP 22 '25
+                      </div>
+                    </div>
+
+                    <p
+                      className="leading-relaxed mb-4 h-30"
+                      style={{
+                        color: "white",
+                        fontWeight: "normal",
+                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      Dyna Robotics secures $120M in Series A funding from
+                      world-class investors to accelerate embodied AI and scale
+                      deployment-first robotics.
+                    </p>
+
+                    <button
+                      onClick={() => navigate("/fundraising")}
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
@@ -276,6 +522,148 @@ const Blog = () => {
                     color: "white",
                   }}
                 >
+                  Blog
+                </h1>
+              </div>
+
+              {/* Stories Subtitle */}
+              <div className="text-left mb-8">
+                <p
+                  className="leading-relaxed"
+                  style={{
+                    fontFamily:
+                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontSize: "clamp(16px, 5vw, 20px)",
+                    fontWeight: "normal",
+                    lineHeight: "1.6",
+                    color: "white",
+                  }}
+                >
+                  Insights and updates from the DYNA team
+                </p>
+              </div>
+
+              <section className="w-full py-0">
+                <div className="">
+                  <div className="">
+                    {/* Stories Card */}
+                    <div className="flex flex-col">
+                      <div
+                        className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                        // onClick={() => navigate("/fundraising")}
+                        style={{
+                          height: "650px",
+                          width: "100%",
+                        }}
+                      >
+                        <img
+                          src="/lovable-uploads/fundraising.jpg"
+                          alt="DYNA Fundraising"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+
+                      <div className="flex flex-col">
+                        <div className="flex items-center justify-between mb-2">
+                          <h2
+                            style={{
+                              color: "white",
+                              margin: "0px",
+                              fontSize: "clamp(16px, 5vw, 20px)",
+                              fontWeight: "normal",
+                              fontFamily:
+                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                            }}
+                          >
+                            Lorem ipsum dolor sit amet
+                          </h2>
+                          <div
+                            style={{
+                              color: "white",
+                              fontWeight: "normal",
+                              fontSize: "clamp(16px, 5vw, 20px)",
+                              fontFamily:
+                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                            }}
+                          >
+                            lorem ipsium
+                          </div>
+                        </div>
+
+                        <p
+                          className="leading-relaxed mb-4"
+                          style={{
+                            color: "white",
+                            fontWeight: "normal",
+                            fontSize: "clamp(16px, 5vw, 20px)",
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                          }}
+                        >
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Voluptates nobis aliquid harum fugiat, similique
+                          expedita quibusdam nisi, necessitatibus ipsa itaque ea
+                          eum quidem
+                        </p>
+
+                        <button
+                          // onClick={() => navigate("/fundraising")}
+                          className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                        >
+                          <span
+                            style={{
+                              fontFamily:
+                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                              fontSize: "clamp(16px, 5vw, 20px)",
+                              textDecoration: "underline",
+                              textUnderlineOffset: "4px",
+                              textDecorationThickness: "1px",
+                            }}
+                          >
+                            Read More
+                          </span>
+                          <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                            <svg
+                              width="12"
+                              height="12"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6 3L11 8L6 13"
+                                stroke="white"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section className="w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+              {/* Stories Title */}
+              <div className="text-left mb-6">
+                <h1
+                  className="leading-tight"
+                  style={{
+                    fontFamily:
+                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontSize: "clamp(28px, 5vw, 41px)",
+                    fontWeight: "normal",
+                    lineHeight: "1.1",
+                    color: "white",
+                  }}
+                >
                   Stories
                 </h1>
               </div>
@@ -293,7 +681,7 @@ const Blog = () => {
                     color: "white",
                   }}
                 >
-                  Press features and coverage about DYNA in the world.
+                  Press features and media coverage of DYNA
                 </p>
               </div>
 
@@ -396,6 +784,103 @@ const Blog = () => {
                     </div>
                   </button>
                 </div>
+              </div>
+            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+              <div
+                className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                onClick={() => navigate("/fundraising")}
+                style={{
+                  height: "650px",
+                  width: "100%",
+                }}
+              >
+                <img
+                  src="/lovable-uploads/founders-futures.jpg"
+                  alt="DYNA Founders"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <div className="flex items-start justify-between mb-2 h-22 gap-4 ">
+                  <h2
+                    style={{
+                      color: "white",
+                      margin: "0px",
+                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontWeight: "normal",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    Dyna Robotics Closes $120M Series A:
+                    <br /> How We Scale Robotic Foundation Models
+                  </h2>
+                  <div
+                    style={{
+                      color: "white",
+                      fontWeight: "normal",
+                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    SEP 22 '25
+                  </div>
+                </div>
+
+                <p
+                  className="leading-relaxed mb-4 h-30"
+                  style={{
+                    color: "white",
+                    fontWeight: "normal",
+                    fontSize: "clamp(16px, 5vw, 20px)",
+                    fontFamily:
+                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                  }}
+                >
+                  Dyna Robotics secures $120M in Series A funding from
+                  world-class investors to accelerate embodied AI and scale
+                  deployment-first robotics.
+                </p>
+
+                <button
+                  onClick={() => navigate("/fundraising")}
+                  className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                >
+                  <span
+                    style={{
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(16px, 5vw, 20px)",
+                      textDecoration: "underline",
+                      textUnderlineOffset: "4px",
+                      textDecorationThickness: "1px",
+                    }}
+                  >
+                    Read More
+                  </span>
+                  <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 3L11 8L6 13"
+                        stroke="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </section>

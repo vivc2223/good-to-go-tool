@@ -342,22 +342,17 @@ const Research = () => {
                 </div>
 
                 {/* Stories Card */}
-                {/* <div className="flex flex-col">
+                <div className="flex flex-col">
                   <div
-                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() =>
-                      window.open(
-                        "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
-                        "_blank"
-                      )
-                    }
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                    onClick={() => navigate("/dyna-2/research")}
                     style={{
                       height: "650px",
                       width: "100%",
                     }}
                   >
                     <img
-                      src="/lovable-uploads/founders-future.jpg"
+                      src="/lovable-uploads/founders-futures.jpg"
                       alt="DYNA Founders"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
@@ -377,7 +372,7 @@ const Research = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        DYNA's Founders & Fortune Feature
+                        DYNA-2 Model
                       </h2>
                       <div
                         style={{
@@ -388,7 +383,7 @@ const Research = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        MAR 25 '25
+                        SEP 16 '25
                       </div>
                     </div>
 
@@ -402,18 +397,13 @@ const Research = () => {
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      Exclusive: Instacart bought his self-checkout startup for
-                      $350M. Now he's teaming with a Google DeepMind alum to
-                      build low-cost robots.
+                      A next-generation vision-language-action foundation model
+                      built for real-world autonomy — faster, stronger, and more
+                      generalizable.
                     </p>
 
                     <button
-                      onClick={() =>
-                        window.open(
-                          "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
-                          "_blank"
-                        )
-                      }
+                      onClick={() => navigate("/dyna-2/research")}
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
@@ -447,7 +437,7 @@ const Research = () => {
                       </div>
                     </button>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </section>
@@ -618,23 +608,18 @@ const Research = () => {
                 >
                   The people, funding, and real-world ambition behind DYNA.
                 </p>
-              </div>
+              </div> */}
 
               <div className="flex flex-col">
                 <div
-                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                  onClick={() =>
-                    window.open(
-                      "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
-                      "_blank"
-                    )
-                  }
+                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                  onClick={() => navigate("/dyna-2/research")}
                   style={{
                     width: "100%",
                   }}
                 >
                   <img
-                    src="/lovable-uploads/founders-future.jpg"
+                    src="/lovable-uploads/founders-futures.jpg"
                     alt="DYNA Founders"
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
@@ -648,13 +633,13 @@ const Research = () => {
                       className="text-base"
                       style={{ color: "white", margin: "0px" }}
                     >
-                      DYNA's Founders & Fortune Feature
+                      DYNA-2 Model
                     </h2>
                     <div
                       className="text-xs font-light"
                       style={{ color: "white" }}
                     >
-                      MAR 25 '25
+                      SEP 16 '25
                     </div>
                   </div>
 
@@ -665,18 +650,13 @@ const Research = () => {
                       fontSize: "clamp(16px, 5vw, 20px)",
                     }}
                   >
-                    Exclusive: Instacart bought his self-checkout startup for
-                    $350M. Now he's teaming with a Google DeepMind alum to build
-                    low-cost robots.
+                    A next-generation vision-language-action foundation model
+                    built for real-world autonomy — faster, stronger, and more
+                    generalizable.
                   </p>
 
                   <button
-                    onClick={() =>
-                      window.open(
-                        "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
-                        "_blank"
-                      )
-                    }
+                    onClick={() => navigate("/dyna-2/research")}
                     className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                   >
                     <span
@@ -710,7 +690,7 @@ const Research = () => {
                     </div>
                   </button>
                 </div>
-              </div> */}
+              </div>
             </div>
           </section>
         </div>
