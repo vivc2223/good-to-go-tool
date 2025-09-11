@@ -105,7 +105,7 @@ const MoreResearch = () => {
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div className="bg-gray-800 p-4 rounded-b-2xl">
+              <div className="bg-white p-4 rounded-b-2xl">
                 <h5 className="text-base font-medium text-blue-400 font-mono">
                   Our best internal VLA baseline quickly encounters catastrophic
                   failure states and fails to make further progress. How can we
@@ -129,7 +129,7 @@ const MoreResearch = () => {
 
           <div className="mb-8">
             <div
-              className="flex overflow-x-auto gap-4 mb-1 bg-gray-800 border border-gray-600 rounded-2xl"
+              className="flex overflow-x-auto gap-4 mb-1 bg-white border border-gray-600 rounded-2xl"
               style={{ scrollbarWidth: "thin" }}
             >
               <div className="flex-shrink-0 w-[26rem] h-64">
@@ -264,7 +264,7 @@ const MoreResearch = () => {
             </li>
           </ol>
           <div
-            className="flex overflow-x-auto gap-4 mb-8 bg-gray-800 border border-gray-600 rounded-2xl"
+            className="flex overflow-x-auto gap-4 mb-8 bg-white border border-gray-600 rounded-2xl"
             style={{ scrollbarWidth: "thin" }}
           >
             <div className="flex-shrink-0 w-[26rem] h-64">
@@ -373,7 +373,7 @@ const MoreResearch = () => {
                 Your browser does not support the video tag.
               </video>
             </div>{" "}
-            <div className="p-2 h-96 bg-gray-800 rounded-lg flex items-center justify-center md:w-1/2">
+            <div className="p-2 h-96 bg-white rounded-lg flex items-center justify-center md:w-1/2">
               <h5 className="text-base font-medium text-blue-400 mb-8 leading-relaxed font-mono">
                 A unique challenge we run into at Dyna is how can we make best
                 use of the large amount of data autonomously collected by DYNA-1
@@ -448,7 +448,7 @@ const MoreResearch = () => {
                 alt="Progress chart showing DYNA-1 improvement over weeks"
                 className="w-full rounded-t-lg"
               />
-              <div className="bg-gray-800 p-4 rounded-b-2xl">
+              <div className="bg-white p-4 rounded-b-2xl">
                 <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   In continuous deployment settings, robot data does not
                   naturally come with clear episodic boundaries. Our approach
@@ -515,7 +515,7 @@ const MoreResearch = () => {
             </p>
 
             <div
-              className="flex overflow-x-auto gap-4 mb-8 bg-gray-800 rounded-2xl"
+              className="flex overflow-x-auto gap-4 mb-8 bg-white rounded-2xl"
               style={{ scrollbarWidth: "thin" }}
             >
               <div className="flex-shrink-0 w-96 h-64">
@@ -716,7 +716,7 @@ const MoreResearch = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="bg-gray-800 p-4 rounded-b-2xl">
+              <div className="bg-white p-4 rounded-b-2xl">
                 <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   DYNA-1 can out-of-box perform napkin folding on unseen
                   customer environment.
@@ -739,7 +739,7 @@ const MoreResearch = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="bg-gray-800 p-4 rounded-b-2xl">
+              <div className="bg-white p-4 rounded-b-2xl">
                 <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   With small amount of on-site learning, DYNA-1 then becomes a
                   fluent continual napkin folder.
@@ -807,7 +807,7 @@ const MoreResearch = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="bg-gray-800 p-4 rounded-b-2xl md:h-36 h-44">
+              <div className="bg-white p-4 rounded-b-2xl md:h-36 h-44">
                 <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   DYNA-1 folding many shirts of different fabrics and sizes in a
                   row. Continual deployment and production-grade execution is
@@ -831,7 +831,7 @@ const MoreResearch = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="bg-gray-800 p-4 rounded-b-2xl md:h-36 h-44">
+              <div className="bg-white p-4 rounded-b-2xl md:h-36 h-44">
                 <h5 className="text-base font-medium text-blue-400 leading-relaxed font-mono">
                   DYNA-1 attempting the extremely challenging cup-filling tasks;
                   model view perspectives are shown deliberately to better
@@ -876,7 +876,7 @@ const MoreResearch = () => {
             embodied AI and building truly capable robots that are ready for
             production, we encourage you to reach out. We are actively{" "}
             <a
-              href="https://ats.rippling.com/en-GB/dyna-careers/jobs"
+              href="https://jobs.ashbyhq.com/dyna-robotics"
               className="text-blue-400"
             >
               hiring
