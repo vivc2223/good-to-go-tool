@@ -402,6 +402,16 @@ const Blog = () => {
                   </div>
                 </div>
 
+                <div className="flex flex-col mb-8">
+                  <img
+                    src="/lovable-uploads/founders-with-robot.jpg"
+                    alt="DYNA Founders with Robot"
+                    className="w-full object-cover mb-6"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
                 <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
