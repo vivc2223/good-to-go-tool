@@ -432,8 +432,7 @@ const Blog = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        Dyna Robotics Closes $120M Series A:
-                        <br /> How We Scale Robotic Foundation Models
+                        Dyna Robotics Raises $120 Million to Advance Robotic Foundation Models on the Path to Physical Artificial General Intelligence
                       </h2>
                       <div
                         style={{
@@ -816,8 +815,7 @@ const Blog = () => {
                         "UntitledSans, system-ui, -apple-system, sans-serif",
                     }}
                   >
-                    Dyna Robotics Closes $120M Series A:
-                    <br /> How We Scale Robotic Foundation Models
+                    Dyna Robotics Raises $120 Million to Advance Robotic Foundation Models on the Path to Physical Artificial General Intelligence
                   </h2>
                   <div
                     style={{
