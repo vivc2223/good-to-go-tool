@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const TopBanner = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-[9999] bg-white text-black py-3 px-4 sm:px-6 md:px-8">
+    <div className="fixed top-0 left-0 right-0 z-[9999] bg-black text-white py-3 px-4 sm:px-6 md:px-8">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 text-base">
         {/* Series A Announcement */}
         <div className="flex items-center gap-1">
@@ -15,27 +15,27 @@ const TopBanner = () => {
             className="inline-flex items-center gap-1 hover:opacity-80 transition-opacity duration-200 underline underline-offset-2"
             aria-label="Read Bloomberg article about DYNA's funding"
           >
-            $120M series A. {/* <ArrowUpRight size={14} /> */}
+            $120M series A
+            <ArrowUpRight size={14} />
           </a>
         </div>
 
         {/* Separator */}
-        {/* <span className="hidden sm:inline text-gray-400">•</span> */}
+        <span className="hidden sm:inline text-gray-400">•</span>
 
         {/* Blog Link */}
         <div className="flex items-center gap-1">
-          Read more
           <a
             href="/blog"
             className="underline underline-offset-2 hover:opacity-80 transition-opacity duration-200"
           >
-            here.
+            Read more here
           </a>
-          {/* <ArrowUpRight size={14} /> */}
+          <ArrowUpRight size={14} />
         </div>
 
         {/* Separator */}
-        {/* <span className="hidden sm:inline text-gray-400">•</span> */}
+        <span className="hidden sm:inline text-gray-400">•</span>
 
         {/* Hiring Link */}
         <div className="flex items-center gap-1">
@@ -43,9 +43,9 @@ const TopBanner = () => {
             href="/careers"
             className="underline underline-offset-2 hover:opacity-80 transition-opacity duration-200"
           >
-            We're hiring!
+            We're hiring
           </a>
-          {/* <ArrowUpRight size={14} /> */}
+          <ArrowUpRight size={14} />
         </div>
       </div>
     </div>
