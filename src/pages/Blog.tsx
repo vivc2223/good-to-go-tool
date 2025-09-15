@@ -156,7 +156,7 @@ const Blog = () => {
                     }}
                   >
                     <img
-                      src="/lovable-uploads/dyna-robot.jpg"
+                      src="/lovable-uploads/founders.jpg"
                       alt="DYNA Fundraising"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
@@ -312,7 +312,7 @@ const Blog = () => {
                     }}
                   >
                     <img
-                      src="/lovable-uploads/founders.jpg"
+                      src="/lovable-uploads/founders-future.jpg"
                       alt="DYNA Founders"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
@@ -563,7 +563,7 @@ const Blog = () => {
                     {/* Stories Card */}
                     <div className="flex flex-col">
                       <div
-                        className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                        className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
                         // onClick={() => navigate("/fundraising")}
                         style={{
                           height: "650px",
@@ -571,7 +571,7 @@ const Blog = () => {
                         }}
                       >
                         <img
-                          src="/lovable-uploads/dyna-robot.jpg"
+                          src="/lovable-uploads/founders.jpg"
                           alt="DYNA Fundraising"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
@@ -712,7 +712,7 @@ const Blog = () => {
                   }
                 >
                   <img
-                    src="/lovable-uploads/founders.jpg"
+                    src="/lovable-uploads/founders-future.jpg"
                     alt="DYNA Founders"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"

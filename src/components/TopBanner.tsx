@@ -15,7 +15,7 @@ const TopBanner = () => {
             className="inline-flex items-center gap-1 hover:opacity-80 transition-opacity duration-200 underline underline-offset-2"
             aria-label="Read Bloomberg article about DYNA's funding"
           >
-            $120M series A. {/* <ArrowUpRight size={14} /> */}
+            $120M series A!{/* <ArrowUpRight size={14} /> */}
           </a>
         </div>
 
