@@ -26,6 +26,14 @@ const BlogStory = () => {
             Dyna Robotics Closes $120M Series A: How We Think About Scaling
             Robotic Foundation Models
           </h1>
+          <p
+            className="text-xl text-white"
+            style={{
+              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+            }}
+          >
+            By: Lindon Gao, Co-Founder & CEO
+          </p>
         </div>
 
         {/* Introduction */}
