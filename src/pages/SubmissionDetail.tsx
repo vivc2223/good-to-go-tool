@@ -35,7 +35,7 @@ interface FileObject {
 const SubmissionDetail = () => {
   const [submission, setSubmission] = useState<Submission | null>(null);
   const [loading, setLoading] = useState(true);
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, session } = useAuth();
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
@@ -44,15 +44,28 @@ const SubmissionDetail = () => {
       navigate("/admin/login");
       return;
     }
-    if (id) {
+    if (id && session) {
       fetchSubmission(id);
     }
-  }, [isAuthenticated, navigate, id]);
+  }, [isAuthenticated, navigate, id, session]);
 
   const fetchSubmission = async (submissionId: string) => {
+    if (!session) {
+      toast({
+        title: "Authentication Error",
+        description: "No active session found.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     try {
       setLoading(true);
-      const response = await axios.get(`/api/submission/${submissionId}`);
+      const response = await axios.get(`/api/submission/${submissionId}`, {
+        headers: {
+          Authorization: `Bearer ${session.access_token}`,
+        },
+      });
 
       if (response.data.success) {
         setSubmission(response.data.data);

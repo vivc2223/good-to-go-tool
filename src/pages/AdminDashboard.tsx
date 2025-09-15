@@ -33,7 +33,7 @@ const AdminDashboard = () => {
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [newsletter, setNewsletter] = useState<NewsletterSubscription[]>([]);
   const [loading, setLoading] = useState(true);
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated, logout, session } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,15 +41,31 @@ const AdminDashboard = () => {
       navigate("/admin/login");
       return;
     }
-    fetchDashboardData();
-  }, [isAuthenticated, navigate]);
+    if (session) {
+      fetchDashboardData();
+    }
+  }, [isAuthenticated, navigate, session]);
 
   const fetchDashboardData = async () => {
+    if (!session) {
+      toast({
+        title: "Authentication Error",
+        description: "No active session found.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     try {
       setLoading(true);
+
+      const authHeaders = {
+        Authorization: `Bearer ${session.access_token}`,
+      };
+
       const [submissionsResponse, newsletterResponse] = await Promise.all([
-        axios.get("/api/submissions"),
-        axios.get("/api/newsletter"),
+        axios.get("/api/submissions", { headers: authHeaders }),
+        axios.get("/api/newsletter", { headers: authHeaders }),
       ]);
 
       if (submissionsResponse.data?.success) {

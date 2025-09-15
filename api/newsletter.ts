@@ -37,8 +37,31 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    // Handle GET: list newsletter subscribers
+    // Handle GET: list newsletter subscribers (PROTECTED)
     if (req.method === "GET") {
+      // Validate authorization header
+      const authHeader = req.headers.authorization;
+      if (!authHeader || !authHeader.startsWith("Bearer ")) {
+        return res.status(401).json({
+          error: "Authorization header is missing or invalid",
+        });
+      }
+
+      const token = authHeader.split(" ")[1];
+
+      // Verify the token with Supabase
+      const {
+        data: { user },
+        error: userError,
+      } = await supabase.auth.getUser(token);
+
+      if (userError || !user) {
+        return res.status(401).json({
+          error: "Invalid or expired token",
+          details: userError?.message,
+        });
+      }
+
       const { data, error } = await supabase
         .from("newsletter")
         .select("id, email, subscribed_at, is_active")

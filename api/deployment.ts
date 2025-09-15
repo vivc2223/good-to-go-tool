@@ -202,7 +202,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       // Insert complete form data into Supabase database
       console.log("Inserting data into database...");
       const { data: insertData, error: insertError } = await supabase
-        .from("deployment-submissions")
+        .from("deployment_submissions")
         .insert([
           {
             requester_name: name,

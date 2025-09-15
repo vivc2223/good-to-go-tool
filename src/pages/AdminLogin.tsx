@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 
 const AdminLogin = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, loading } = useAuth();
   const navigate = useNavigate();
@@ -12,18 +12,18 @@ const AdminLogin = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!username || !password) {
+    if (!email || !password) {
       toast({
         title: "Error",
-        description: "Please enter both username and password",
+        description: "Please enter both email and password",
         variant: "destructive",
       });
       return;
     }
 
-    const success = await login(username, password);
+    const result = await login(email, password);
 
-    if (success) {
+    if (result.success) {
       toast({
         title: "Login successful",
         description: "Welcome to the admin dashboard",
@@ -32,7 +32,7 @@ const AdminLogin = () => {
     } else {
       toast({
         title: "Login failed",
-        description: "Invalid username or password",
+        description: result.error || "Invalid email or password",
         variant: "destructive",
       });
     }
@@ -68,18 +68,18 @@ const AdminLogin = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label
-              htmlFor="username"
+              htmlFor="email"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Username
+              Email
             </label>
             <input
-              id="username"
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-              placeholder="Enter username"
+              placeholder="Enter email"
               disabled={loading}
             />
           </div>

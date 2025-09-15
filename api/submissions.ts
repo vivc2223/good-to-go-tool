@@ -35,10 +35,33 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
+  // Validate authorization header
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    return res.status(401).json({
+      error: "Authorization header is missing or invalid",
+    });
+  }
+
+  const token = authHeader.split(" ")[1];
+
+  // Verify the token with Supabase
+  const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser(token);
+
+  if (userError || !user) {
+    return res.status(401).json({
+      error: "Invalid or expired token",
+      details: userError?.message,
+    });
+  }
+
   try {
     // Fetch all submissions from the deployment-submissions table
     const { data: submissions, error } = await supabase
-      .from("deployment-submissions")
+      .from("deployment_submissions")
       .select("*")
       .order("created_at", { ascending: false });
 
