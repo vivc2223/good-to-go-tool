@@ -38,7 +38,7 @@ const BlogStory = () => {
           >
             I'm thrilled to announce that DYNA has{" "}
             <a
-              href="https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-r[…]-to-physical-artificial-general-intelligence-302556817.html"
+              href="https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html"
               className="text-blue-400 hover:text-blue-300"
               target="_blank"
               rel="noopener noreferrer"
@@ -497,7 +497,7 @@ const BlogStory = () => {
           <p className="mt-6 text-xl leading-relaxed text-white">
             Read the{" "}
             <a
-              href="https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-r[…]-to-physical-artificial-general-intelligence-302556817.html"
+              href="https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html"
               className="text-blue-400 hover:text-blue-300"
               target="_blank"
               rel="noopener noreferrer"

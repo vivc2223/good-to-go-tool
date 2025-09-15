@@ -26,7 +26,7 @@ const TopBanner = () => {
         <div className="flex items-center gap-1">
           Read more
           <a
-            href="/blog"
+            href="/blog/dyna-robotics-closes-120m-series-a"
             className="underline underline-offset-2 hover:opacity-80 transition-opacity duration-200"
           >
             here.
