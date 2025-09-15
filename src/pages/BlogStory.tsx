@@ -382,7 +382,7 @@ const BlogStory = () => {
         {/* What Next */}
         <section className="mb-16">
           <h2
-            className="text-3xl font-normal mb-6 text-white"
+            className="text-3xl font-medium mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -433,7 +433,7 @@ const BlogStory = () => {
         {/* Join Us */}
         <section className="">
           <h2
-            className="text-3xl font-normal mb-6 text-white"
+            className="text-3xl font-medium mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
