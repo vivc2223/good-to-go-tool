@@ -342,7 +342,7 @@ const Research = () => {
                 </div>
 
                 {/* Stories Card */}
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
                     onClick={() => navigate("/dyna-2/research")}
@@ -437,7 +437,7 @@ const Research = () => {
                       </div>
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
@@ -610,7 +610,7 @@ const Research = () => {
                 </p>
               </div> */}
 
-              <div className="flex flex-col">
+              {/* <div className="flex flex-col">
                 <div
                   className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
                   onClick={() => navigate("/dyna-2/research")}
@@ -690,7 +690,7 @@ const Research = () => {
                     </div>
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
         </div>
