@@ -197,7 +197,7 @@ const BlogStory = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            Principle 2: Distribution is King.
+            Principle 2: Distribution is King
           </h3>
           <p
             className="text-xl leading-relaxed mb-8 text-white"
@@ -233,7 +233,7 @@ const BlogStory = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            Principle 3: ROI is Product-Market Fit.
+            Principle 3: ROI is Product-Market Fit
           </h3>
           <p
             className="text-xl leading-relaxed mb-6 text-white"
