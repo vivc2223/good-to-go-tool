@@ -401,7 +401,7 @@ const BlogStory = () => {
           </p>
 
           <ul
-            className="space-y-3 list-disc list-inside mb-12 text-xl text-white"
+            className="space-y-3 list-disc list-inside mb-12 ml-8 text-xl text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
