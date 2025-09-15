@@ -11,6 +11,7 @@ import DeploymentSection from "@/components/DeploymentSection";
 import Footer from "@/components/Footer";
 import { useScrollEffects } from "@/hooks/useScrollEffects";
 import Banner from "@/components/Banner";
+import TopBanner from "@/components/TopBanner";
 
 const Index = () => {
   useScrollEffects();
@@ -55,6 +56,7 @@ const Index = () => {
         />
         <link rel="canonical" href="https://www.dyna.co/" />
       </Helmet>
+      <TopBanner />
       <Navbar />
       <main>
         <Hero />

@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const TopBanner = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-black text-white py-3 px-4 sm:px-6 md:px-8">
+    <div className="fixed top-0 left-0 right-0 z-[9999] bg-black text-white py-3 px-4 sm:px-6 md:px-8">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 text-base">
         {/* Series A Announcement */}
         <div className="flex items-center gap-1">

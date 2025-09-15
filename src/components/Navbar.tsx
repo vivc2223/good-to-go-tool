@@ -71,8 +71,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-8 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-gray-800 transition-transform duration-300 ease-in-out ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
+      className={`fixed ${
+        location.pathname === "/" ? "top-9" : "top-0"
+      } left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 transition-transform duration-300 ease-in-out ${
+        isVisible
+          ? "translate-y-0"
+          : location.pathname === "/"
+          ? "-translate-y-[calc(100%+2rem)]"
+          : "-translate-y-full"
       }`}
     >
       <div className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
@@ -157,7 +163,7 @@ const Navbar = () => {
       {/* Company Dropdown Overlay */}
       {showCompanyDropdown && (
         <div
-          className="fixed top-26 left-0 right-0 h-screen z-30 animate-in fade-in slide-in-from-top-2 duration-300"
+          className="fixed top-16 left-0 right-0 h-screen z-40 animate-in fade-in slide-in-from-top-2 duration-300"
           style={{
             background: "#1a2e2e",
           }}
