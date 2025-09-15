@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import React, { useEffect, useRef, useState, useCallback } from "react";
 
 // Mock hooks for demo
@@ -550,54 +551,56 @@ const Hero = () => {
             DYNA is building general-purpose robots that power the future of the
             physical economy
           </h1>
-
-          <div
-            ref={heroButtonRef}
+        </div>
+        <div
+          ref={heroButtonRef}
+          style={{
+            ...heroButtonStyle,
+            minHeight: "48px",
+            position: "relative",
+          }}
+          className="opacity-100 flex flex-row items-center justify-between gap-4"
+        >
+          <button className="flex flex-row items-center gap-2 text-lg border border-white rounded-2xl p-1 px-4 transition-all duration-200 hover:bg-white hover:bg-opacity-10 hover:scale-105">
+            We raised $120M. Read our story <ArrowRight width={32} />
+          </button>
+          <button
+            onClick={scrollToFeatures}
+            className="group inline-flex items-center gap-3 transition-all duration-300 hover:gap-4 text-white"
             style={{
-              ...heroButtonStyle,
-              minHeight: "48px",
-              position: "relative",
+              position: "static",
+              transform: "none",
             }}
-            className="opacity-100"
           >
-            <button
-              onClick={scrollToFeatures}
-              className="group inline-flex items-center gap-3 transition-all duration-300 hover:gap-4 text-white"
+            <span
+              className="text-lg font-medium text-white"
               style={{
-                position: "static",
-                transform: "none",
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                textDecoration: "underline",
+                textUnderlineOffset: "4px",
+                textDecorationThickness: "1px",
               }}
             >
-              <span
-                className="text-lg font-medium text-white"
-                style={{
-                  fontFamily: "system-ui, -apple-system, sans-serif",
-                  textDecoration: "underline",
-                  textUnderlineOffset: "4px",
-                  textDecorationThickness: "1px",
-                }}
+              Request A Demo
+            </span>
+            <div className="w-8 h-8 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                Request A Demo
-              </span>
-              <div className="w-8 h-8 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 3L11 8L6 13"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </button>
-          </div>
+                <path
+                  d="M6 3L11 8L6 13"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
     </section>
