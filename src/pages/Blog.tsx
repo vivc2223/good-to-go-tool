@@ -148,7 +148,7 @@ const Blog = () => {
                 {/* Stories Card */}
                 <div className="flex flex-col">
                   <div
-                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
                     // onClick={() => navigate("/fundraising")}
                     style={{
                       height: "650px",
@@ -156,7 +156,7 @@ const Blog = () => {
                     }}
                   >
                     <img
-                      src="/lovable-uploads/fundraising.jpg"
+                      src="/lovable-uploads/dyna-robot.jpg"
                       alt="DYNA Fundraising"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
@@ -165,18 +165,20 @@ const Blog = () => {
                   </div>
 
                   <div className="flex flex-col">
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-start justify-between mb-2">
                       <h2
                         style={{
                           color: "white",
                           margin: "0px",
                           fontSize: "clamp(16px, 5vw, 20px)",
                           fontWeight: "normal",
+                          width: "70%",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        Lorem ipsum dolor sit amet
+                        Dyna Robotics Closes $120M Series A: How We Think About
+                        Scaling Robotic Foundation Models
                       </h2>
                       <div
                         style={{
@@ -187,7 +189,7 @@ const Blog = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        lorem ipsium
+                        SEP 15 ’25
                       </div>
                     </div>
 
@@ -201,9 +203,9 @@ const Blog = () => {
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Voluptates nobis aliquid harum fugiat, similique expedita
-                      quibusdam nisi, necessitatibus ipsa itaque ea eum quidem
+                      DYNA raised $120M and unveiled five first principles for
+                      scaling embodied AI, combining generalization,
+                      distribution, ROI, data and iteration.
                     </p>
 
                     <button
@@ -310,7 +312,7 @@ const Blog = () => {
                     }}
                   >
                     <img
-                      src="/lovable-uploads/founders-future.jpg"
+                      src="/lovable-uploads/founders.jpg"
                       alt="DYNA Founders"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
@@ -319,7 +321,7 @@ const Blog = () => {
                   </div>
 
                   <div className="flex flex-col">
-                    <div className="flex items-start justify-between mb-2 h-16">
+                    <div className="flex items-start justify-between mb-2 h-24">
                       <h2
                         style={{
                           color: "white",
@@ -404,15 +406,20 @@ const Blog = () => {
 
                 <div className="flex flex-col">
                   <div
-                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
-                    onClick={() => navigate("/fundraising")}
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                    onClick={() =>
+                      window.open(
+                        "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
+                        "_blank"
+                      )
+                    }
                     style={{
                       height: "650px",
                       width: "100%",
                     }}
                   >
                     <img
-                      src="/lovable-uploads/founders-futures.jpg"
+                      src="/lovable-uploads/dyna-robot.jpg"
                       alt="DYNA Founders"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
@@ -421,9 +428,10 @@ const Blog = () => {
                   </div>
 
                   <div className="flex flex-col">
-                    <div className="flex items-start justify-between mb-2 h-16 ">
+                    <div className="flex items-start justify-between mb-2 h-24">
                       <h2
                         style={{
+                          width: "70%",
                           color: "white",
                           margin: "0px",
                           fontSize: "clamp(16px, 5vw, 20px)",
@@ -432,8 +440,9 @@ const Blog = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        Dyna Robotics Closes $120M Series A:
-                        <br /> How We Scale Robotic Foundation Models
+                        Dyna Robotics Closes $120 Million To Advance Robotic
+                        Foundation Models On The Path To Pysical Artificial
+                        General Intelligence
                       </h2>
                       <div
                         style={{
@@ -444,7 +453,7 @@ const Blog = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        SEP 22 '25
+                        SEP 15 '25
                       </div>
                     </div>
 
@@ -458,13 +467,18 @@ const Blog = () => {
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      Dyna Robotics secures $120M in Series A funding from
-                      world-class investors to accelerate embodied AI and scale
-                      deployment-first robotics.
+                      DYNA raised $120M led by Robostrategy, CRV, and First
+                      Round to scale embodied AI robots achieving 99%+
+                      commercial performance.
                     </p>
 
                     <button
-                      onClick={() => navigate("/fundraising")}
+                      onClick={() =>
+                        window.open(
+                          "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
+                          "_blank"
+                        )
+                      }
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
@@ -557,7 +571,7 @@ const Blog = () => {
                         }}
                       >
                         <img
-                          src="/lovable-uploads/fundraising.jpg"
+                          src="/lovable-uploads/dyna-robot.jpg"
                           alt="DYNA Fundraising"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
@@ -566,18 +580,20 @@ const Blog = () => {
                       </div>
 
                       <div className="flex flex-col">
-                        <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-start justify-between mb-2">
                           <h2
                             style={{
                               color: "white",
                               margin: "0px",
                               fontSize: "clamp(16px, 5vw, 20px)",
+                              width: "70%",
                               fontWeight: "normal",
                               fontFamily:
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
                             }}
                           >
-                            Lorem ipsum dolor sit amet
+                            Dyna Robotics Closes $120M Series A: How We Think
+                            About Scaling Robotic Foundation Models
                           </h2>
                           <div
                             style={{
@@ -588,7 +604,7 @@ const Blog = () => {
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
                             }}
                           >
-                            lorem ipsium
+                            SEP 15 ’25
                           </div>
                         </div>
 
@@ -602,10 +618,9 @@ const Blog = () => {
                               "UntitledSans, system-ui, -apple-system, sans-serif",
                           }}
                         >
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Voluptates nobis aliquid harum fugiat, similique
-                          expedita quibusdam nisi, necessitatibus ipsa itaque ea
-                          eum quidem
+                          DYNA raised $120M and unveiled five first principles
+                          for scaling embodied AI, combining generalization,
+                          distribution, ROI, data and iteration.
                         </p>
 
                         <button
@@ -697,7 +712,7 @@ const Blog = () => {
                   }
                 >
                   <img
-                    src="/lovable-uploads/founders-future.jpg"
+                    src="/lovable-uploads/founders.jpg"
                     alt="DYNA Founders"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
@@ -708,10 +723,10 @@ const Blog = () => {
                 <div className="flex flex-col">
                   <div className="flex items-center justify-between mb-2">
                     <h2
-                      className="text-base"
                       style={{
                         color: "white",
                         margin: "0px",
+                        fontSize: "clamp(16px, 5vw, 20px)",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -788,15 +803,20 @@ const Blog = () => {
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
               <div
-                className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
-                onClick={() => navigate("/fundraising")}
+                className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                onClick={() =>
+                  window.open(
+                    "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
+                    "_blank"
+                  )
+                }
                 style={{
                   height: "650px",
                   width: "100%",
                 }}
               >
                 <img
-                  src="/lovable-uploads/founders-futures.jpg"
+                  src="/lovable-uploads/dyna-robot.jpg"
                   alt="DYNA Founders"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
@@ -811,13 +831,15 @@ const Blog = () => {
                       color: "white",
                       margin: "0px",
                       fontSize: "clamp(16px, 5vw, 20px)",
+                      width: "70%",
                       fontWeight: "normal",
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
                     }}
                   >
-                    Dyna Robotics Closes $120M Series A:
-                    <br /> How We Scale Robotic Foundation Models
+                    Dyna Robotics Closes $120 Million How We Scale Robotic
+                    Foundation Model On The Path To Pysical Artificial General
+                    Intelligence
                   </h2>
                   <div
                     style={{
@@ -848,7 +870,12 @@ const Blog = () => {
                 </p>
 
                 <button
-                  onClick={() => navigate("/fundraising")}
+                  onClick={() =>
+                    window.open(
+                      "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
+                      "_blank"
+                    )
+                  }
                   className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                 >
                   <span
