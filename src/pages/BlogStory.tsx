@@ -309,7 +309,7 @@ const BlogStory = () => {
             strategy can sink the whole ship. Two things we care about the most:
           </p>
           <ul
-            className="space-y-3 list-disc list-inside mb-6 text-xl text-white"
+            className="space-y-3 list-none list-inside mb-6 text-xl text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
