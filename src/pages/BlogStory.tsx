@@ -192,7 +192,7 @@ const BlogStory = () => {
             Principle 2: Distribution is King.
           </h3>
           <p
-            className="text-xl leading-relaxed mb-12 text-white"
+            className="text-xl leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
