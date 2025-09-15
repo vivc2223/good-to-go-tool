@@ -19,6 +19,7 @@ import MoreResearch from "./pages/MoreResearch";
 import Blog from "./pages/Blog";
 import Fundraising from "./pages/Fundraising";
 import DynaResearch from "./pages/DynaResearch";
+import BlogStory from "./pages/BlogStory";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -36,6 +37,10 @@ const App = () => (
               <Route path="/mission" element={<Mission />} />
               <Route path="/culture" element={<Culture />} />
               <Route path="/blog" element={<Blog />} />
+              <Route
+                path="/blog/dyna-robotics-closes-120m-series-a"
+                element={<BlogStory />}
+              />
               <Route path="/fundraising" element={<Fundraising />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/dyna-1/research" element={<MoreResearch />} />
