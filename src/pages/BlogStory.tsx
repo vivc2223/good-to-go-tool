@@ -345,7 +345,7 @@ const BlogStory = () => {
             Principle 5: Iteration Speed Wins the Race
           </h3>
           <p
-            className="text-xl leading-relaxed mb-12 text-white"
+            className="text-xl leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -387,7 +387,7 @@ const BlogStory = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            What Next
+            What's Next
           </h2>
 
           <p
