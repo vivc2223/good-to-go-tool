@@ -11,7 +11,7 @@ const CareersHero = () => {
     <section className="pt-24 pb-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-black">
       <div className="max-w-4xl">
         {/* Hero Content - matching home page layout */}
-        <div className="mb-8 sm:mb-10" ref={heroRef} style={heroStyle}>
+        <div className="my-8 sm:my-10" ref={heroRef} style={heroStyle}>
           <h1
             className="leading-tight mb-4 sm:mb-6"
             style={{

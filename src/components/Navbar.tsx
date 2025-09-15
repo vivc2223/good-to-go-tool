@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 transition-transform duration-300 ease-in-out ${
+      className={`fixed top-8 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-gray-800 transition-transform duration-300 ease-in-out ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -157,7 +157,7 @@ const Navbar = () => {
       {/* Company Dropdown Overlay */}
       {showCompanyDropdown && (
         <div
-          className="fixed top-16 left-0 right-0 h-screen z-40 animate-in fade-in slide-in-from-top-2 duration-300"
+          className="fixed top-26 left-0 right-0 h-screen z-30 animate-in fade-in slide-in-from-top-2 duration-300"
           style={{
             background: "#1a2e2e",
           }}

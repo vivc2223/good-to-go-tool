@@ -1,0 +1,55 @@
+import React from "react";
+import { ArrowUpRight } from "lucide-react";
+
+const TopBanner = () => {
+  return (
+    <div className="fixed top-0 left-0 right-0 z-50 bg-black text-white py-3 px-4 sm:px-6 md:px-8">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 text-base">
+        {/* Series A Announcement */}
+        <div className="flex items-center gap-1">
+          <span>DYNA just raised</span>
+          <a
+            href="https://www.bloomberg.com/news/articles/2025-09-15/dyna-robotics-raises-120-million-in-funding-from-nvidia-amazon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 hover:opacity-80 transition-opacity duration-200 underline underline-offset-2"
+            aria-label="Read Bloomberg article about DYNA's funding"
+          >
+            $120M series A
+            <ArrowUpRight size={14} />
+          </a>
+        </div>
+
+        {/* Separator */}
+        <span className="hidden sm:inline text-gray-400">•</span>
+
+        {/* Blog Link */}
+        <div className="flex items-center gap-1">
+          <a
+            href="/blog"
+            className="underline underline-offset-2 hover:opacity-80 transition-opacity duration-200"
+          >
+            Read more here
+          </a>
+          <ArrowUpRight size={14} />
+        </div>
+
+        {/* Separator */}
+        <span className="hidden sm:inline text-gray-400">•</span>
+
+        {/* Hiring Link */}
+        <div className="flex items-center gap-1">
+          <a
+            href="/careers"
+            className="underline underline-offset-2 hover:opacity-80 transition-opacity duration-200"
+          >
+            We're hiring
+          </a>
+          <ArrowUpRight size={14} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TopBanner;
