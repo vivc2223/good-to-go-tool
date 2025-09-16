@@ -269,8 +269,8 @@ const Research = () => {
                         style={{
                           color: "white",
                           margin: "0px",
-                          fontSize: "clamp(16px, 5vw, 20px)",
-                          fontWeight: "normal",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -280,8 +280,8 @@ const Research = () => {
                       <div
                         style={{
                           color: "white",
-                          fontSize: "clamp(16px, 5vw, 20px)",
-                          fontWeight: "normal",
+                          fontSize: "clamp(14px, 4vw, 16px)",
+                          fontWeight: "300",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -295,6 +295,7 @@ const Research = () => {
                       style={{
                         color: "white",
                         fontSize: "clamp(16px, 5vw, 20px)",
+                        fontWeight: "normal",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -504,10 +505,11 @@ const Research = () => {
                 <div className="flex flex-col">
                   <div className="flex items-center justify-between mb-2">
                     <h2
-                      className="text-base"
                       style={{
                         color: "white",
                         margin: "0px",
+                        fontSize: "clamp(20px, 5vw, 24px)",
+                        fontWeight: "500",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -515,9 +517,10 @@ const Research = () => {
                       DYNA-1 Model
                     </h2>
                     <div
-                      className="text-xs font-light"
                       style={{
                         color: "white",
+                        fontSize: "clamp(14px, 4vw, 16px)",
+                        fontWeight: "300",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}

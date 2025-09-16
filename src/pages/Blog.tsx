@@ -172,8 +172,8 @@ const Blog = () => {
                         style={{
                           color: "white",
                           margin: "0px",
-                          fontSize: "clamp(16px, 5vw, 20px)",
-                          fontWeight: "normal",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
                           width: "70%",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -185,13 +185,13 @@ const Blog = () => {
                       <div
                         style={{
                           color: "white",
-                          fontWeight: "normal",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontWeight: "300",
+                          fontSize: "clamp(14px, 4vw, 16px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        SEP 15 ’25
+                        SEP 15 '25
                       </div>
                     </div>
 
@@ -325,13 +325,14 @@ const Blog = () => {
                   </div>
 
                   <div className="flex flex-col">
-                    <div className="flex items-start justify-between mb-2 h-24">
+                    <div className="flex items-start justify-between  mb-2 h-28">
                       <h2
+                        className=" leading-none"
                         style={{
                           color: "white",
                           margin: "0px",
-                          fontSize: "clamp(16px, 5vw, 20px)",
-                          fontWeight: "normal",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -339,10 +340,11 @@ const Blog = () => {
                         DYNA Founders & Fortune Feature
                       </h2>
                       <div
+                        className=""
                         style={{
                           color: "white",
-                          fontWeight: "normal",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontWeight: "300",
+                          fontSize: "clamp(14px, 4vw, 16px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -432,14 +434,15 @@ const Blog = () => {
                   </div>
 
                   <div className="flex flex-col">
-                    <div className="flex items-start justify-between mb-2 h-24">
+                    <div className="flex items-start justify-between mb-2 h-28">
                       <h2
+                        className="leading-tight"
                         style={{
-                          width: "70%",
+                          width: "80%",
                           color: "white",
                           margin: "0px",
-                          fontSize: "clamp(16px, 5vw, 20px)",
-                          fontWeight: "normal",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -451,8 +454,8 @@ const Blog = () => {
                       <div
                         style={{
                           color: "white",
-                          fontWeight: "normal",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontWeight: "300",
+                          fontSize: "clamp(14px, 4vw, 16px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -591,9 +594,9 @@ const Blog = () => {
                             style={{
                               color: "white",
                               margin: "0px",
-                              fontSize: "clamp(16px, 5vw, 20px)",
-                              width: "70%",
-                              fontWeight: "normal",
+                              fontSize: "clamp(20px, 5vw, 24px)",
+                              width: "80%",
+                              fontWeight: "500",
                               fontFamily:
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
                             }}
@@ -604,13 +607,13 @@ const Blog = () => {
                           <div
                             style={{
                               color: "white",
-                              fontWeight: "normal",
-                              fontSize: "clamp(16px, 5vw, 20px)",
+                              fontWeight: "300",
+                              fontSize: "clamp(14px, 4vw, 16px)",
                               fontFamily:
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
                             }}
                           >
-                            SEP 15 ’25
+                            SEP 15 '25
                           </div>
                         </div>
 
@@ -734,7 +737,8 @@ const Blog = () => {
                       style={{
                         color: "white",
                         margin: "0px",
-                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontSize: "clamp(20px, 5vw, 24px)",
+                        fontWeight: "500",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -742,9 +746,10 @@ const Blog = () => {
                       DYNA Founders & Fortune Feature
                     </h2>
                     <div
-                      className="text-xs font-light"
                       style={{
                         color: "white",
+                        fontWeight: "300",
+                        fontSize: "clamp(14px, 4vw, 16px)",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -838,9 +843,9 @@ const Blog = () => {
                     style={{
                       color: "white",
                       margin: "0px",
-                      fontSize: "clamp(16px, 5vw, 20px)",
-                      width: "70%",
-                      fontWeight: "normal",
+                      fontSize: "clamp(20px, 5vw, 24px)",
+                      width: "80%",
+                      fontWeight: "500",
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
                     }}
@@ -852,8 +857,8 @@ const Blog = () => {
                   <div
                     style={{
                       color: "white",
-                      fontWeight: "normal",
-                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontWeight: "300",
+                      fontSize: "clamp(14px, 4vw, 16px)",
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
                     }}
