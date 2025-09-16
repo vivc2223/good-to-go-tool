@@ -292,7 +292,7 @@ const BlogStory = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            Principle 4: Effortless Data, Enduring Quality.
+            Principle 4: Effortless Data, Enduring Quality
           </h3>
           <p
             className="text-lg leading-relaxed mb-6 text-white"
