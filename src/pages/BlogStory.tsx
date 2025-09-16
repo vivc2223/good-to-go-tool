@@ -27,7 +27,7 @@ const BlogStory = () => {
             Robotic Foundation Models
           </h1>
           <p
-            className="text-xl text-white"
+            className="text-lg text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -39,7 +39,7 @@ const BlogStory = () => {
         {/* Introduction */}
         <div className="max-w-none mb-12">
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -61,7 +61,7 @@ const BlogStory = () => {
           </p>
 
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -83,7 +83,7 @@ const BlogStory = () => {
           </p>
 
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -97,7 +97,7 @@ const BlogStory = () => {
           </p>
 
           <p
-            className="text-xl leading-relaxed mb-8 text-white"
+            className="text-lg leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -109,7 +109,7 @@ const BlogStory = () => {
           </p>
 
           <p
-            className="text-xl leading-relaxed mb-8 text-white"
+            className="text-lg leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -123,7 +123,7 @@ const BlogStory = () => {
           </p>
 
           <p
-            className="text-xl leading-relaxed mb-12 text-white"
+            className="text-lg leading-relaxed mb-12 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -167,7 +167,7 @@ const BlogStory = () => {
             Principle 1: Physical AGI requires Generalization AND Performance
           </h3>
           <p
-            className="text-xl leading-relaxed mb-8 text-white"
+            className="text-lg leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -178,7 +178,7 @@ const BlogStory = () => {
             every action must be precise.
           </p>
           <p
-            className="text-xl leading-relaxed mb-12 text-white"
+            className="text-lg leading-relaxed mb-12 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -200,7 +200,7 @@ const BlogStory = () => {
             Principle 2: Distribution is King
           </h3>
           <p
-            className="text-xl leading-relaxed mb-8 text-white"
+            className="text-lg leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -211,7 +211,7 @@ const BlogStory = () => {
             still considered the king because distribution beats scoreboards.
           </p>
           <p
-            className="text-xl leading-relaxed mb-12 text-white"
+            className="text-lg leading-relaxed mb-12 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -236,7 +236,7 @@ const BlogStory = () => {
             Principle 3: ROI is Product-Market Fit
           </h3>
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -248,7 +248,7 @@ const BlogStory = () => {
             our research translate to business outcomes?
           </p>
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -274,7 +274,7 @@ const BlogStory = () => {
             day one.
           </p>
           <p
-            className="text-xl leading-relaxed mb-12 text-white"
+            className="text-lg leading-relaxed mb-12 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -295,7 +295,7 @@ const BlogStory = () => {
             Principle 4: Effortless Data, Enduring Quality.
           </h3>
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -304,7 +304,7 @@ const BlogStory = () => {
             needed for sustained ROI is scaling the right kind of data.
           </p>
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -317,7 +317,7 @@ const BlogStory = () => {
             strategy can sink the whole ship. Two things we care about the most:
           </p>
           <ul
-            className="space-y-3 list-none list-inside mb-6 text-xl text-white"
+            className="space-y-3 list-none list-inside mb-6 text-lg text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -353,7 +353,7 @@ const BlogStory = () => {
             Principle 5: Iteration Speed Wins the Race
           </h3>
           <p
-            className="text-xl leading-relaxed mb-8 text-white"
+            className="text-lg leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -364,7 +364,7 @@ const BlogStory = () => {
             Iteration reveals what works.
           </p>
           <p
-            className="text-xl leading-relaxed mb-8 text-white"
+            className="text-lg leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -378,11 +378,11 @@ const BlogStory = () => {
           </p>
 
           {/* Founders Image */}
-          <div className="mb-16">
+          <div className="mb-16 flex justify-center">
             <img
               src="/lovable-uploads/founders.jpg"
               alt="DYNA Founders"
-              className="w-full h-full rounded-lg"
+              className="max-w-lg h-auto"
             />
           </div>
         </section>
@@ -399,7 +399,7 @@ const BlogStory = () => {
           </h2>
 
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -409,7 +409,7 @@ const BlogStory = () => {
           </p>
 
           <ul
-            className="space-y-3 list-disc list-inside mb-12 ml-8 text-xl text-white"
+            className="space-y-3 list-disc list-inside mb-12 ml-8 text-lg text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -449,7 +449,7 @@ const BlogStory = () => {
             Join Us
           </h2>
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -457,7 +457,7 @@ const BlogStory = () => {
             Our mission is to build high performance general-purpose robots.
           </p>
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -466,7 +466,7 @@ const BlogStory = () => {
             challenges, let's set up a pilot.
           </p>
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -475,7 +475,7 @@ const BlogStory = () => {
             let's talk.
           </p>
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -486,7 +486,7 @@ const BlogStory = () => {
             solving real problems, within days.
           </p>
           <p
-            className="text-xl leading-relaxed text-white"
+            className="text-lg leading-relaxed text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -502,7 +502,7 @@ const BlogStory = () => {
             </a>
             .
           </p>{" "}
-          <p className="mt-6 text-xl leading-relaxed text-white">
+          <p className="mt-6 text-lg leading-relaxed text-white">
             Read the{" "}
             <a
               href="https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html"

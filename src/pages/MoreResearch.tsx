@@ -32,7 +32,7 @@ const MoreResearch = () => {
         {/* Introduction */}
         <div className="max-w-none mb-12">
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -46,7 +46,7 @@ const MoreResearch = () => {
           </p>
 
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -74,7 +74,7 @@ const MoreResearch = () => {
           </div>
           <div className=" mb-6 flex flex-col md:flex-row items-center gap-6">
             <p
-              className="text-xl leading-relaxed md:w-1/2 text-white"
+              className="text-lg leading-relaxed md:w-1/2 text-white"
               style={{
                 fontFamily:
                   "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -117,7 +117,7 @@ const MoreResearch = () => {
           </div>
 
           <p
-            className="text-xl leading-relaxed mb-8 text-white"
+            className="text-lg leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -206,7 +206,7 @@ const MoreResearch = () => {
             Our Insights and Approach
           </h2>
           <h4
-            className="text-xl font-light mb-8 italic text-white"
+            className="text-lg font-light mb-8 italic text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -215,7 +215,7 @@ const MoreResearch = () => {
             it wrong."
           </h4>
           <p
-            className="text-xl leading-relaxed mb-8 text-white"
+            className="text-lg leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -229,7 +229,7 @@ const MoreResearch = () => {
             for robotics.
           </p>
           <p
-            className="text-xl leading-relaxed text-white"
+            className="text-lg leading-relaxed text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -240,7 +240,7 @@ const MoreResearch = () => {
             capabilities, such as:
           </p>
           <ol
-            className="list-decimal list-outside space-y-2 mb-12 text-xl pl-6 text-white"
+            className="list-decimal list-outside space-y-2 mb-12 text-lg pl-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -400,7 +400,7 @@ const MoreResearch = () => {
           </h2>
 
           <p
-            className="text-xl leading-relaxed mb-2 text-white"
+            className="text-lg leading-relaxed mb-2 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -410,7 +410,7 @@ const MoreResearch = () => {
           </p>
 
           <ul
-            className="space-y-3 list-disc list-inside mb-8 text-xl text-white"
+            className="space-y-3 list-disc list-inside mb-8 text-lg text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -462,20 +462,20 @@ const MoreResearch = () => {
 
           <div className="mb-8">
             <p
-              className="text-xl leading-relaxed text-white"
+              className="text-lg leading-relaxed text-white"
               style={{
                 fontFamily:
                   "UntitledSans, system-ui, -apple-system, sans-serif",
               }}
             >
-              <span className="text-xl font-semibold mb-4">Robustness. </span>
+              <span className="text-lg font-semibold mb-4">Robustness. </span>
               Over this learning process, DYNA-1 iteratively becomes much better
               at handling extremely difficult and out-of-distribution
               situations. Napkin folding is particularly challenging because:
             </p>
 
             <ol
-              className="list-decimal list-inside space-y-4 mb-8 text-xl text-white"
+              className="list-decimal list-inside space-y-4 mb-8 text-lg text-white"
               style={{
                 fontFamily:
                   "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -504,7 +504,7 @@ const MoreResearch = () => {
             </ol>
 
             <p
-              className="text-xl leading-relaxed mb-6 text-white"
+              className="text-lg leading-relaxed mb-6 text-white"
               style={{
                 fontFamily:
                   "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -612,13 +612,13 @@ const MoreResearch = () => {
 
           <div className="mb-8">
             <p
-              className="text-xl leading-relaxed mb-6 text-white"
+              className="text-lg leading-relaxed mb-6 text-white"
               style={{
                 fontFamily:
                   "UntitledSans, system-ui, -apple-system, sans-serif",
               }}
             >
-              <span className="text-xl font-bold mb-4">Quality. </span>
+              <span className="text-lg font-bold mb-4">Quality. </span>
               DYNA-1 achieved an unprecedented level of robustness for robot
               foundation models. But at Dyna, we hold ourselves to an even
               higher standard: production-grade quality (grades 4 or 5 out of 5
@@ -628,7 +628,7 @@ const MoreResearch = () => {
               perfection (grade 5) from near-perfection (grade 3).
             </p>
             <p
-              className="text-xl leading-relaxed mb-6 text-white"
+              className="text-lg leading-relaxed mb-6 text-white"
               style={{
                 fontFamily:
                   "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -681,7 +681,7 @@ const MoreResearch = () => {
           </h2>
 
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -748,7 +748,7 @@ const MoreResearch = () => {
             </div>
           </div>
           <p
-            className="text-xl leading-relaxed mb-8 text-white"
+            className="text-lg leading-relaxed mb-8 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -774,7 +774,7 @@ const MoreResearch = () => {
           </h2>
 
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -852,7 +852,7 @@ const MoreResearch = () => {
           </h2>
 
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
@@ -864,7 +864,7 @@ const MoreResearch = () => {
             viable.
           </p>
           <p
-            className="text-xl leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
