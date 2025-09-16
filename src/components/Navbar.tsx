@@ -72,7 +72,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed ${
-        location.pathname === "/" ? "md:top-9 top-[4.5rem] " : "top-0"
+        location.pathname === "/" ? "min-[506px]:top-9 top-[4.5rem] " : "top-0"
       } left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 transition-transform duration-300 ease-in-out ${
         isVisible
           ? "translate-y-0"
