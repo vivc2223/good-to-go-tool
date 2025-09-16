@@ -159,7 +159,7 @@ const ResearchFeatures = () => {
           </h2>
           
           <AnimatedText
-            text="We close the gap between frontier AI models and physical-world autonomy. DYNA-1 is built on advanced vision-language-action systems and trained directly in real environments — no simulation shortcuts."
+            text="We close the gap between frontier AI models and physical-world autonomy. DYNA-1 is built on advanced vision-language-action systems and trained directly in real environments — no simulation shortcuts"
             className="text-base sm:text-lg md:text-xl font-display leading-tight text-gray-600 max-w-4xl mb-8"
           />
 
