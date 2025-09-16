@@ -404,7 +404,7 @@ const BlogStory = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            This $120 million will accelerate three critical areas of our
+            This $120 million will accelerate four critical areas of our
             mission:
           </p>
 

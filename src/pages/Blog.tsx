@@ -169,6 +169,7 @@ const Blog = () => {
                   <div className="flex flex-col">
                     <div className="flex items-start justify-between mb-2">
                       <h2
+                        className="leading-tight"
                         style={{
                           color: "white",
                           margin: "0px",
