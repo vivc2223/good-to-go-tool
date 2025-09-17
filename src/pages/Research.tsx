@@ -280,8 +280,8 @@ const Research = () => {
                       <div
                         style={{
                           color: "white",
-                          fontSize: "clamp(20px, 5vw, 24px)",
-                          fontWeight: "normal",
+                          fontSize: "clamp(14px, 4vw, 16px)",
+                          fontWeight: "300",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -519,8 +519,8 @@ const Research = () => {
                     <div
                       style={{
                         color: "white",
-                        fontSize: "clamp(20px, 5vw, 24px)",
-                        fontWeight: "normal",
+                        fontSize: "clamp(14px, 4vw, 16px)",
+                        fontWeight: "300",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
