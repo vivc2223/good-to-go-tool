@@ -281,7 +281,7 @@ const Research = () => {
                         style={{
                           color: "white",
                           fontSize: "clamp(20px, 5vw, 24px)",
-                          fontWeight: "500",
+                          fontWeight: "normal",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -503,7 +503,7 @@ const Research = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="mb-2">
                     <h2
                       style={{
                         color: "white",
@@ -516,17 +516,6 @@ const Research = () => {
                     >
                       DYNA-1 Model
                     </h2>
-                    <div
-                      style={{
-                        color: "white",
-                        fontSize: "clamp(20px, 5vw, 24px)",
-                        fontWeight: "500",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      JUN 15 '25
-                    </div>
                   </div>
 
                   <p
@@ -542,6 +531,19 @@ const Research = () => {
                     and trained directly in real environments — no simulation
                     shortcuts.
                   </p>
+
+                  <div
+                    className="mb-4"
+                    style={{
+                      color: "white",
+                      fontSize: "clamp(20px, 5vw, 24px)",
+                      fontWeight: "normal",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    JUN 15 '25
+                  </div>
 
                   <button
                     onClick={() => navigate("/dyna-1/research")}

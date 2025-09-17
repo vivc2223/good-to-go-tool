@@ -186,7 +186,7 @@ const Blog = () => {
                       <div
                         style={{
                           color: "white",
-                          fontWeight: "500",
+                          fontWeight: "normal",
                           fontSize: "clamp(20px, 5vw, 24px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -344,7 +344,7 @@ const Blog = () => {
                         className=""
                         style={{
                           color: "white",
-                          fontWeight: "500",
+                          fontWeight: "normal",
                           fontSize: "clamp(20px, 5vw, 24px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -455,7 +455,7 @@ const Blog = () => {
                       <div
                         style={{
                           color: "white",
-                          fontWeight: "500",
+                          fontWeight: "normal",
                           fontSize: "clamp(20px, 5vw, 24px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -590,13 +590,12 @@ const Blog = () => {
                       </div>
 
                       <div className="flex flex-col">
-                        <div className="flex items-start justify-between mb-2">
+                        <div className="mb-2">
                           <h2
                             style={{
                               color: "white",
                               margin: "0px",
                               fontSize: "clamp(20px, 5vw, 24px)",
-                              width: "80%",
                               fontWeight: "500",
                               fontFamily:
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -605,17 +604,6 @@ const Blog = () => {
                             Dyna Robotics Closes $120M Series A: How We Think
                             About Scaling Robotic Foundation Models
                           </h2>
-                          <div
-                            style={{
-                              color: "white",
-                              fontWeight: "500",
-                              fontSize: "clamp(20px, 5vw, 24px)",
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
-                            }}
-                          >
-                            SEP 15 '25
-                          </div>
                         </div>
 
                         <p
@@ -632,6 +620,19 @@ const Blog = () => {
                           for scaling embodied AI, combining generalization,
                           distribution, ROI, data and iteration.
                         </p>
+
+                        <div
+                          className="mb-4"
+                          style={{
+                            color: "white",
+                            fontWeight: "normal",
+                            fontSize: "clamp(20px, 5vw, 24px)",
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                          }}
+                        >
+                          SEP 15 '25
+                        </div>
 
                         <button
                           onClick={() =>
@@ -733,7 +734,7 @@ const Blog = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="mb-2">
                     <h2
                       style={{
                         color: "white",
@@ -746,17 +747,6 @@ const Blog = () => {
                     >
                       DYNA Founders & Fortune Feature
                     </h2>
-                    <div
-                      style={{
-                        color: "white",
-                        fontWeight: "500",
-                        fontSize: "clamp(20px, 5vw, 24px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      MAR 25 '25
-                    </div>
                   </div>
 
                   <p
@@ -772,6 +762,19 @@ const Blog = () => {
                     $350M. Now he's teaming with a Google DeepMind alum to build
                     low-cost robots.
                   </p>
+
+                  <div
+                    className="mb-4"
+                    style={{
+                      color: "white",
+                      fontWeight: "normal",
+                      fontSize: "clamp(20px, 5vw, 24px)",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    MAR 25 '25
+                  </div>
 
                   <button
                     onClick={() =>
@@ -839,13 +842,12 @@ const Blog = () => {
               </div>
 
               <div className="flex flex-col">
-                <div className="flex items-start justify-between mb-2 h-22 gap-4 ">
+                <div className="mb-2">
                   <h2
                     style={{
                       color: "white",
                       margin: "0px",
                       fontSize: "clamp(20px, 5vw, 24px)",
-                      width: "80%",
                       fontWeight: "500",
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -855,21 +857,10 @@ const Blog = () => {
                     Foundation Model On The Path To Pysical Artificial General
                     Intelligence
                   </h2>
-                  <div
-                    style={{
-                      color: "white",
-                      fontWeight: "500",
-                      fontSize: "clamp(20px, 5vw, 24px)",
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                    }}
-                  >
-                    SEP 22 '25
-                  </div>
                 </div>
 
                 <p
-                  className="leading-relaxed mb-4 h-30"
+                  className="leading-relaxed mb-4"
                   style={{
                     color: "white",
                     fontWeight: "normal",
@@ -882,6 +873,19 @@ const Blog = () => {
                   world-class investors to accelerate embodied AI and scale
                   deployment-first robotics.
                 </p>
+
+                <div
+                  className="mb-4"
+                  style={{
+                    color: "white",
+                    fontWeight: "normal",
+                    fontSize: "clamp(20px, 5vw, 24px)",
+                    fontFamily:
+                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                  }}
+                >
+                  SEP 22 '25
+                </div>
 
                 <button
                   onClick={() =>
