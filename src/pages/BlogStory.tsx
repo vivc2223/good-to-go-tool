@@ -382,7 +382,7 @@ const BlogStory = () => {
             <img
               src="/lovable-uploads/founders.jpg"
               alt="DYNA Founders"
-              className="max-w-lg h-auto"
+              className="max-w-lg h-auto rounded-lg"
             />
           </div>
         </section>
