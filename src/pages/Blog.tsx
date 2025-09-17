@@ -186,8 +186,8 @@ const Blog = () => {
                       <div
                         style={{
                           color: "white",
-                          fontWeight: "300",
-                          fontSize: "clamp(14px, 4vw, 16px)",
+                          fontWeight: "500",
+                          fontSize: "clamp(20px, 5vw, 24px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -344,8 +344,8 @@ const Blog = () => {
                         className=""
                         style={{
                           color: "white",
-                          fontWeight: "300",
-                          fontSize: "clamp(14px, 4vw, 16px)",
+                          fontWeight: "500",
+                          fontSize: "clamp(20px, 5vw, 24px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -455,8 +455,8 @@ const Blog = () => {
                       <div
                         style={{
                           color: "white",
-                          fontWeight: "300",
-                          fontSize: "clamp(14px, 4vw, 16px)",
+                          fontWeight: "500",
+                          fontSize: "clamp(20px, 5vw, 24px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -608,8 +608,8 @@ const Blog = () => {
                           <div
                             style={{
                               color: "white",
-                              fontWeight: "300",
-                              fontSize: "clamp(14px, 4vw, 16px)",
+                              fontWeight: "500",
+                              fontSize: "clamp(20px, 5vw, 24px)",
                               fontFamily:
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
                             }}
@@ -749,8 +749,8 @@ const Blog = () => {
                     <div
                       style={{
                         color: "white",
-                        fontWeight: "300",
-                        fontSize: "clamp(14px, 4vw, 16px)",
+                        fontWeight: "500",
+                        fontSize: "clamp(20px, 5vw, 24px)",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -858,8 +858,8 @@ const Blog = () => {
                   <div
                     style={{
                       color: "white",
-                      fontWeight: "300",
-                      fontSize: "clamp(14px, 4vw, 16px)",
+                      fontWeight: "500",
+                      fontSize: "clamp(20px, 5vw, 24px)",
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
                     }}
