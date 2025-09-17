@@ -155,10 +155,23 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                 e.stopPropagation();
                 handlePrevSlide();
               }}
-              className="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-40 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-white text-gray-900 hover:bg-gray-100 transition-all duration-200 hover:scale-105 shadow-lg flex items-center justify-center"
-              aria-label="Previous video"
+              className="w-8 h-8 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1"
             >
-              <ChevronLeft size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 3L5 8L10 13"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </button>
 
             <button
@@ -167,10 +180,23 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                 e.stopPropagation();
                 handleNextSlide();
               }}
-              className="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-40 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-white text-gray-900 hover:bg-gray-100 transition-all duration-200 hover:scale-105 shadow-lg flex items-center justify-center"
-              aria-label="Next video"
+              className="w-8 h-8 absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-40  rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1"
             >
-              <ChevronRight size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 3L11 8L6 13"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </button>
           </>
         )}
