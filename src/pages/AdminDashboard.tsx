@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
@@ -36,17 +36,7 @@ const AdminDashboard = () => {
   const { isAuthenticated, logout, session } = useAuth();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate("/admin/login");
-      return;
-    }
-    if (session) {
-      fetchDashboardData();
-    }
-  }, [isAuthenticated, navigate, session]);
-
-  const fetchDashboardData = async () => {
+  const fetchDashboardData = useCallback(async () => {
     if (!session) {
       toast({
         title: "Authentication Error",
@@ -89,7 +79,17 @@ const AdminDashboard = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [session]);
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate("/admin/login");
+      return;
+    }
+    if (session) {
+      fetchDashboardData();
+    }
+  }, [isAuthenticated, navigate, session, fetchDashboardData]);
 
   const handleLogout = () => {
     logout();
@@ -107,6 +107,104 @@ const AdminDashboard = () => {
       day: "numeric",
       hour: "2-digit",
       minute: "2-digit",
+    });
+  };
+
+  const exportSubmissionsToCSV = () => {
+    if (submissions.length === 0) {
+      toast({
+        title: "No Data",
+        description: "No submissions to export",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const headers = [
+      "Date",
+      "Requester Name",
+      "Email",
+      "Title",
+      "Company",
+      "Use Case",
+      "States",
+      "Total Units",
+      "Files Count",
+    ];
+
+    const csvData = submissions.map((submission) => [
+      formatDate(submission.created_at),
+      submission.requester_name,
+      submission.email,
+      submission.title,
+      submission.company,
+      submission.use_case,
+      submission.states.join("; "),
+      submission.total_units,
+      submission.workflow_media?.length || 0,
+    ]);
+
+    const csvContent = [headers, ...csvData]
+      .map((row) => row.map((field) => `"${field}"`).join(","))
+      .join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute(
+      "download",
+      `submissions_${new Date().toISOString().split("T")[0]}.csv`
+    );
+    link.style.visibility = "hidden";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    toast({
+      title: "Export Successful",
+      description: "Submissions data exported to CSV",
+    });
+  };
+
+  const exportNewsletterToCSV = () => {
+    if (newsletter.length === 0) {
+      toast({
+        title: "No Data",
+        description: "No newsletter subscribers to export",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const headers = ["Email", "Subscribed At", "Status"];
+
+    const csvData = newsletter.map((subscriber) => [
+      subscriber.email,
+      formatDate(subscriber.subscribed_at),
+      subscriber.is_active ? "Active" : "Inactive",
+    ]);
+
+    const csvContent = [headers, ...csvData]
+      .map((row) => row.map((field) => `"${field}"`).join(","))
+      .join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute(
+      "download",
+      `newsletter_subscribers_${new Date().toISOString().split("T")[0]}.csv`
+    );
+    link.style.visibility = "hidden";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    toast({
+      title: "Export Successful",
+      description: "Newsletter subscribers exported to CSV",
     });
   };
 
@@ -191,10 +289,16 @@ const AdminDashboard = () => {
 
         {/* Submissions Table */}
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="px-6 py-4 bg-gray-50 border-b">
+          <div className="px-6 py-4 bg-gray-50 border-b flex justify-between items-center">
             <h3 className="text-lg font-semibold text-gray-900">
               Recent Submissions
             </h3>
+            <button
+              onClick={exportSubmissionsToCSV}
+              className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
+            >
+              Export CSV
+            </button>
           </div>
 
           {submissions.length === 0 ? (
@@ -277,10 +381,16 @@ const AdminDashboard = () => {
 
         {/* Newsletter Subscribers Table */}
         <div className="bg-white rounded-lg shadow-lg overflow-hidden mt-8">
-          <div className="px-6 py-4 bg-gray-50 border-b">
+          <div className="px-6 py-4 bg-gray-50 border-b flex justify-between items-center">
             <h3 className="text-lg font-semibold text-gray-900">
               Newsletter Subscribers
             </h3>
+            <button
+              onClick={exportNewsletterToCSV}
+              className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
+            >
+              Export CSV
+            </button>
           </div>
 
           {newsletter.length === 0 ? (
