@@ -208,7 +208,7 @@ const Research = () => {
                     style={{
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                       fontWeight: "normal",
                       lineHeight: "1.6",
                       color: "white",
@@ -227,7 +227,7 @@ const Research = () => {
                     style={{
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                       fontWeight: "normal",
                       lineHeight: "1.6",
                       color: "white",
@@ -294,7 +294,7 @@ const Research = () => {
                       className="leading-relaxed mb-4"
                       style={{
                         color: "white",
-                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontSize: "clamp(14px, 4vw, 20px)",
                         fontWeight: "normal",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -313,7 +313,7 @@ const Research = () => {
                         style={{
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontSize: "clamp(14px, 4vw, 20px)",
                           textDecoration: "underline",
                           textUnderlineOffset: "4px",
                           textDecorationThickness: "1px",
@@ -367,7 +367,7 @@ const Research = () => {
                         style={{
                           color: "white",
                           margin: "0px",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontSize: "clamp(14px, 4vw, 20px)",
                           fontWeight: "normal",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -379,7 +379,7 @@ const Research = () => {
                         style={{
                           color: "white",
                           fontWeight: "normal",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontSize: "clamp(14px, 4vw, 20px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
@@ -393,7 +393,7 @@ const Research = () => {
                       style={{
                         color: "white",
                         fontWeight: "normal",
-                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontSize: "clamp(14px, 4vw, 20px)",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -411,7 +411,7 @@ const Research = () => {
                         style={{
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontSize: "clamp(14px, 4vw, 20px)",
                           textDecoration: "underline",
                           textUnderlineOffset: "4px",
                           textDecorationThickness: "1px",
@@ -473,7 +473,7 @@ const Research = () => {
                   style={{
                     fontFamily:
                       "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(16px, 5vw, 20px)",
+                    fontSize: "clamp(14px, 4vw, 20px)",
                     fontWeight: "normal",
                     lineHeight: "1.6",
                     color: "white",
@@ -524,7 +524,7 @@ const Research = () => {
                       color: "white",
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                     }}
                   >
                     DYNA-1 is built on advanced vision-language-action systems
@@ -605,7 +605,7 @@ const Research = () => {
                   style={{
                     fontFamily:
                       "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(16px, 5vw, 20px)",
+                    fontSize: "clamp(14px, 4vw, 20px)",
                     fontWeight: "normal",
                     lineHeight: "1.6",
                     color: "white",
@@ -652,7 +652,7 @@ const Research = () => {
                     className="leading-relaxed mb-4"
                     style={{
                       color: "white",
-                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                     }}
                   >
                     A next-generation vision-language-action foundation model

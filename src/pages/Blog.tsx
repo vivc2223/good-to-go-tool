@@ -130,7 +130,7 @@ const Blog = () => {
                     style={{
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                       fontWeight: "normal",
                       lineHeight: "1.6",
                       color: "white",
@@ -201,7 +201,7 @@ const Blog = () => {
                       style={{
                         color: "white",
                         fontWeight: "normal",
-                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontSize: "clamp(14px, 4vw, 20px)",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -221,7 +221,7 @@ const Blog = () => {
                         style={{
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontSize: "clamp(14px, 4vw, 20px)",
                           textDecoration: "underline",
                           textUnderlineOffset: "4px",
                           textDecorationThickness: "1px",
@@ -286,7 +286,7 @@ const Blog = () => {
                     style={{
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                       fontWeight: "normal",
                       lineHeight: "1.6",
                       color: "white",
@@ -359,7 +359,7 @@ const Blog = () => {
                       style={{
                         color: "white",
                         fontWeight: "normal",
-                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontSize: "clamp(14px, 4vw, 20px)",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -382,7 +382,7 @@ const Blog = () => {
                         style={{
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontSize: "clamp(14px, 4vw, 20px)",
                           textDecoration: "underline",
                           textUnderlineOffset: "4px",
                           textDecorationThickness: "1px",
@@ -470,7 +470,7 @@ const Blog = () => {
                       style={{
                         color: "white",
                         fontWeight: "normal",
-                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontSize: "clamp(14px, 4vw, 20px)",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
@@ -493,7 +493,7 @@ const Blog = () => {
                         style={{
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(16px, 5vw, 20px)",
+                          fontSize: "clamp(14px, 4vw, 20px)",
                           textDecoration: "underline",
                           textUnderlineOffset: "4px",
                           textDecorationThickness: "1px",
@@ -555,7 +555,7 @@ const Blog = () => {
                   style={{
                     fontFamily:
                       "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(16px, 5vw, 20px)",
+                    fontSize: "clamp(14px, 4vw, 20px)",
                     fontWeight: "normal",
                     lineHeight: "1.6",
                     color: "white",
@@ -611,7 +611,7 @@ const Blog = () => {
                           style={{
                             color: "white",
                             fontWeight: "normal",
-                            fontSize: "clamp(16px, 5vw, 20px)",
+                            fontSize: "clamp(14px, 4vw, 20px)",
                             fontFamily:
                               "UntitledSans, system-ui, -apple-system, sans-serif",
                           }}
@@ -644,7 +644,7 @@ const Blog = () => {
                             style={{
                               fontFamily:
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
-                              fontSize: "clamp(16px, 5vw, 20px)",
+                              fontSize: "clamp(14px, 4vw, 20px)",
                               textDecoration: "underline",
                               textUnderlineOffset: "4px",
                               textDecorationThickness: "1px",
@@ -703,7 +703,7 @@ const Blog = () => {
                   style={{
                     fontFamily:
                       "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(16px, 5vw, 20px)",
+                    fontSize: "clamp(14px, 4vw, 20px)",
                     fontWeight: "normal",
                     lineHeight: "1.6",
                     color: "white",
@@ -753,7 +753,7 @@ const Blog = () => {
                     className="leading-relaxed mb-4"
                     style={{
                       color: "white",
-                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
                     }}
@@ -789,7 +789,7 @@ const Blog = () => {
                       style={{
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
-                        fontSize: "clamp(16px, 5vw, 20px)",
+                        fontSize: "clamp(14px, 4vw, 20px)",
                         textDecoration: "underline",
                         textUnderlineOffset: "4px",
                         textDecorationThickness: "1px",
@@ -864,7 +864,7 @@ const Blog = () => {
                   style={{
                     color: "white",
                     fontWeight: "normal",
-                    fontSize: "clamp(16px, 5vw, 20px)",
+                    fontSize: "clamp(14px, 4vw, 20px)",
                     fontFamily:
                       "UntitledSans, system-ui, -apple-system, sans-serif",
                   }}
@@ -900,7 +900,7 @@ const Blog = () => {
                     style={{
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(16px, 5vw, 20px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                       textDecoration: "underline",
                       textUnderlineOffset: "4px",
                       textDecorationThickness: "1px",
