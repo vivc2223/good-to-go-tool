@@ -296,18 +296,18 @@ const Navbar = () => {
                 Company
               </span>
               <Link
+                to="/blog"
+                className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+                onClick={() => setIsOpen(false)}
+              >
+                Stories
+              </Link>
+              <Link
                 to="/mission"
                 className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
                 onClick={() => setIsOpen(false)}
               >
                 Mission
-              </Link>
-              <Link
-                to="/blog"
-                className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
-                onClick={() => setIsOpen(false)}
-              >
-                Blog
               </Link>
               <Link
                 to="/culture"
