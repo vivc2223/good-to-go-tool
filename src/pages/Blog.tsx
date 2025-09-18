@@ -626,7 +626,7 @@ const Blog = () => {
                           style={{
                             color: "white",
                             fontWeight: "normal",
-                            fontSize: "clamp(20px, 5vw, 24px)",
+                            fontSize: "clamp(14px, 4vw, 20px)",
                             fontFamily:
                               "UntitledSans, system-ui, -apple-system, sans-serif",
                           }}
@@ -768,7 +768,7 @@ const Blog = () => {
                     style={{
                       color: "white",
                       fontWeight: "normal",
-                      fontSize: "clamp(20px, 5vw, 24px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
                     }}
@@ -879,7 +879,7 @@ const Blog = () => {
                   style={{
                     color: "white",
                     fontWeight: "normal",
-                    fontSize: "clamp(20px, 5vw, 24px)",
+                    fontSize: "clamp(14px, 4vw, 20px)",
                     fontFamily:
                       "UntitledSans, system-ui, -apple-system, sans-serif",
                   }}

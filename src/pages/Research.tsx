@@ -536,7 +536,7 @@ const Research = () => {
                     className="mb-4"
                     style={{
                       color: "white",
-                      fontSize: "clamp(20px, 5vw, 24px)",
+                      fontSize: "clamp(14px, 4vw, 20px)",
                       fontWeight: "normal",
                       fontFamily:
                         "UntitledSans, system-ui, -apple-system, sans-serif",
