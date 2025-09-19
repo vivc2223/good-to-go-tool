@@ -21,6 +21,7 @@ import Fundraising from "./pages/Fundraising";
 import DynaResearch from "./pages/DynaResearch";
 import BlogStory from "./pages/BlogStory";
 import NewBlog from "./pages/NewBlog";
+import NewBlog2 from "./pages/NewBlog2";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -42,7 +43,8 @@ const App = () => (
                 path="/blog/dyna-robotics-closes-120m-series-a"
                 element={<BlogStory />}
               />
-              <Route path="/new-blog" element={<NewBlog />} />
+              <Route path="/blog/new-blog" element={<NewBlog />} />
+              <Route path="/blog/new-blog-2" element={<NewBlog2 />} />
               <Route path="/fundraising" element={<Fundraising />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/dyna-1/research" element={<MoreResearch />} />

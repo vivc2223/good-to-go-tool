@@ -253,7 +253,7 @@ const Blog = () => {
                 <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() => navigate("/new-blog")}
+                    onClick={() => navigate("/blog/new-blog")}
                     style={{
                       height: "745px",
                       width: "100%",
@@ -314,7 +314,7 @@ const Blog = () => {
                     </p>
 
                     <button
-                      onClick={() => navigate("/new-blog")}
+                      onClick={() => navigate("/blog/new-blog")}
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
