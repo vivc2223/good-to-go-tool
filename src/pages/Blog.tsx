@@ -153,7 +153,7 @@ const Blog = () => {
                       navigate("/blog/dyna-robotics-closes-120m-series-a")
                     }
                     style={{
-                      // height: "650px",
+                      height: "745px",
                       width: "100%",
                     }}
                   >
