@@ -136,7 +136,7 @@ const Blog = () => {
                       color: "white",
                     }}
                   >
-                    Insights and updates from the DYNA team
+                    Insights and updates from the DYNA team.
                   </p>
                 </div>
               </div>
@@ -669,7 +669,7 @@ const Blog = () => {
                     color: "white",
                   }}
                 >
-                  Insights and updates from the DYNA team
+                  Insights and updates from the DYNA team.
                 </p>
               </div>
 
