@@ -250,7 +250,7 @@ const Blog = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
                     onClick={() => navigate("/blog/new-blog")}
@@ -348,7 +348,7 @@ const Blog = () => {
                       </div>
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
@@ -774,7 +774,7 @@ const Blog = () => {
                     </div>
 
                     {/* Second Blog Card */}
-                    <div className="flex flex-col">
+                    {/* <div className="flex flex-col">
                       <div
                         className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
                         onClick={() => navigate("/blog/new-blog")}
@@ -872,7 +872,7 @@ const Blog = () => {
                           </div>
                         </button>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </section>
