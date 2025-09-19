@@ -253,11 +253,7 @@ const Blog = () => {
                 <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    // onClick={() =>
-                    //   navigate(
-                    //     "/blog/breakthrough-vision-language-action-models"
-                    //   )
-                    // }
+                    onClick={() => navigate("/new-blog")}
                     style={{
                       height: "745px",
                       width: "100%",
@@ -318,11 +314,7 @@ const Blog = () => {
                     </p>
 
                     <button
-                      // onClick={() =>
-                      //   navigate(
-                      //     "/blog/breakthrough-vision-language-action-models"
-                      //   )
-                      // }
+                      onClick={() => navigate("/new-blog")}
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
@@ -785,11 +777,7 @@ const Blog = () => {
                     <div className="flex flex-col">
                       <div
                         className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                        // onClick={() =>
-                        //   navigate(
-                        //     "/blog/breakthrough-vision-language-action-models"
-                        //   )
-                        // }
+                        onClick={() => navigate("/new-blog")}
                         style={{
                           // height: "650px",
                           width: "100%",
@@ -850,11 +838,7 @@ const Blog = () => {
                         </div>
 
                         <button
-                          // onClick={() =>
-                          //   navigate(
-                          //     "/blog/breakthrough-vision-language-action-models"
-                          //   )
-                          // }
+                          onClick={() => navigate("/new-blog")}
                           className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                         >
                           <span
