@@ -255,7 +255,7 @@ const Research = () => {
                     }}
                   >
                     <img
-                      src="/lovable-uploads/researchh.png"
+                      src="/lovable-uploads/research.png"
                       alt="DYNA Robot Research"
                       className="w-full h-[650px] transition-transform duration-500 group-hover:scale-105"
                       style={{
@@ -497,7 +497,7 @@ const Research = () => {
                   }}
                 >
                   <img
-                    src="/lovable-uploads/researchh.png"
+                    src="/lovable-uploads/research.png"
                     alt="DYNA Robot Research"
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     fetchPriority="high"
