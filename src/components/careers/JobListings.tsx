@@ -18,17 +18,12 @@ const JobListings = () => {
   const jobData = [
     {
       department: "Engineering",
-      count: 7,
+      count: 6,
       roles: [
         {
           location: "Redwood City, CA",
           title: "Senior Software Engineer, Data Platform",
           link: "https://jobs.ashbyhq.com/dyna-robotics/43dcc186-62b1-4641-9365-3cb9767fc653",
-        },
-        {
-          location: "Redwood City, CA",
-          title: "Senior Software Engineer, DevOps",
-          link: "https://jobs.ashbyhq.com/dyna-robotics/37016340-4b33-4a26-b66c-315f715a99c6",
         },
         {
           location: "Redwood City, CA",
