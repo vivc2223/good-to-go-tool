@@ -70,13 +70,8 @@ const JobListings = () => {
     },
     {
       department: "Operations",
-      count: 3,
+      count: 2,
       roles: [
-        {
-          location: "Redwood City, CA",
-          title: "Data Annotation Specialist",
-          link: "https://jobs.ashbyhq.com/dyna-robotics/080a2b88-f724-4585-8d16-2d4839a1d563",
-        },
         {
           location: "Redwood City, CA",
           title: "Enterprise Account Executive",
