@@ -169,7 +169,7 @@ const ScrollPinnedIndustries = forwardRef<ScrollPinnedIndustriesRef>(
 
                     {/* Button moved inline with description */}
                     <div className="flex justify-start lg:justify-end">
-                      <LineButton
+                      <button
                         onClick={() => {
                           const deploymentSection =
                             document.getElementById("deployment-form");
@@ -179,10 +179,39 @@ const ScrollPinnedIndustries = forwardRef<ScrollPinnedIndustriesRef>(
                             });
                           }
                         }}
-                        color="white"
+                        className="group inline-flex items-center gap-3 transition-all duration-300 hover:gap-4 text-white"
                       >
-                        Need Help In Your Industry?
-                      </LineButton>
+                        <span
+                          className="font-medium text-white"
+                          style={{
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontSize: "clamp(16px, 2vw, 18px)",
+                            textDecoration: "underline",
+                            textUnderlineOffset: "4px",
+                            textDecorationThickness: "1px",
+                          }}
+                        >
+                          Need Help In Your Industry?
+                        </span>
+                        <div className="w-8 h-8 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6 3L11 8L6 13"
+                              stroke="white"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
