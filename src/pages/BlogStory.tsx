@@ -59,9 +59,19 @@ const BlogStory = () => {
             Innovation Fund, Salesforce Ventures, Samsung Next, LG Technology
             Ventures and amongst others.
           </p>
-
+          <video
+            className="w-full h-auto rounded-t-lg"
+            controls
+            loop
+            muted
+            playsInline
+            autoPlay
+          >
+            <source src="/videos/fundraising.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <p
-            className="text-lg leading-relaxed mb-6 text-white"
+            className="text-lg leading-relaxed my-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
