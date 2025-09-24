@@ -60,7 +60,7 @@ const BlogStory = () => {
             Ventures and amongst others.
           </p>
           <video
-            className="w-full h-auto rounded-t-lg"
+            className="w-full h-auto rounded-lg"
             controls
             loop
             muted

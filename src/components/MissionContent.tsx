@@ -255,9 +255,9 @@ const MissionContent = () => {
               </h2>
             </div>
           </div>
-          <div>
+          <div className="w-full flex justify-center items-center">
             <video
-              className="w-full h-[450px]"
+              className="w-full h-auto max-w-5xl rounded-lg"
               controls
               loop
               muted
