@@ -882,8 +882,7 @@ const MoreResearch = () => {
               hiring
             </a>{" "}
             across AI research and engineering for both full-time and internship
-            positions. Some of our videos also contain an easter egg puzzle; can
-            you solve it?
+            positions.
           </p>
 
           <video
