@@ -22,7 +22,7 @@ const JobListings = () => {
       roles: [
         {
           location: "Redwood City, CA",
-          title: "Senior Software Engineer, Data Platform",
+          title: "Senior Software Engineer, ML Data Platform",
           link: "https://jobs.ashbyhq.com/dyna-robotics/43dcc186-62b1-4641-9365-3cb9767fc653",
         },
         {
