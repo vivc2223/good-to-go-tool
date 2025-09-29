@@ -254,28 +254,28 @@ const Navbar = () => {
                 <div className="flex flex-col space-y-4 pt-16">
                   <Link
                     to="/blog"
-                    className="dropdown-link block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    className="dropdown-link text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Stories
                   </Link>
                   <Link
                     to="/mission"
-                    className="dropdown-link block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    className="dropdown-link text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Mission
                   </Link>
                   <Link
                     to="/culture"
-                    className="dropdown-link block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    className="dropdown-link text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Culture
                   </Link>
                   <Link
                     to="/careers"
-                    className="dropdown-link block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    className="dropdown-link text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Careers
