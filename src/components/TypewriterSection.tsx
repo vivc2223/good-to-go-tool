@@ -11,6 +11,8 @@ const TypewriterSection = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [isPinned, setIsPinned] = useState(false);
+  const [missionPhraseIndex, setMissionPhraseIndex] = useState(0);
+  const [missionAnimatedText, setMissionAnimatedText] = useState("embodied AI");
   const sectionRef = useRef<HTMLElement>(null);
   const leftColumnRef = useRef<HTMLDivElement>(null);
   const rightColumnRef = useRef<HTMLDivElement>(null);
@@ -24,6 +26,15 @@ const TypewriterSection = () => {
       "dexterous autonomy",
       "high-throughput reliability",
       "continuous deployment",
+    ],
+    []
+  );
+
+  const missionPhrases = useMemo(
+    () => [
+      "embodied AI",
+      "zero-shot generalization",
+      "the future of work"
     ],
     []
   );
@@ -84,6 +95,20 @@ const TypewriterSection = () => {
     currentTypewriterIndex,
     typewriterPhrases,
   ]);
+
+  // Mission headline typewriter effect - cycles every 2.5 seconds
+  useEffect(() => {
+    const missionInterval = setInterval(() => {
+      setMissionPhraseIndex((prev) => (prev + 1) % missionPhrases.length);
+    }, 2500);
+
+    return () => clearInterval(missionInterval);
+  }, [missionPhrases.length]);
+
+  // Update mission animated text with fade effect
+  useEffect(() => {
+    setMissionAnimatedText(missionPhrases[missionPhraseIndex]);
+  }, [missionPhraseIndex, missionPhrases]);
 
   // Smart pinning: Pin during scroll-to-reveal, unpin after all blocks shown
   // useEffect(() => {
@@ -285,7 +310,17 @@ const TypewriterSection = () => {
                               color: "white",
                             }}
                           >
-                            Bring embodied AI to the real world.
+                            Bring{" "}
+                            <span 
+                              className="inline-block transition-opacity duration-300"
+                              key={missionPhraseIndex}
+                              style={{
+                                animation: "fade-in 0.3s ease-out"
+                              }}
+                            >
+                              {missionAnimatedText}
+                            </span>{" "}
+                            to the real world.
                           </p>
                         </div>
                       </div>
