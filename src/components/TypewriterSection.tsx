@@ -192,7 +192,7 @@ const TypewriterSection = () => {
       },
       missionIsPaused
         ? missionIsTyping
-          ? 700 // Pause after typing
+          ? 4000 // Pause after typing (4 seconds display time)
           : 100 // Brief pause after erasing
         : missionPreErasePause
         ? 200 // Pre-erase pause
