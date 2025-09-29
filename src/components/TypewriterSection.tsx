@@ -254,7 +254,7 @@ const TypewriterSection = () => {
                         ))}
                       </div>
                     </div> */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start w-full max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
                       {/* Left Column - Our Mission & Bold Headline */}
                       <div className="text-left">
                         {/* Our Mission header */}
