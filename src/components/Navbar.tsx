@@ -212,6 +212,28 @@ const Navbar = () => {
                 filter: brightness(0.85) saturate(1.1);
               }
             }
+
+            .dropdown-link {
+              position: relative;
+              display: inline-block;
+            }
+
+            .dropdown-link::after {
+              content: '';
+              position: absolute;
+              bottom: -6px;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: white;
+              transform: scaleX(0);
+              transform-origin: left;
+              transition: transform 300ms ease-in-out;
+            }
+
+            .dropdown-link:hover::after {
+              transform: scaleX(1);
+            }
           `}</style>
           <div className="relative z-10 h-screen flex items-start pt-12">
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
@@ -232,28 +254,28 @@ const Navbar = () => {
                 <div className="flex flex-col space-y-4 pt-16">
                   <Link
                     to="/blog"
-                    className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    className="dropdown-link block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Stories
                   </Link>
                   <Link
                     to="/mission"
-                    className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    className="dropdown-link block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Mission
                   </Link>
                   <Link
                     to="/culture"
-                    className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    className="dropdown-link block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Culture
                   </Link>
                   <Link
                     to="/careers"
-                    className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
+                    className="dropdown-link block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Careers
