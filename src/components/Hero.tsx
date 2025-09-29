@@ -536,7 +536,7 @@ const Hero = () => {
             style={{
               ...heroTextStyle,
               fontSize: isMobile ? "28px" : "49.5px",
-              fontFamily: "system-ui, -apple-system, sans-serif",
+              fontFamily: "Helvetica Now Display, system-ui, -apple-system, sans-serif",
               fontWeight: "normal",
               letterSpacing: "-0.02em",
               color: "white",
