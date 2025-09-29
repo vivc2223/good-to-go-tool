@@ -274,10 +274,10 @@ const TypewriterSection = () => {
                         </h3>
                       </div>
 
-                      {/* Bold headline */}
-                      <div className="mb-4 sm:mb-6 md:mb-4">
+                      {/* Flex row: Bold headline on left, first text on right */}
+                      <div className="mb-4 sm:mb-6 md:mb-4 flex flex-col md:flex-row justify-between items-start gap-4">
                         <p
-                          className="leading-tight"
+                          className="leading-tight flex-shrink-0"
                           style={{
                             fontFamily:
                               "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -289,14 +289,27 @@ const TypewriterSection = () => {
                         >
                           Bring embodied AI to the real world.
                         </p>
+                        <p
+                          className="leading-relaxed text-right flex-shrink"
+                          style={{
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontSize: "clamp(16px, 5vw, 20px)",
+                            fontWeight: "normal",
+                            lineHeight: "1.6",
+                            color: "white",
+                          }}
+                        >
+                          {textBlocks[0]}
+                        </p>
                       </div>
 
-                      {/* Text blocks container with integrated CTA */}
+                      {/* Remaining text blocks (right-aligned) */}
                       <div className="relative space-y-4 sm:space-y-6 md:space-y-4">
-                        {textBlocks.map((text, index) => (
-                          <div key={index} className="opacity-100">
+                        {textBlocks.slice(1).map((text, index) => (
+                          <div key={index} className="opacity-100 text-right">
                             <p
-                              className="leading-relaxed whitespace-pre-line w-full "
+                              className="leading-relaxed whitespace-pre-line w-full"
                               style={{
                                 fontFamily:
                                   "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -311,8 +324,8 @@ const TypewriterSection = () => {
                           </div>
                         ))}
 
-                        {/* Learn More Button - at the bottom after all text blocks */}
-                        <div className="mt-6 sm:mt-8">
+                        {/* Learn More Button - right-aligned */}
+                        <div className="mt-6 sm:mt-8 flex justify-end">
                           <button
                             onClick={() => navigate("/mission")}
                             className="group inline-flex items-center gap-3 transition-all duration-300 hover:gap-4 text-white"
