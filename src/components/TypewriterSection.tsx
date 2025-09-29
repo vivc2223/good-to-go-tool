@@ -15,7 +15,11 @@ const TypewriterSection = () => {
   const [missionPhraseIndex, setMissionPhraseIndex] = useState(0);
   const [missionIsTyping, setMissionIsTyping] = useState(true);
   const [missionIsPaused, setMissionIsPaused] = useState(false);
+  const [missionPreErasePause, setMissionPreErasePause] = useState(false);
+  const [showMissionCaret, setShowMissionCaret] = useState(true);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const headlineRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const leftColumnRef = useRef<HTMLDivElement>(null);
   const rightColumnRef = useRef<HTMLDivElement>(null);
@@ -36,8 +40,8 @@ const TypewriterSection = () => {
   const missionPhrases = useMemo(
     () => [
       "embodied AI",
-      "zero-shot generalization",
-      "the future of work"
+      "physical AGI",
+      "real autonomy"
     ],
     []
   );
@@ -56,6 +60,20 @@ const TypewriterSection = () => {
     const handleChange = () => setPrefersReducedMotion(mediaQuery.matches);
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  // Viewport visibility detection for mission headline
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    
+    if (headlineRef.current) {
+      observer.observe(headlineRef.current);
+    }
+    
+    return () => observer.disconnect();
   }, []);
 
   // Cursor blinking effect
@@ -111,6 +129,9 @@ const TypewriterSection = () => {
 
   // Mission headline true typewriter effect
   useEffect(() => {
+    // Only animate when visible
+    if (!isVisible) return;
+
     const currentPhrase = missionPhrases[missionPhraseIndex];
 
     // If reduced motion, show full phrase instantly with longer pauses
@@ -129,42 +150,55 @@ const TypewriterSection = () => {
     const typewriterTimeout = setTimeout(
       () => {
         if (missionIsPaused) {
-          // Pause after completing typing or erasing
+          // Pause after completing typing
           if (missionIsTyping) {
-            // Just finished typing, now pause before erasing
+            // Just finished typing, now enter pre-erase pause
             setMissionIsPaused(false);
-            setMissionIsTyping(false);
+            setMissionPreErasePause(true);
+            setShowMissionCaret(false);
           } else {
             // Just finished erasing, now pause before next phrase
             setMissionIsPaused(false);
             setMissionIsTyping(true);
+            setShowMissionCaret(true);
             setMissionPhraseIndex((prev) => (prev + 1) % missionPhrases.length);
           }
+        } else if (missionPreErasePause) {
+          // Pre-erase pause completed, start erasing
+          setMissionPreErasePause(false);
+          setMissionIsTyping(false);
+          setShowMissionCaret(true);
         } else if (missionIsTyping) {
           // Typing characters one by one
           if (missionText.length < currentPhrase.length) {
             setMissionText((prev) => currentPhrase.slice(0, prev.length + 1));
+            setShowMissionCaret(true);
           } else {
-            // Finished typing, pause before erasing
+            // Finished typing, pause
             setMissionIsPaused(true);
+            setShowMissionCaret(false);
           }
         } else {
           // Erasing characters one by one
           if (missionText.length > 0) {
             setMissionText((prev) => prev.slice(0, -1));
+            setShowMissionCaret(true);
           } else {
-            // Finished erasing, pause before next phrase
+            // Finished erasing, brief pause
             setMissionIsPaused(true);
+            setShowMissionCaret(false);
           }
         }
       },
       missionIsPaused
         ? missionIsTyping
-          ? 600 // Pause after typing
-          : 400 // Pause after erasing
+          ? 700 // Pause after typing
+          : 100 // Brief pause after erasing
+        : missionPreErasePause
+        ? 200 // Pre-erase pause
         : missionIsTyping
-        ? 50 // Typing speed
-        : 40 // Erasing speed
+        ? 60 // Typing speed (55-65ms range)
+        : 42 // Erasing speed (40-45ms range)
     );
 
     return () => clearTimeout(typewriterTimeout);
@@ -172,9 +206,11 @@ const TypewriterSection = () => {
     missionText,
     missionIsTyping,
     missionIsPaused,
+    missionPreErasePause,
     missionPhraseIndex,
     missionPhrases,
     prefersReducedMotion,
+    isVisible,
   ]);
 
   // Smart pinning: Pin during scroll-to-reveal, unpin after all blocks shown
@@ -250,11 +286,36 @@ const TypewriterSection = () => {
           }
           
           /* Mission headline responsive styling */
-          @media (max-width: 640px) {
+          @media (min-width: 1024px) {
             .mission-headline {
-              white-space: normal !important;
-              font-size: clamp(28px, 8vw, 36px) !important;
+              font-size: clamp(40px, 5vw, 56px) !important;
             }
+          }
+
+          @media (max-width: 1023px) and (min-width: 768px) {
+            .mission-headline {
+              font-size: clamp(36px, 6vw, 44px) !important;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .mission-headline {
+              font-size: clamp(28px, 7vw, 32px) !important;
+            }
+            
+            .mission-headline .second-line {
+              white-space: normal !important;
+            }
+          }
+
+          /* Caret blinking */
+          @keyframes blink-caret {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+          }
+
+          .caret-blink {
+            animation: blink-caret 1s step-end infinite;
           }
           
           /* Respect reduced motion preference */
@@ -381,29 +442,38 @@ const TypewriterSection = () => {
                         </div>
 
                         {/* Bold headline */}
-                        <div>
+                        <div ref={headlineRef}>
                           <p
                             className="mission-headline leading-tight"
                             style={{
                               fontFamily:
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
-                              fontSize: "clamp(32px, 6vw, 45px)",
+                              fontSize: "clamp(40px, 5vw, 56px)",
                               fontWeight: "bold",
                               lineHeight: "1.2",
                               color: "white",
                             }}
                           >
-                            <span className="whitespace-nowrap lg:whitespace-nowrap">
+                            {/* First line - always together */}
+                            <span className="block whitespace-nowrap">
                               Bring{" "}
                               <span 
                                 className="inline-block min-w-[1ch]"
                                 aria-live="polite"
                                 aria-atomic="true"
                               >
-                                {missionText}
-                              </span>{" "}
+                                {prefersReducedMotion 
+                                  ? "embodied AI"
+                                  : missionText}
+                                {!prefersReducedMotion && showMissionCaret && (
+                                  <span className="inline-block ml-0.5 caret-blink">
+                                    |
+                                  </span>
+                                )}
+                              </span>
                             </span>
-                            <span className="inline-block">
+                            {/* Second line - force break */}
+                            <span className="block whitespace-nowrap second-line">
                               to the real world.
                             </span>
                           </p>
