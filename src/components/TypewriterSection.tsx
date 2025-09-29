@@ -258,61 +258,67 @@ const TypewriterSection = () => {
                         ))}
                       </div>
                     </div> */}
-                    <div className="max-w-3xl text-left">
-                      {/* Our Mission header */}
-                      <div className="mb-4 sm:mb-8">
-                        <h3
-                          style={{
-                            fontFamily:
-                              "UntitledSans, system-ui, -apple-system, sans-serif",
-                            fontSize: "clamp(28px, 5vw, 41px)",
-                            fontWeight: "normal",
-                            color: "white",
-                          }}
-                        >
-                          Our Mission
-                        </h3>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start w-full max-w-7xl">
+                      {/* Left Column - Our Mission & Bold Headline */}
+                      <div className="text-left">
+                        {/* Our Mission header */}
+                        <div className="mb-4 sm:mb-8">
+                          <h3
+                            style={{
+                              fontFamily:
+                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                              fontSize: "clamp(28px, 5vw, 41px)",
+                              fontWeight: "normal",
+                              color: "white",
+                            }}
+                          >
+                            Our Mission
+                          </h3>
+                        </div>
+
+                        {/* Bold headline */}
+                        <div>
+                          <p
+                            className="leading-tight"
+                            style={{
+                              fontFamily:
+                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                              fontSize: "clamp(32px, 6vw, 45px)",
+                              fontWeight: "bold",
+                              lineHeight: "1.2",
+                              color: "white",
+                            }}
+                          >
+                            Bring embodied AI to the real world.
+                          </p>
+                        </div>
                       </div>
 
-                      {/* Bold headline */}
-                      <div className="mb-4 sm:mb-6 md:mb-4">
-                        <p
-                          className="leading-tight"
-                          style={{
-                            fontFamily:
-                              "UntitledSans, system-ui, -apple-system, sans-serif",
-                            fontSize: "clamp(32px, 6vw, 45px)",
-                            fontWeight: "bold",
-                            lineHeight: "1.2",
-                            color: "white",
-                          }}
-                        >
-                          Bring embodied AI to the real world.
-                        </p>
-                      </div>
+                      {/* Right Column - Text Blocks & CTA */}
+                      <div className="text-left lg:text-right">
+                        {/* Text blocks container */}
+                        <div className="space-y-4 mb-6 sm:mb-8">
+                          {textBlocks.map((text, index) => (
+                            <div key={index}>
+                              <p
+                                className="leading-relaxed whitespace-pre-line"
+                                style={{
+                                  fontFamily:
+                                    "UntitledSans, system-ui, -apple-system, sans-serif",
+                                  fontSize: "clamp(16px, 5vw, 20px)",
+                                  fontWeight: "normal",
+                                  lineHeight: "1.4",
+                                  color: "white",
+                                }}
+                              >
+                                {text}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
 
-                      {/* Text blocks container with integrated CTA */}
-                      <div className="relative space-y-4 sm:space-y-6 md:space-y-4">
-                        {textBlocks.map((text, index) => (
-                          <div key={index} className="opacity-100">
-                            <p
-                              className="leading-relaxed whitespace-pre-line w-full "
-                              style={{
-                                fontFamily:
-                                  "UntitledSans, system-ui, -apple-system, sans-serif",
-                                fontSize: "clamp(16px, 5vw, 20px)",
-                                fontWeight: "normal",
-                                lineHeight: "1.6",
-                                color: "white",
-                              }}
-                            >
-                              {text}
-                            </p>
-                          </div>
-                        ))}
-
-                        {/* Learn More Button - at the bottom after all text blocks */}
-                        <div className="mt-6 sm:mt-8">
+                        {/* Learn More Button */}
+                        <div className="flex justify-start lg:justify-end">
                           <button
                             onClick={() => navigate("/mission")}
                             className="group inline-flex items-center gap-3 transition-all duration-300 hover:gap-4 text-white"
