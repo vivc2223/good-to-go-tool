@@ -42,7 +42,7 @@ const RealWorldAutonomySection = () => {
               style={{
                 fontFamily: 'UntitledSans, system-ui, -apple-system, sans-serif',
                 fontSize: '49.5px',
-                fontWeight: 'bold',
+                fontWeight: '900',
                 lineHeight: '1.1'
               }}
             >
