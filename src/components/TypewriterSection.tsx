@@ -11,8 +11,11 @@ const TypewriterSection = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [isPinned, setIsPinned] = useState(false);
+  const [missionText, setMissionText] = useState("");
   const [missionPhraseIndex, setMissionPhraseIndex] = useState(0);
-  const [missionAnimatedText, setMissionAnimatedText] = useState("embodied AI");
+  const [missionIsTyping, setMissionIsTyping] = useState(true);
+  const [missionIsPaused, setMissionIsPaused] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const leftColumnRef = useRef<HTMLDivElement>(null);
   const rightColumnRef = useRef<HTMLDivElement>(null);
@@ -44,6 +47,16 @@ const TypewriterSection = () => {
     "Our robots come with out-of-the-box intelligence—easy to set up and scale.",
     "Dyna's world-class team delivers the best of research and product to push the frontier of AGI in the real world.",
   ];
+
+  // Detect prefers-reduced-motion
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+    
+    const handleChange = () => setPrefersReducedMotion(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
 
   // Cursor blinking effect
   useEffect(() => {
@@ -96,19 +109,73 @@ const TypewriterSection = () => {
     typewriterPhrases,
   ]);
 
-  // Mission headline typewriter effect - cycles every 2.5 seconds
+  // Mission headline true typewriter effect
   useEffect(() => {
-    const missionInterval = setInterval(() => {
-      setMissionPhraseIndex((prev) => (prev + 1) % missionPhrases.length);
-    }, 2500);
+    const currentPhrase = missionPhrases[missionPhraseIndex];
 
-    return () => clearInterval(missionInterval);
-  }, [missionPhrases.length]);
+    // If reduced motion, show full phrase instantly with longer pauses
+    if (prefersReducedMotion) {
+      if (missionText !== currentPhrase) {
+        setMissionText(currentPhrase);
+      }
+      
+      const pauseTimeout = setTimeout(() => {
+        setMissionPhraseIndex((prev) => (prev + 1) % missionPhrases.length);
+      }, 3000);
+      
+      return () => clearTimeout(pauseTimeout);
+    }
 
-  // Update mission animated text with fade effect
-  useEffect(() => {
-    setMissionAnimatedText(missionPhrases[missionPhraseIndex]);
-  }, [missionPhraseIndex, missionPhrases]);
+    const typewriterTimeout = setTimeout(
+      () => {
+        if (missionIsPaused) {
+          // Pause after completing typing or erasing
+          if (missionIsTyping) {
+            // Just finished typing, now pause before erasing
+            setMissionIsPaused(false);
+            setMissionIsTyping(false);
+          } else {
+            // Just finished erasing, now pause before next phrase
+            setMissionIsPaused(false);
+            setMissionIsTyping(true);
+            setMissionPhraseIndex((prev) => (prev + 1) % missionPhrases.length);
+          }
+        } else if (missionIsTyping) {
+          // Typing characters one by one
+          if (missionText.length < currentPhrase.length) {
+            setMissionText((prev) => currentPhrase.slice(0, prev.length + 1));
+          } else {
+            // Finished typing, pause before erasing
+            setMissionIsPaused(true);
+          }
+        } else {
+          // Erasing characters one by one
+          if (missionText.length > 0) {
+            setMissionText((prev) => prev.slice(0, -1));
+          } else {
+            // Finished erasing, pause before next phrase
+            setMissionIsPaused(true);
+          }
+        }
+      },
+      missionIsPaused
+        ? missionIsTyping
+          ? 600 // Pause after typing
+          : 400 // Pause after erasing
+        : missionIsTyping
+        ? 50 // Typing speed
+        : 40 // Erasing speed
+    );
+
+    return () => clearTimeout(typewriterTimeout);
+  }, [
+    missionText,
+    missionIsTyping,
+    missionIsPaused,
+    missionPhraseIndex,
+    missionPhrases,
+    prefersReducedMotion,
+  ]);
 
   // Smart pinning: Pin during scroll-to-reveal, unpin after all blocks shown
   // useEffect(() => {
@@ -160,7 +227,7 @@ const TypewriterSection = () => {
 
   return (
     <>
-      {/* Custom styles for mobile height optimization */}
+      {/* Custom styles for mobile height optimization and mission headline */}
       <style>
         {`
           @media (max-height: 600px) {
@@ -179,6 +246,22 @@ const TypewriterSection = () => {
             }
             .typewriter-sticky {
               min-height: 100vh !important;
+            }
+          }
+          
+          /* Mission headline responsive styling */
+          @media (max-width: 640px) {
+            .mission-headline {
+              white-space: normal !important;
+              font-size: clamp(28px, 8vw, 36px) !important;
+            }
+          }
+          
+          /* Respect reduced motion preference */
+          @media (prefers-reduced-motion: reduce) {
+            .mission-headline * {
+              animation: none !important;
+              transition: none !important;
             }
           }
         `}
@@ -300,7 +383,7 @@ const TypewriterSection = () => {
                         {/* Bold headline */}
                         <div>
                           <p
-                            className="leading-tight"
+                            className="mission-headline leading-tight"
                             style={{
                               fontFamily:
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
@@ -310,17 +393,19 @@ const TypewriterSection = () => {
                               color: "white",
                             }}
                           >
-                            Bring{" "}
-                            <span 
-                              className="inline-block transition-opacity duration-300"
-                              key={missionPhraseIndex}
-                              style={{
-                                animation: "fade-in 0.3s ease-out"
-                              }}
-                            >
-                              {missionAnimatedText}
-                            </span>{" "}
-                            to the real world.
+                            <span className="whitespace-nowrap lg:whitespace-nowrap">
+                              Bring{" "}
+                              <span 
+                                className="inline-block min-w-[1ch]"
+                                aria-live="polite"
+                                aria-atomic="true"
+                              >
+                                {missionText}
+                              </span>{" "}
+                            </span>
+                            <span className="inline-block">
+                              to the real world.
+                            </span>
                           </p>
                         </div>
                       </div>
