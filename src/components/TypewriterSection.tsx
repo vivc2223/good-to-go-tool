@@ -29,10 +29,9 @@ const TypewriterSection = () => {
   );
 
   const textBlocks = [
-    "DYNA brings embodied AGI to the real world by building high-performance, intelligent robots that scale.",
     "We develop a foundation model for robotics that adapts across environments and learns new skills within hours.",
     "Our robots come with out-of-the-box intelligence—easy to set up and scale.",
-    "Dyna’s world-class team delivers the best of research and product to push the frontier of AGI in the real world.",
+    "Dyna's world-class team delivers the best of research and product to push the frontier of AGI in the real world.",
   ];
 
   // Cursor blinking effect
@@ -273,6 +272,23 @@ const TypewriterSection = () => {
                         >
                           Our Mission
                         </h3>
+                      </div>
+
+                      {/* Bold headline */}
+                      <div className="mb-4 sm:mb-6 md:mb-4">
+                        <p
+                          className="leading-tight"
+                          style={{
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontSize: "clamp(32px, 6vw, 45px)",
+                            fontWeight: "bold",
+                            lineHeight: "1.2",
+                            color: "white",
+                          }}
+                        >
+                          Bring embodied AI to the real world.
+                        </p>
                       </div>
 
                       {/* Text blocks container with integrated CTA */}
