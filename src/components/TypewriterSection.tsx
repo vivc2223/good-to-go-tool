@@ -190,12 +190,8 @@ const TypewriterSection = () => {
           <div className="h-full flex items-center justify-center w-full relative z-10">
             {/* Responsive padding container */}
             <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6">
-              {/* Main content wrapper with responsive max-width */}
-              <div className="w-full max-w-7xl">
-                {/* Content container with responsive alignment */}
-                <div className="flex flex-col space-y-4 sm:space-y-6 md:space-y-4">
-                  {/* Headline section with responsive centering */}
-                  {/* <div ref={leftRevealRef} style={leftRevealStyle}>
+              {/* Headline section with responsive centering */}
+              {/* <div ref={leftRevealRef} style={leftRevealStyle}>
                     <div className="max-w-4xl text-left">
                       <div
                         style={{
@@ -258,7 +254,7 @@ const TypewriterSection = () => {
                         ))}
                       </div>
                     </div> */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start w-full max-w-7xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start w-full max-w-7xl mx-auto">
                       {/* Left Column - Our Mission & Bold Headline */}
                       <div className="text-left">
                         {/* Our Mission header */}
@@ -360,8 +356,6 @@ const TypewriterSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
         </div>
       </section>
     </>
