@@ -251,7 +251,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Right side - Large navigation links closer together */}
-                <div className="flex flex-col items-start space-y-4 pt-16">
+                <div className="flex flex-col space-y-4 pt-16">
                   <Link
                     to="/blog"
                     className="dropdown-link text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"

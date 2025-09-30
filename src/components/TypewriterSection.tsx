@@ -11,15 +11,6 @@ const TypewriterSection = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [isPinned, setIsPinned] = useState(false);
-  const [missionText, setMissionText] = useState("");
-  const [missionPhraseIndex, setMissionPhraseIndex] = useState(0);
-  const [missionIsTyping, setMissionIsTyping] = useState(true);
-  const [missionIsPaused, setMissionIsPaused] = useState(false);
-  const [missionPreErasePause, setMissionPreErasePause] = useState(false);
-  const [showMissionCaret, setShowMissionCaret] = useState(true);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const headlineRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const leftColumnRef = useRef<HTMLDivElement>(null);
   const rightColumnRef = useRef<HTMLDivElement>(null);
@@ -37,44 +28,12 @@ const TypewriterSection = () => {
     []
   );
 
-  const missionPhrases = useMemo(
-    () => [
-      "embodied AI",
-      "physical AGI",
-      "real autonomy"
-    ],
-    []
-  );
-
   const textBlocks = [
+    "DYNA brings embodied AGI to the real world by building high-performance, intelligent robots that scale.",
     "We develop a foundation model for robotics that adapts across environments and learns new skills within hours.",
     "Our robots come with out-of-the-box intelligence—easy to set up and scale.",
-    "Dyna's world-class team delivers the best of research and product to push the frontier of AGI in the real world.",
+    "Dyna’s world-class team delivers the best of research and product to push the frontier of AGI in the real world.",
   ];
-
-  // Detect prefers-reduced-motion
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPrefersReducedMotion(mediaQuery.matches);
-    
-    const handleChange = () => setPrefersReducedMotion(mediaQuery.matches);
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
-
-  // Viewport visibility detection for mission headline
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.1 }
-    );
-    
-    if (headlineRef.current) {
-      observer.observe(headlineRef.current);
-    }
-    
-    return () => observer.disconnect();
-  }, []);
 
   // Cursor blinking effect
   useEffect(() => {
@@ -127,92 +86,6 @@ const TypewriterSection = () => {
     typewriterPhrases,
   ]);
 
-  // Mission headline true typewriter effect
-  useEffect(() => {
-    // Only animate when visible
-    if (!isVisible) return;
-
-    const currentPhrase = missionPhrases[missionPhraseIndex];
-
-    // If reduced motion, show full phrase instantly with longer pauses
-    if (prefersReducedMotion) {
-      if (missionText !== currentPhrase) {
-        setMissionText(currentPhrase);
-      }
-      
-      const pauseTimeout = setTimeout(() => {
-        setMissionPhraseIndex((prev) => (prev + 1) % missionPhrases.length);
-      }, 3000);
-      
-      return () => clearTimeout(pauseTimeout);
-    }
-
-    const typewriterTimeout = setTimeout(
-      () => {
-        if (missionIsPaused) {
-          // Pause after completing typing
-          if (missionIsTyping) {
-            // Just finished typing, now enter pre-erase pause
-            setMissionIsPaused(false);
-            setMissionPreErasePause(true);
-            setShowMissionCaret(false);
-          } else {
-            // Just finished erasing, now pause before next phrase
-            setMissionIsPaused(false);
-            setMissionIsTyping(true);
-            setShowMissionCaret(true);
-            setMissionPhraseIndex((prev) => (prev + 1) % missionPhrases.length);
-          }
-        } else if (missionPreErasePause) {
-          // Pre-erase pause completed, start erasing
-          setMissionPreErasePause(false);
-          setMissionIsTyping(false);
-          setShowMissionCaret(true);
-        } else if (missionIsTyping) {
-          // Typing characters one by one
-          if (missionText.length < currentPhrase.length) {
-            setMissionText((prev) => currentPhrase.slice(0, prev.length + 1));
-            setShowMissionCaret(true);
-          } else {
-            // Finished typing, pause
-            setMissionIsPaused(true);
-            setShowMissionCaret(false);
-          }
-        } else {
-          // Erasing characters one by one
-          if (missionText.length > 0) {
-            setMissionText((prev) => prev.slice(0, -1));
-            setShowMissionCaret(true);
-          } else {
-            // Finished erasing, brief pause
-            setMissionIsPaused(true);
-            setShowMissionCaret(false);
-          }
-        }
-      },
-      missionIsPaused
-        ? missionIsTyping
-          ? 4000 // Pause after typing (4 seconds display time)
-          : 100 // Brief pause after erasing
-        : missionPreErasePause
-        ? 200 // Pre-erase pause
-        : missionIsTyping
-        ? 60 // Typing speed (55-65ms range)
-        : 42 // Erasing speed (40-45ms range)
-    );
-
-    return () => clearTimeout(typewriterTimeout);
-  }, [
-    missionText,
-    missionIsTyping,
-    missionIsPaused,
-    missionPreErasePause,
-    missionPhraseIndex,
-    missionPhrases,
-    prefersReducedMotion,
-    isVisible,
-  ]);
-
   // Smart pinning: Pin during scroll-to-reveal, unpin after all blocks shown
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -263,7 +136,7 @@ const TypewriterSection = () => {
 
   return (
     <>
-      {/* Custom styles for mobile height optimization and mission headline */}
+      {/* Custom styles for mobile height optimization */}
       <style>
         {`
           @media (max-height: 600px) {
@@ -282,47 +155,6 @@ const TypewriterSection = () => {
             }
             .typewriter-sticky {
               min-height: 100vh !important;
-            }
-          }
-          
-          /* Mission headline responsive styling */
-          @media (min-width: 1024px) {
-            .mission-headline {
-              font-size: clamp(40px, 5vw, 56px) !important;
-            }
-          }
-
-          @media (max-width: 1023px) and (min-width: 768px) {
-            .mission-headline {
-              font-size: clamp(36px, 6vw, 44px) !important;
-            }
-          }
-
-          @media (max-width: 767px) {
-            .mission-headline {
-              font-size: clamp(28px, 7vw, 32px) !important;
-            }
-            
-            .mission-headline .second-line {
-              white-space: normal !important;
-            }
-          }
-
-          /* Caret blinking */
-          @keyframes blink-caret {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-          }
-
-          .caret-blink {
-            animation: blink-caret 1s step-end infinite;
-          }
-          
-          /* Respect reduced motion preference */
-          @media (prefers-reduced-motion: reduce) {
-            .mission-headline * {
-              animation: none !important;
-              transition: none !important;
             }
           }
         `}
@@ -359,8 +191,12 @@ const TypewriterSection = () => {
           <div className="h-full flex items-center justify-center w-full relative z-10">
             {/* Responsive padding container */}
             <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6">
-              {/* Headline section with responsive centering */}
-              {/* <div ref={leftRevealRef} style={leftRevealStyle}>
+              {/* Main content wrapper with responsive max-width */}
+              <div className="w-full max-w-7xl">
+                {/* Content container with responsive alignment */}
+                <div className="flex flex-col space-y-4 sm:space-y-6 md:space-y-4">
+                  {/* Headline section with responsive centering */}
+                  {/* <div ref={leftRevealRef} style={leftRevealStyle}>
                     <div className="max-w-4xl text-left">
                       <div
                         style={{
@@ -423,88 +259,44 @@ const TypewriterSection = () => {
                         ))}
                       </div>
                     </div> */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
-                      {/* Left Column - Our Mission & Bold Headline */}
-                      <div className="text-left">
-                        {/* Our Mission header */}
-                        <div className="mb-4 sm:mb-8">
-                          <h3
-                            style={{
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
-                              fontSize: "clamp(28px, 5vw, 41px)",
-                              fontWeight: "normal",
-                              color: "white",
-                            }}
-                          >
-                            Our Mission
-                          </h3>
-                        </div>
-
-                        {/* Bold headline */}
-                        <div ref={headlineRef}>
-                          <p
-                            className="mission-headline leading-tight"
-                            style={{
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
-                              fontSize: "clamp(40px, 5vw, 56px)",
-                              fontWeight: "bold",
-                              lineHeight: "1.2",
-                              color: "white",
-                            }}
-                          >
-                            {/* First line - always together */}
-                            <span className="block whitespace-nowrap">
-                              Bring{" "}
-                              <span 
-                                className="inline-block min-w-[1ch]"
-                                aria-live="polite"
-                                aria-atomic="true"
-                              >
-                                {prefersReducedMotion 
-                                  ? "embodied AI"
-                                  : missionText}
-                                {!prefersReducedMotion && showMissionCaret && (
-                                  <span className="inline-block ml-0.5 caret-blink">
-                                    |
-                                  </span>
-                                )}
-                              </span>
-                            </span>
-                            {/* Second line - force break */}
-                            <span className="block whitespace-nowrap second-line">
-                              to the real world.
-                            </span>
-                          </p>
-                        </div>
+                    <div className="max-w-3xl text-left">
+                      {/* Our Mission header */}
+                      <div className="mb-4 sm:mb-8">
+                        <h3
+                          style={{
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontSize: "clamp(28px, 5vw, 41px)",
+                            fontWeight: "normal",
+                            color: "white",
+                          }}
+                        >
+                          Our Mission
+                        </h3>
                       </div>
 
-                      {/* Right Column - Text Blocks & CTA */}
-                      <div className="text-left lg:text-right">
-                        {/* Text blocks container */}
-                        <div className="space-y-4 mb-6 sm:mb-8">
-                          {textBlocks.map((text, index) => (
-                            <div key={index}>
-                              <p
-                                className="leading-relaxed whitespace-pre-line"
-                                style={{
-                                  fontFamily:
-                                    "UntitledSans, system-ui, -apple-system, sans-serif",
-                                  fontSize: "clamp(16px, 5vw, 20px)",
-                                  fontWeight: "normal",
-                                  lineHeight: "1.4",
-                                  color: "white",
-                                }}
-                              >
-                                {text}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
+                      {/* Text blocks container with integrated CTA */}
+                      <div className="relative space-y-4 sm:space-y-6 md:space-y-4">
+                        {textBlocks.map((text, index) => (
+                          <div key={index} className="opacity-100">
+                            <p
+                              className="leading-relaxed whitespace-pre-line w-full "
+                              style={{
+                                fontFamily:
+                                  "UntitledSans, system-ui, -apple-system, sans-serif",
+                                fontSize: "clamp(16px, 5vw, 20px)",
+                                fontWeight: "normal",
+                                lineHeight: "1.6",
+                                color: "white",
+                              }}
+                            >
+                              {text}
+                            </p>
+                          </div>
+                        ))}
 
-                        {/* Learn More Button */}
-                        <div className="flex justify-start lg:justify-end">
+                        {/* Learn More Button - at the bottom after all text blocks */}
+                        <div className="mt-6 sm:mt-8">
                           <button
                             onClick={() => navigate("/mission")}
                             className="group inline-flex items-center gap-3 transition-all duration-300 hover:gap-4 text-white"
@@ -546,6 +338,8 @@ const TypewriterSection = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
