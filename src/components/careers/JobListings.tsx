@@ -18,8 +18,13 @@ const JobListings = () => {
   const jobData = [
     {
       department: "Engineering",
-      count: 6,
+      count: 7,
       roles: [
+        {
+          location: "Redwood City, CA",
+          title: "Hardware Support Engineer",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/8c29f7f6-1f77-45fa-ba54-d5a7d80bbd08",
+        },
         {
           location: "Redwood City, CA",
           title: "Senior Software Engineer, ML Data Platform",
