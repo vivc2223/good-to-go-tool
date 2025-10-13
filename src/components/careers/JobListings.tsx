@@ -70,7 +70,7 @@ const JobListings = () => {
     },
     {
       department: "Operations",
-      count: 2,
+      count: 3,
       roles: [
         {
           location: "Redwood City, CA",
@@ -81,6 +81,11 @@ const JobListings = () => {
           location: "Redwood City, CA",
           title: "Model Product Manager",
           link: "https://jobs.ashbyhq.com/dyna-robotics/da2e4c70-72cf-4fa9-857b-9ae1593d0c74",
+        },
+        {
+          location: "Redwood City, CA",
+          title: "Technical Sourcer",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/590c1681-5737-48c8-89fd-9232e4edfd48",
         },
       ],
     },
