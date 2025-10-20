@@ -70,12 +70,17 @@ const JobListings = () => {
     },
     {
       department: "Operations",
-      count: 3,
+      count: 4,
       roles: [
         {
           location: "Redwood City, CA",
           title: "Enterprise Account Executive",
           link: "https://jobs.ashbyhq.com/dyna-robotics/5c6d7c20-a3a9-474f-a588-1f78277c1c3d",
+        },
+        {
+          location: "Redwood City, CA",
+          title: "Model Product Manager",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/da2e4c70-72cf-4fa9-857b-9ae1593d0c74",
         },
         {
           location: "Redwood City, CA",
