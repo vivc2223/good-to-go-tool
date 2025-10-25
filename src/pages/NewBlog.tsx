@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import { TwitterTweetEmbed } from "react-twitter-embed";
 
 const NewBlog = () => {
   const navigate = useNavigate();
@@ -89,15 +90,27 @@ const NewBlog = () => {
             </div>
           </div>
 
-          {/* Featured Image */}
-          <div className="mb-12">
-            <img
-              src="/lovable-uploads/researchs.jpg"
-              alt="Blog post featured image"
-              className="w-full h-96 object-cover border border-white"
-              loading="lazy"
-              decoding="async"
+          {/* YouTube Video */}
+          <div className="mb-12 flex justify-center">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/oqtWoAywrrY?si=KeyAUIPtePKZ6B7X"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="w-full max-w-2xl"
+              style={{ aspectRatio: "560/315" }}
             />
+          </div>
+
+          {/* Twitter Posts */}
+          <div className="mb-12 space-y-8">
+            <TwitterTweetEmbed tweetId={"1974040283168772571"} />
+            <TwitterTweetEmbed tweetId={"1967917002808566129"} />
+            <TwitterTweetEmbed tweetId={"1970261329207288289"} />
           </div>
 
           {/* Content */}
