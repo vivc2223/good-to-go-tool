@@ -131,16 +131,16 @@ const Navbar = () => {
                   Company
                 </span>
               </div>
-              <a
-                href="https://jobs.ashbyhq.com/dyna-robotics"
+              <Link
+                to="/careers"
                 className="px-3 py-2 text-sm font-medium transition-colors duration-200"
                 style={{
-                  color: "#cccccc",
+                  color: isActive("/careers") ? "#ffffff" : "#cccccc",
                 }}
                 onMouseEnter={handleOtherNavHover}
               >
                 Careers
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -251,13 +251,13 @@ const Navbar = () => {
                   >
                     Culture
                   </Link>
-                  <a
-                    href="https://jobs.ashbyhq.com/dyna-robotics"
+                  <Link
+                    to="/careers"
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
                   >
                     Careers
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -316,13 +316,13 @@ const Navbar = () => {
               >
                 Culture
               </Link>
-              <a
-                href="https://jobs.ashbyhq.com/dyna-robotics"
+              <Link
+                to="/careers"
                 className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
                 onClick={() => setIsOpen(false)}
               >
                 Careers
-              </a>
+              </Link>
             </div>
           </div>
         </div>

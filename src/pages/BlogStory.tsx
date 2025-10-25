@@ -503,7 +503,7 @@ const BlogStory = () => {
           >
             Join us. Visit us at{" "}
             <a
-              href="https://jobs.ashbyhq.com/dyna-robotics"
+              href="https://dyna.co/careers"
               className="text-blue-400 hover:text-blue-300"
               target="_blank"
               rel="noopener noreferrer"
