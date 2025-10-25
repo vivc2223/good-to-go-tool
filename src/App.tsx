@@ -43,8 +43,8 @@ const App = () => (
                 path="/blog/dyna-robotics-closes-120m-series-a"
                 element={<BlogStory />}
               />
-              <Route path="/blog/new-blog" element={<NewBlog />} />
-              {/* <Route path="/blog/new-blog-2" element={<NewBlog2 />} /> */}
+              {/* <Route path="/blog/new-blog" element={<NewBlog />} />
+              <Route path="/blog/new-blog-2" element={<NewBlog2 />} /> */}
               <Route path="/fundraising" element={<Fundraising />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/dyna-1/research" element={<MoreResearch />} />
