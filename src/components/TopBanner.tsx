@@ -40,7 +40,7 @@ const TopBanner = () => {
         {/* Hiring Link */}
         <div className="flex items-center gap-1">
           <a
-            href="/careers"
+            href="https://jobs.ashbyhq.com/dyna-robotics"
             className="underline underline-offset-2 hover:opacity-80 transition-opacity duration-200"
           >
             We're hiring!
