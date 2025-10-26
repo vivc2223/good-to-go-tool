@@ -260,7 +260,7 @@ const Blog = () => {
                     }}
                   >
                     <img
-                      src="/lovable-uploads/researchs.jpg"
+                      src="/lovable-uploads/research.jpg"
                       alt="DYNA Research"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 border border-white"
                       loading="lazy"
@@ -784,7 +784,7 @@ const Blog = () => {
                         }}
                       >
                         <img
-                          src="/lovable-uploads/researchs.jpg"
+                          src="/lovable-uploads/research.jpg"
                           alt="DYNA Research"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 border border-white"
                           loading="lazy"
