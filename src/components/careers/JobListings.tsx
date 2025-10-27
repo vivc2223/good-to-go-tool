@@ -27,13 +27,18 @@ const JobListings = () => {
         },
         {
           location: "Redwood City, CA",
+          title: "Senior Robotics Software Engineer",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/6e454635-290e-475d-bc21-7e88c1f5f3b9",
+        },
+        {
+          location: "Redwood City, CA",
           title: "Senior Software Engineer, ML Data Platform",
           link: "https://jobs.ashbyhq.com/dyna-robotics/43dcc186-62b1-4641-9365-3cb9767fc653",
         },
         {
           location: "Redwood City, CA",
-          title: "Senior Robotics Software Engineer",
-          link: "https://jobs.ashbyhq.com/dyna-robotics/6e454635-290e-475d-bc21-7e88c1f5f3b9",
+          title: "Sr. Robotics Hardware Engineer",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/4b938279-230a-490e-aa4b-a750c5880dc9",
         },
         {
           location: "Redwood City, CA",
@@ -50,28 +55,17 @@ const JobListings = () => {
           title: "Staff Machine Learning Infrastructure Engineer",
           link: "https://jobs.ashbyhq.com/dyna-robotics/ec8f09de-ee26-4117-9b41-d317b074c2dc",
         },
-        {
-          location: "Redwood City, CA",
-          title: "Senior Robotics Hardware Engineer",
-          link: "https://jobs.ashbyhq.com/dyna-robotics/4b938279-230a-490e-aa4b-a750c5880dc9",
-        },
-      ],
-    },
-    {
-      department: "Research",
-      count: 1,
-      roles: [
-        {
-          location: "Redwood City, CA",
-          title: "Research Engineer/ Scientist",
-          link: "https://jobs.ashbyhq.com/dyna-robotics/357b1b23-0712-489e-b336-1462f186cba7",
-        },
       ],
     },
     {
       department: "Operations",
-      count: 5,
+      count: 6,
       roles: [
+        {
+          location: "Redwood City, CA",
+          title: "Data Collection Operator",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/3dc6a8a5-98fe-4e33-8a61-08ccff952985",
+        },
         {
           location: "Redwood City, CA",
           title: "Enterprise Account Executive",
@@ -79,8 +73,8 @@ const JobListings = () => {
         },
         {
           location: "Redwood City, CA",
-          title: "Data Collection Operator",
-          link: "https://jobs.ashbyhq.com/dyna-robotics/3dc6a8a5-98fe-4e33-8a61-08ccff952985",
+          title: "Industrial Designer",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/f9f66415-c495-42a1-81c1-dabae3c2ebde",
         },
         {
           location: "Redwood City, CA",
@@ -96,6 +90,17 @@ const JobListings = () => {
           location: "Redwood City, CA",
           title: "Technical Sourcer",
           link: "https://jobs.ashbyhq.com/dyna-robotics/590c1681-5737-48c8-89fd-9232e4edfd48",
+        },
+      ],
+    },
+    {
+      department: "Research",
+      count: 1,
+      roles: [
+        {
+          location: "Redwood City, CA",
+          title: "Research Engineer/ Scientist",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/357b1b23-0712-489e-b336-1462f186cba7",
         },
       ],
     },
