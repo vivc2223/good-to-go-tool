@@ -251,13 +251,6 @@ const Navbar = () => {
                   >
                     Culture
                   </Link>
-                  <Link
-                    to="/careers"
-                    className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
-                    style={{ letterSpacing: "-0.02em" }}
-                  >
-                    Careers
-                  </Link>
                 </div>
               </div>
             </div>
@@ -315,13 +308,6 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Culture
-              </Link>
-              <Link
-                to="/careers"
-                className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
-                onClick={() => setIsOpen(false)}
-              >
-                Careers
               </Link>
             </div>
           </div>
