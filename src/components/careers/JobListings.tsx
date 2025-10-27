@@ -99,17 +99,6 @@ const JobListings = () => {
         },
       ],
     },
-    {
-      department: "Admin",
-      count: 1,
-      roles: [
-        {
-          location: "Redwood City, CA",
-          title: "On Site Office Admin Role",
-          link: "https://jobs.ashbyhq.com/dyna-robotics/86ab8a3d-17c8-4323-b623-486851c3e50a",
-        },
-      ],
-    },
   ];
 
   return (
