@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
-import { TwitterTweetEmbed } from "react-twitter-embed";
+import { Tweet } from "react-tweet";
 
 const NewBlog = () => {
   const navigate = useNavigate();
@@ -107,10 +107,10 @@ const NewBlog = () => {
           </div>
 
           {/* Twitter Posts */}
-          <div className="mb-12 space-y-8">
-            <TwitterTweetEmbed tweetId={"1974040283168772571"} />
-            <TwitterTweetEmbed tweetId={"1967917002808566129"} />
-            <TwitterTweetEmbed tweetId={"1970261329207288289"} />
+          <div className="mb-12 space-y-8 flex flex-col items-center">
+            <Tweet id="1974040283168772571" />
+            <Tweet id="1967917002808566129" />
+            <Tweet id="1970261329207288289" />
           </div>
 
           {/* Content */}
