@@ -82,7 +82,7 @@ const JobListings = () => {
           link: "https://jobs.ashbyhq.com/dyna-robotics/da2e4c70-72cf-4fa9-857b-9ae1593d0c74",
         },
         {
-          location: "Redwood City, CA",
+          location: "Los Angeles, CA",
           title: "Robot Safety Operator",
           link: "https://jobs.ashbyhq.com/dyna-robotics/2cd2835a-7025-4842-9fc0-4b16c011aaeb",
         },
