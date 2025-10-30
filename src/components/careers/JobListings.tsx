@@ -18,7 +18,7 @@ const JobListings = () => {
   const jobData = [
     {
       department: "Engineering",
-      count: 7,
+      count: 8,
       roles: [
         {
           location: "Redwood City, CA",
@@ -54,6 +54,11 @@ const JobListings = () => {
           location: "Redwood City, CA",
           title: "Staff Machine Learning Infrastructure Engineer",
           link: "https://jobs.ashbyhq.com/dyna-robotics/ec8f09de-ee26-4117-9b41-d317b074c2dc",
+        },
+        {
+          location: "Redwood City, CA",
+          title: "Staff Navigation Engineer",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/1a1fa493-6f04-42d2-8a55-76ecfca6b30d",
         },
       ],
     },
