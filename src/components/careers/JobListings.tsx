@@ -18,7 +18,7 @@ const JobListings = () => {
   const jobData = [
     {
       department: "Engineering",
-      count: 8,
+      count: 9,
       roles: [
         {
           location: "Redwood City, CA",
@@ -44,6 +44,11 @@ const JobListings = () => {
           location: "Redwood City, CA",
           title: "Staff Backend Software Engineer",
           link: "https://jobs.ashbyhq.com/dyna-robotics/3d6e2493-b4fa-427d-8a82-2f20004f3426",
+        },
+        {
+          location: "Redwood City, CA",
+          title: "Staff Electrical Engineer",
+          link: "https://jobs.ashbyhq.com/dyna-robotics/e11aa73b-bc91-40ac-b0dd-5e435d9bd597",
         },
         {
           location: "Redwood City, CA",
