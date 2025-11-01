@@ -206,7 +206,7 @@ const JobListings = () => {
           setJobData(transformedData);
         } else {
           // If no data or unexpected format, use fallback
-          // setJobData(fallbackJobData);
+          setJobData(fallbackJobData);
         }
       } catch (err) {
         console.error("Error fetching jobs:", err);
