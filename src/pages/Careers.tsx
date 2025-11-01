@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import CareersHero from "@/components/careers/CareersHero";
-import JobListings from "@/components/careers/JobListings";
 import Footer from "@/components/Footer";
+import JobListings from "@/components/careers/JobListings";
 
 const Careers = () => {
   // Initialize intersection observer to detect when elements enter viewport

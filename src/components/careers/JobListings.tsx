@@ -1,12 +1,11 @@
-import React from "react";
-import { ExternalLink } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+import { supabase } from "@/lib/supabase";
 
 const JobListings = () => {
   interface Role {
@@ -15,7 +14,30 @@ const JobListings = () => {
     link: string;
     isContactUs?: boolean;
   }
-  const jobData = [
+
+  interface Department {
+    department: string;
+    count: number;
+    roles: Role[];
+  }
+
+  interface AshbyJobPosting {
+    id: string;
+    title?: string;
+    departmentName?: string;
+    locationName?: string;
+  }
+
+  interface AshbyResponse {
+    results?: AshbyJobPosting[];
+  }
+
+  const [jobData, setJobData] = useState<Department[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Fallback job data in case API fails
+  const fallbackJobData: Department[] = [
     {
       department: "Engineering",
       count: 9,
@@ -116,6 +138,90 @@ const JobListings = () => {
     },
   ];
 
+  // Transform Ashby job postings into our department-based format
+  const transformAshbyJobs = (jobPostings: AshbyJobPosting[]): Department[] => {
+    // Group jobs by department
+    const departmentMap = new Map<string, Role[]>();
+
+    jobPostings.forEach((job) => {
+      // Extract department from departmentName
+      const department = job.departmentName || "Other";
+
+      // Extract location from locationName
+      const location = job.locationName || "Location TBD";
+
+      // Extract title
+      const title = job.title || "Position";
+
+      // Construct link using job id
+      const link = `https://jobs.ashbyhq.com/dyna-robotics/${job.id}`;
+
+      if (!departmentMap.has(department)) {
+        departmentMap.set(department, []);
+      }
+
+      departmentMap.get(department)!.push({
+        location,
+        title,
+        link,
+      });
+    });
+
+    // Convert to array format and sort by department name
+    const departments: Department[] = Array.from(departmentMap.entries()).map(
+      ([department, roles]) => ({
+        department,
+        count: roles.length,
+        roles,
+      })
+    );
+
+    // Sort departments alphabetically
+    departments.sort((a, b) => a.department.localeCompare(b.department));
+
+    return departments;
+  };
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        // Call the Supabase Edge Function
+        const { data, error: fetchError } = await supabase.functions.invoke(
+          "fetch-ashby-jobs",
+          {
+            body: { listedOnly: true, status: "OPEN" },
+          }
+        );
+        if (fetchError) {
+          throw fetchError;
+        }
+
+        // Transform Ashby API response to our format
+        const response = data as AshbyResponse;
+        if (response?.results) {
+          const transformedData = transformAshbyJobs(response.results);
+          setJobData(transformedData);
+        } else {
+          // If no data or unexpected format, use fallback
+          // setJobData(fallbackJobData);
+        }
+      } catch (err) {
+        console.error("Error fetching jobs:", err);
+        setError("Failed to load job listings");
+        // Use fallback data on error
+        setJobData(fallbackJobData);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <section className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pb-16 bg-black">
       <div className="max-w-4xl">
@@ -146,114 +252,158 @@ const JobListings = () => {
           </p>
         </div>
 
-        {/* Job Listings Accordion - updated for black background */}
-        <Accordion type="multiple" className="space-y-4">
-          {jobData.map((department, index) => (
-            <AccordionItem
-              key={department.department}
-              value={`department-${index}`}
-              className="border border-gray-600 rounded-lg overflow-hidden bg-black"
+        {/* Loading State */}
+        {loading && (
+          <div className="text-white mb-8">
+            <p
+              style={{
+                fontFamily:
+                  "UntitledSans, system-ui, -apple-system, sans-serif",
+              }}
             >
-              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 transition-colors duration-300">
-                <div className="flex items-center justify-between w-full pr-4">
-                  <span
-                    className="text-xl"
-                    style={{
-                      color: "white",
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontWeight: "normal",
-                    }}
-                  >
-                    {department.department}
-                  </span>
-                  <span
-                    className="text-xl"
-                    style={{
-                      color: "white",
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontWeight: "normal",
-                    }}
-                  >
-                    {department.count.toString().padStart(2, "0")}
-                  </span>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="px-0 pb-0">
-                <div className="space-y-0">
-                  {department.roles.map((role, roleIndex) => (
-                    <div
-                      key={roleIndex}
-                      className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center px-6 py-4 border-t border-gray-600 hover:bg-gray-900 transition-colors duration-300"
+              Loading job listings...
+            </p>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && !loading && (
+          <div className="text-white mb-8">
+            <p
+              style={{
+                fontFamily:
+                  "UntitledSans, system-ui, -apple-system, sans-serif",
+                color: "#ff6b6b",
+              }}
+            >
+              {error}
+            </p>
+          </div>
+        )}
+
+        {/* Job Listings Accordion - updated for black background */}
+        {jobData.length > 0 ? (
+          <Accordion type="multiple" className="space-y-4">
+            {jobData.map((department, index) => (
+              <AccordionItem
+                key={department.department}
+                value={`department-${index}`}
+                className="border border-gray-600 rounded-lg overflow-hidden bg-black"
+              >
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 transition-colors duration-300">
+                  <div className="flex items-center justify-between w-full pr-4">
+                    <span
+                      className="text-xl"
+                      style={{
+                        color: "white",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        fontWeight: "normal",
+                      }}
                     >
+                      {department.department}
+                    </span>
+                    <span
+                      className="text-xl"
+                      style={{
+                        color: "white",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        fontWeight: "normal",
+                      }}
+                    >
+                      {department.count.toString().padStart(2, "0")}
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-0 pb-0">
+                  <div className="space-y-0">
+                    {department.roles.map((role, roleIndex) => (
                       <div
-                        style={{
-                          color: "white",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontWeight: "normal",
-                        }}
+                        key={roleIndex}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center px-6 py-4 border-t border-gray-600 hover:bg-gray-900 transition-colors duration-300"
                       >
-                        {role.location}
-                      </div>
-                      <div
-                        style={{
-                          color: "white",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontWeight: "normal",
-                        }}
-                      >
-                        {role.title}
-                      </div>
-                      <div className="flex justify-start md:justify-end">
-                        <button
-                          onClick={() => {
-                            window.open(role.link, "_blank");
+                        <div
+                          style={{
+                            color: "white",
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontWeight: "normal",
                           }}
-                          className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white"
                         >
-                          <span
-                            className="text-sm"
-                            style={{
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
-                              fontWeight: "normal",
-                              textDecoration: "underline",
-                              textUnderlineOffset: "4px",
-                              textDecorationThickness: "1px",
-                              color: "white",
+                          {role.location}
+                        </div>
+                        <div
+                          style={{
+                            color: "white",
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontWeight: "normal",
+                          }}
+                        >
+                          {role.title}
+                        </div>
+                        <div className="flex justify-start md:justify-end">
+                          <button
+                            onClick={() => {
+                              window.open(role.link, "_blank");
                             }}
+                            className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white"
                           >
-                            Apply Now
-                          </span>
-                          <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                            <svg
-                              width="12"
-                              height="12"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <span
+                              className="text-sm"
+                              style={{
+                                fontFamily:
+                                  "UntitledSans, system-ui, -apple-system, sans-serif",
+                                fontWeight: "normal",
+                                textDecoration: "underline",
+                                textUnderlineOffset: "4px",
+                                textDecorationThickness: "1px",
+                                color: "white",
+                              }}
                             >
-                              <path
-                                d="M6 3L11 8L6 13"
-                                stroke="white"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </div>
-                        </button>
+                              Apply Now
+                            </span>
+                            <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                              <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6 3L11 8L6 13"
+                                  stroke="white"
+                                  strokeWidth="1.5"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        ) : (
+          !loading && (
+            <div className="text-white mb-8">
+              <p
+                style={{
+                  fontFamily:
+                    "UntitledSans, system-ui, -apple-system, sans-serif",
+                }}
+              >
+                No job listings available at this time.
+              </p>
+            </div>
+          )
+        )}
 
         {/* Contact Us Section */}
         <div className="mt-12">
