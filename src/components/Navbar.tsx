@@ -310,6 +310,17 @@ const Navbar = () => {
                 Culture
               </Link>
             </div>
+            <Link
+              to="/careers"
+              className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                isActive("/careers")
+                  ? "text-white bg-gray-800"
+                  : "text-gray-300 hover:text-white hover:bg-gray-800"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Careers
+            </Link>
           </div>
         </div>
       )}

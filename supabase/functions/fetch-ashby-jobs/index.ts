@@ -46,7 +46,8 @@ serve(async (req) => {
     });
   } catch (err) {
     console.error("Error fetching from Ashby:", err);
-    return new Response(JSON.stringify({ error: err.message }), {
+    const errorMessage = err instanceof Error ? err.message : "Unknown error occurred";
+    return new Response(JSON.stringify({ error: errorMessage }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
     });
