@@ -26,11 +26,12 @@ const CareersHero = () => {
           </h1>
 
           <p
-            className="text-base max-w-4xl leading-relaxed"
+            className="max-w-4xl leading-relaxed"
             style={{
               color: "white",
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
               fontWeight: "normal",
+              fontSize: "clamp(16px, 5vw, 20px)",
             }}
           >
             We're assembling a focused team of builders, researchers, and
