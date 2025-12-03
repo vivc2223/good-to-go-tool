@@ -616,9 +616,9 @@ const Research = () => {
                 >
                   The people, funding, and real-world ambition behind DYNA.
                 </p>
-              </div> */}
+              </div>
 
-              {/* <div className="flex flex-col">
+              <div className="flex flex-col">
                 <div
                   className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
                   onClick={() => navigate("/dyna-2/research")}

@@ -249,7 +249,104 @@ const Blog = () => {
                     </button>
                   </div>
                 </div>
+                <div className="flex flex-col">
+                  <div
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                    onClick={() => navigate("/dyna-2/research")}
+                    style={{
+                      height: "745px",
+                      width: "100%",
+                    }}
+                  >
+                    {/* <img
+                      src="/lovable-uploads/founders.jpg"
+                      alt="DYNA Fundraising"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                    /> */}
+                  </div>
 
+                  <div className="flex flex-col">
+                    <div className="flex items-start justify-between mb-2">
+                      <h2
+                        className="leading-tight"
+                        style={{
+                          color: "white",
+                          margin: "0px",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
+                          width: "70%",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Est, ex quis, necessitatibus cum suscipit
+                      </h2>
+                      <div
+                        style={{
+                          color: "white",
+                          fontWeight: "normal",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        lorem
+                      </div>
+                    </div>
+
+                    <p
+                      className="leading-relaxed mb-4"
+                      style={{
+                        color: "white",
+                        fontWeight: "normal",
+                        fontSize: "clamp(14px, 4vw, 20px)",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellendus, incidunt.
+                    </p>
+
+                    <button
+                      onClick={() => navigate("/dyna-2/research")}
+                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                    >
+                      <span
+                        style={{
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontSize: "clamp(14px, 4vw, 20px)",
+                          textDecoration: "underline",
+                          textUnderlineOffset: "4px",
+                          textDecorationThickness: "1px",
+                        }}
+                      >
+                        Read More
+                      </span>
+                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 3L11 8L6 13"
+                            stroke="white"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -674,6 +771,104 @@ const Blog = () => {
                       </div>
                     </div>
 
+                    <div className="flex flex-col mb-8">
+                      <div
+                        className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                        onClick={() => navigate("/dyna-2/research")}
+                        style={{
+                          // height: "650px",
+                          width: "100%",
+                        }}
+                      >
+                        {/* <img
+                          src="/lovable-uploads/founders.jpg"
+                          alt="DYNA Fundraising"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                          decoding="async"
+                        /> */}
+                      </div>
+
+                      <div className="flex flex-col">
+                        <div className="mb-2">
+                          <h2
+                            style={{
+                              color: "white",
+                              margin: "0px",
+                              fontSize: "clamp(20px, 5vw, 24px)",
+                              fontWeight: "500",
+                              fontFamily:
+                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                            }}
+                          >
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Est, ex quis, necessitatibus cum suscipit
+                          </h2>
+                        </div>
+
+                        <p
+                          className="leading-relaxed mb-4"
+                          style={{
+                            color: "white",
+                            fontWeight: "normal",
+                            fontSize: "clamp(14px, 4vw, 20px)",
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                          }}
+                        >
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Repellendus, incidunt.
+                        </p>
+
+                        <div
+                          className="mb-4"
+                          style={{
+                            color: "white",
+                            fontWeight: "normal",
+                            fontSize: "clamp(14px, 4vw, 20px)",
+                            fontFamily:
+                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                          }}
+                        >
+                          lorem
+                        </div>
+
+                        <button
+                          onClick={() => navigate("/dyna-2/research")}
+                          className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                        >
+                          <span
+                            style={{
+                              fontFamily:
+                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                              fontSize: "clamp(14px, 4vw, 20px)",
+                              textDecoration: "underline",
+                              textUnderlineOffset: "4px",
+                              textDecorationThickness: "1px",
+                            }}
+                          >
+                            Read More
+                          </span>
+                          <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                            <svg
+                              width="12"
+                              height="12"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6 3L11 8L6 13"
+                                stroke="white"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
