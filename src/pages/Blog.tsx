@@ -281,8 +281,8 @@ const Blog = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Est, ex quis, necessitatibus cum suscipit
+                        How Monster Laundry Scaled Its Laundromat Operations
+                        with DYNA
                       </h2>
                       <div
                         style={{
@@ -293,7 +293,7 @@ const Blog = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        lorem
+                        DEC 4 '25
                       </div>
                     </div>
 
@@ -307,8 +307,10 @@ const Blog = () => {
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellendus, incidunt.
+                      DYNA transformed Monster Laundry’s folding bottleneck into
+                      a scalable advantage, delivering higher throughput,
+                      consistent quality, and immediate ROI with a compact,
+                      production-ready robot.
                     </p>
 
                     <button
@@ -801,8 +803,8 @@ const Blog = () => {
                                 "UntitledSans, system-ui, -apple-system, sans-serif",
                             }}
                           >
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Est, ex quis, necessitatibus cum suscipit
+                            How Monster Laundry Scaled Its Laundromat Operations
+                            with DYNA
                           </h2>
                         </div>
 
@@ -816,8 +818,10 @@ const Blog = () => {
                               "UntitledSans, system-ui, -apple-system, sans-serif",
                           }}
                         >
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Repellendus, incidunt.
+                          DYNA transformed Monster Laundry’s folding bottleneck
+                          into a scalable advantage, delivering higher
+                          throughput, consistent quality, and immediate ROI with
+                          a compact, production-ready robot.{" "}
                         </p>
 
                         <div
@@ -830,7 +834,7 @@ const Blog = () => {
                               "UntitledSans, system-ui, -apple-system, sans-serif",
                           }}
                         >
-                          lorem
+                          DEC 4 '25
                         </div>
 
                         <button
