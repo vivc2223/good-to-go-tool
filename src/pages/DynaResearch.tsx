@@ -33,7 +33,7 @@ const DynaResearch = () => {
         {/* Testimonial Quote */}
         <div className="max-w-none mb-12">
           <p
-            className="md:text-3xl text-lg leading-relaxed mb-6 text-white"
+            className="md:text-3xl text-lg text-center leading-relaxed mb-6 text-white"
             style={{
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
