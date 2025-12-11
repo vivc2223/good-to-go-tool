@@ -588,50 +588,18 @@ const Research = () => {
                 </div>
               </div>
 
-              {/* Stories Title */}
-              {/* <div className="text-left mb-6">
-                <h1
-                  className="leading-tight"
-                  style={{
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(28px, 5vw, 41px)",
-                    fontWeight: "normal",
-                    lineHeight: "1.1",
-                    color: "white",
-                  }}
-                >
-                  Blog
-                </h1>
-              </div>
-
-              <div className="text-left mb-8">
-                <p
-                  className="leading-relaxed"
-                  style={{
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(14px, 4vw, 20px)",
-                    fontWeight: "normal",
-                    lineHeight: "1.6",
-                    color: "white",
-                  }}
-                >
-                  The people, funding, and real-world ambition behind DYNA.
-                </p>
-              </div>
-
-              <div className="flex flex-col">
+              {/* Second Research Card - Mobile */}
+              <div className="flex flex-col mb-16">
                 <div
-                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
+                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
                   onClick={() => navigate("/dyna-2/research")}
                   style={{
                     width: "100%",
                   }}
                 >
                   <img
-                    src="/lovable-uploads/founders-futures.jpg"
-                    alt="DYNA Founders"
+                    src="/lovable-uploads/research.jpg"
+                    alt="DYNA Sim-to-Real Research"
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
@@ -639,42 +607,57 @@ const Research = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="mb-2">
                     <h2
-                      className="text-base"
-                      style={{ color: "white", margin: "0px" }}
+                      style={{
+                        color: "white",
+                        margin: "0px",
+                        fontSize: "clamp(20px, 5vw, 24px)",
+                        fontWeight: "500",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
                     >
-                      DYNA-2 Model
+                      Scaling Robotic Learning
                     </h2>
-                    <div
-                      className="text-xs font-light"
-                      style={{ color: "white" }}
-                    >
-                      SEP 16 '25
-                    </div>
                   </div>
 
                   <p
                     className="leading-relaxed mb-4"
                     style={{
                       color: "white",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
                       fontSize: "clamp(14px, 4vw, 20px)",
                     }}
                   >
-                    A next-generation vision-language-action foundation model
-                    built for real-world autonomy — faster, stronger, and more
-                    generalizable.
+                    How we bridged the sim-to-real gap using foundation models
+                    and continual learning approaches that work in unstructured
+                    environments.
                   </p>
+
+                  <div
+                    className="mb-4"
+                    style={{
+                      color: "white",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                      fontWeight: "normal",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    MAY 15 '25
+                  </div>
 
                   <button
                     onClick={() => navigate("/dyna-2/research")}
                     className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                   >
                     <span
-                      className="text-sm font-medium text-white"
                       style={{
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
+                        fontSize: "clamp(14px, 4vw, 20px)",
                         textDecoration: "underline",
                         textUnderlineOffset: "4px",
                         textDecorationThickness: "1px",
@@ -701,7 +684,7 @@ const Research = () => {
                     </div>
                   </button>
                 </div>
-              </div> */}
+              </div>
             </div>
           </section>
         </div>
