@@ -345,6 +345,107 @@ const Research = () => {
                   </div>
                 </div>
 
+                {/* Second Research Card */}
+                <div className="flex flex-col">
+                  <div
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                    onClick={() => handleBlogClick(blogPosts[1])}
+                    style={{
+                      height: "650px",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      src="/lovable-uploads/research.jpg"
+                      alt="Scaling Robotic Learning"
+                      className="w-full h-[650px] transition-transform duration-500 group-hover:scale-105"
+                      style={{
+                        objectFit: "cover",
+                      }}
+                      fetchPriority="high"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <div className="flex items-center justify-between mb-2">
+                      <h2
+                        style={{
+                          color: "white",
+                          margin: "0px",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        Scaling Robotic Learning
+                      </h2>
+                      <div
+                        style={{
+                          color: "white",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "normal",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        MAY 15 '25
+                      </div>
+                    </div>
+
+                    <p
+                      className="leading-relaxed mb-4"
+                      style={{
+                        color: "white",
+                        fontSize: "clamp(14px, 4vw, 20px)",
+                        fontWeight: "normal",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      How we bridged the sim-to-real gap using foundation models
+                      and continual learning approaches that work in unstructured
+                      environments.
+                    </p>
+
+                    <button
+                      onClick={() => console.log("Navigate to second blog post")}
+                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                    >
+                      <span
+                        style={{
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontSize: "clamp(14px, 4vw, 20px)",
+                          textDecoration: "underline",
+                          textUnderlineOffset: "4px",
+                          textDecorationThickness: "1px",
+                        }}
+                      >
+                        Read More
+                      </span>
+                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 3L11 8L6 13"
+                            stroke="white"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
               </div>
             </div>
           </section>
@@ -453,6 +554,104 @@ const Research = () => {
 
                   <button
                     onClick={() => navigate("/dyna-1/research")}
+                    className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                  >
+                    <span
+                      className="text-sm font-medium text-white"
+                      style={{
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        textDecoration: "underline",
+                        textUnderlineOffset: "4px",
+                        textDecorationThickness: "1px",
+                      }}
+                    >
+                      Read More
+                    </span>
+                    <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 3L11 8L6 13"
+                          stroke="white"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              {/* Second Research Card - Mobile */}
+              <div className="flex flex-col mb-16">
+                <div
+                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                  onClick={() => handleBlogClick(blogPosts[1])}
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    src="/lovable-uploads/research.jpg"
+                    alt="Scaling Robotic Learning"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <div className="mb-2">
+                    <h2
+                      style={{
+                        color: "white",
+                        margin: "0px",
+                        fontSize: "clamp(20px, 5vw, 24px)",
+                        fontWeight: "500",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      Scaling Robotic Learning
+                    </h2>
+                  </div>
+
+                  <p
+                    className="leading-relaxed mb-4"
+                    style={{
+                      color: "white",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                    }}
+                  >
+                    How we bridged the sim-to-real gap using foundation models
+                    and continual learning approaches that work in unstructured
+                    environments.
+                  </p>
+
+                  <div
+                    className="mb-4"
+                    style={{
+                      color: "white",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                      fontWeight: "normal",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    MAY 15 '25
+                  </div>
+
+                  <button
+                    onClick={() => console.log("Navigate to second blog post")}
                     className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                   >
                     <span
