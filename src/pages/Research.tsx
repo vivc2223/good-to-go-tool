@@ -349,15 +349,15 @@ const Research = () => {
                 <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() => handleBlogClick(blogPosts[0])}
+                    onClick={() => navigate("/dyna-2/research")}
                     style={{
                       height: "650px",
                       width: "100%",
                     }}
                   >
                     <img
-                      src="/lovable-uploads/newresearch.png"
-                      alt="DYNA Robot Research"
+                      src="/lovable-uploads/research.jpg"
+                      alt="DYNA Sim-to-Real Research"
                       className="w-full h-[650px] transition-transform duration-500 group-hover:scale-105"
                       style={{
                         objectFit: "cover",
@@ -379,7 +379,7 @@ const Research = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        DYNA-1 Model
+                        Scaling Robotic Learning
                       </h2>
                       <div
                         style={{
@@ -390,7 +390,7 @@ const Research = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        JUN 15 '25
+                        MAY 15 '25
                       </div>
                     </div>
 
@@ -404,13 +404,13 @@ const Research = () => {
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      DYNA-1 is built on advanced vision-language-action systems
-                      and trained directly in real environments — no simulation
-                      shortcuts.
+                      How we bridged the sim-to-real gap using foundation models
+                      and continual learning approaches that work in unstructured
+                      environments.
                     </p>
 
                     <button
-                      onClick={() => navigate("/dyna-1/research")}
+                      onClick={() => navigate("/dyna-2/research")}
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
