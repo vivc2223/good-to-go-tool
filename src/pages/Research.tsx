@@ -345,20 +345,23 @@ const Research = () => {
                   </div>
                 </div>
 
-                {/* Stories Card */}
-                {/* <div className="flex flex-col">
+                {/* Second Research Card */}
+                <div className="flex flex-col">
                   <div
-                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced border border-white"
-                    onClick={() => navigate("/dyna-2/research")}
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                    onClick={() => handleBlogClick(blogPosts[0])}
                     style={{
                       height: "650px",
                       width: "100%",
                     }}
                   >
                     <img
-                      src="/lovable-uploads/founders-futures.jpg"
-                      alt="DYNA Founders"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      src="/lovable-uploads/newresearch.png"
+                      alt="DYNA Robot Research"
+                      className="w-full h-[650px] transition-transform duration-500 group-hover:scale-105"
+                      style={{
+                        objectFit: "cover",
+                      }}
                       loading="lazy"
                       decoding="async"
                     />
@@ -370,24 +373,24 @@ const Research = () => {
                         style={{
                           color: "white",
                           margin: "0px",
-                          fontSize: "clamp(14px, 4vw, 20px)",
-                          fontWeight: "normal",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        DYNA-2 Model
+                        DYNA-1 Model
                       </h2>
                       <div
                         style={{
                           color: "white",
+                          fontSize: "clamp(20px, 5vw, 24px)",
                           fontWeight: "normal",
-                          fontSize: "clamp(14px, 4vw, 20px)",
                           fontFamily:
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        SEP 16 '25
+                        JUN 15 '25
                       </div>
                     </div>
 
@@ -395,19 +398,19 @@ const Research = () => {
                       className="leading-relaxed mb-4"
                       style={{
                         color: "white",
-                        fontWeight: "normal",
                         fontSize: "clamp(14px, 4vw, 20px)",
+                        fontWeight: "normal",
                         fontFamily:
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      A next-generation vision-language-action foundation model
-                      built for real-world autonomy — faster, stronger, and more
-                      generalizable.
+                      DYNA-1 is built on advanced vision-language-action systems
+                      and trained directly in real environments — no simulation
+                      shortcuts.
                     </p>
 
                     <button
-                      onClick={() => navigate("/dyna-2/research")}
+                      onClick={() => navigate("/dyna-1/research")}
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
@@ -441,7 +444,7 @@ const Research = () => {
                       </div>
                     </button>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </section>
