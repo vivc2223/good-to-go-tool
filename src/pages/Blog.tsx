@@ -262,8 +262,12 @@ const Blog = () => {
                       width: "100%",
                     }}
                   >
-                    <div
-                      className="w-full h-full bg-black border border-white transition-transform duration-500 group-hover:scale-105"
+                    <iframe
+                      className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                      src="https://www.youtube.com/embed/FT3LayT-wck?autoplay=1&mute=1&controls=0&loop=1&playlist=FT3LayT-wck&playsinline=1"
+                      title="Monster Laundry"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
                     />
                   </div>
 
@@ -782,8 +786,12 @@ const Blog = () => {
                           width: "100%",
                         }}
                       >
-                        <div
-                          className="w-full h-full bg-black border border-white transition-transform duration-500 group-hover:scale-105"
+                        <iframe
+                          className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                          src="https://www.youtube.com/embed/FT3LayT-wck?autoplay=1&mute=1&controls=0&loop=1&playlist=FT3LayT-wck&playsinline=1"
+                          title="Monster Laundry"
+                          allow="autoplay; encrypted-media"
+                          allowFullScreen
                           style={{ minHeight: "300px" }}
                         />
                       </div>
