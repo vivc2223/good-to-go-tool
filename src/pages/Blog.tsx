@@ -263,7 +263,7 @@ const Blog = () => {
                     }}
                   >
                     <div
-                      className="w-full h-full bg-black transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full bg-black border border-white transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
 
@@ -783,7 +783,7 @@ const Blog = () => {
                         }}
                       >
                         <div
-                          className="w-full h-full bg-black transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-full bg-black border border-white transition-transform duration-500 group-hover:scale-105"
                           style={{ minHeight: "300px" }}
                         />
                       </div>
