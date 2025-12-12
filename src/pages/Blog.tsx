@@ -262,13 +262,8 @@ const Blog = () => {
                       width: "100%",
                     }}
                   >
-                    <video
-                      src="/videos/monster.mp4"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
+                    <div
+                      className="w-full h-full bg-black transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
 
@@ -787,13 +782,9 @@ const Blog = () => {
                           width: "100%",
                         }}
                       >
-                        <video
-                          src="/videos/monster.mp4"
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
+                        <div
+                          className="w-full h-full bg-black transition-transform duration-500 group-hover:scale-105"
+                          style={{ minHeight: "300px" }}
                         />
                       </div>
 
