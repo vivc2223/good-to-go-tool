@@ -269,7 +269,6 @@ const Blog = () => {
                       allow="autoplay; encrypted-media"
                       allowFullScreen
                     />
-                    <div className="pointer-events-none absolute inset-0 bg-background/80" />
                   </div>
 
                   <div className="flex flex-col">
@@ -795,7 +794,6 @@ const Blog = () => {
                           allowFullScreen
                           style={{ minHeight: "300px" }}
                         />
-                        <div className="pointer-events-none absolute inset-0 bg-background/80" />
                       </div>
 
                       <div className="flex flex-col">
