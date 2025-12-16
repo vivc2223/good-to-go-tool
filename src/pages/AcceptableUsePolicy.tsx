@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const AcceptableUsePolicy = () => {
   return (
@@ -8,7 +10,9 @@ const AcceptableUsePolicy = () => {
         <title>Acceptable Use Policy | DYNA Robotics</title>
         <meta name="description" content="DYNA Robotics Acceptable Use Policy for Services, Equipment, and Software." />
       </Helmet>
-      <div className="min-h-screen bg-black text-white py-16 px-4 sm:px-6 md:px-8 lg:px-16">
+      <div className="min-h-screen bg-black">
+        <Navbar />
+        <div className="text-white py-16 px-4 sm:px-6 md:px-8 lg:px-16 pt-32">
         <div className="max-w-4xl mx-auto">
           {/* Title */}
           <h1 className="text-center mb-12" style={{ fontSize: "30px", fontWeight: "bold" }}>
@@ -64,6 +68,8 @@ const AcceptableUsePolicy = () => {
             </p>
           </div>
         </div>
+        </div>
+        <Footer />
       </div>
     </>
   );
