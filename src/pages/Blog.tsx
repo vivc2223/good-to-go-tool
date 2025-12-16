@@ -542,12 +542,10 @@ const Blog = () => {
                       width: "100%",
                     }}
                   >
-                    <iframe
-                      className="w-full h-full transition-transform duration-500 group-hover:scale-105 pointer-events-none"
-                      src="https://www.youtube.com/embed/FT3LayT-wck?autoplay=1&mute=1&controls=0&loop=1&playlist=FT3LayT-wck&playsinline=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&showinfo=0"
-                      title="Monster Laundry"
-                      allow="autoplay; encrypted-media"
-                      allowFullScreen
+                    <img
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      src="/lovable-uploads/monster-laundry-thumbnail.png"
+                      alt="Monster Laundry with DYNA robots"
                     />
                   </div>
 
@@ -914,13 +912,11 @@ const Blog = () => {
                     width: "100%",
                   }}
                 >
-                  <iframe
-                    className="w-full h-full transition-transform duration-500 group-hover:scale-105 pointer-events-none"
-                    src="https://www.youtube.com/embed/FT3LayT-wck?autoplay=1&mute=1&controls=0&loop=1&playlist=FT3LayT-wck&playsinline=1&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&showinfo=0"
-                    title="Monster Laundry"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                    style={{ minHeight: "300px" }}
+                  <img
+                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                    src="/lovable-uploads/monster-laundry-thumbnail.png"
+                    alt="Monster Laundry with DYNA robots"
+                    style={{ minHeight: "300px", objectFit: "cover" }}
                   />
                 </div>
 
