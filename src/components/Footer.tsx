@@ -69,6 +69,8 @@ const Footer = () => {
             <span className="hidden md:inline">|</span>
             <a
               href="/acceptable-use-policy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity duration-300"
             >
               Acceptable Use Policy
