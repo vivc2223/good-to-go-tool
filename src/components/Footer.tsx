@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-black py-8">
       <div className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row items-center md:justify-between gap-4 md:gap-0">
           {/* Logo and Social Icons */}
           <div className="flex items-center gap-4">
             <div className="rounded-lg p-2">
@@ -64,9 +64,9 @@ const Footer = () => {
           </div>
 
           {/* Copyright and Policy Link */}
-          <div className="flex items-center gap-4 text-xs text-white">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-xs text-white text-center">
             <span>DYNA Robotics Inc. All rights reserved.</span>
-            <span>|</span>
+            <span className="hidden md:inline">|</span>
             <a
               href="/acceptable-use-policy"
               className="hover:opacity-80 transition-opacity duration-300"
