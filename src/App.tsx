@@ -22,6 +22,7 @@ import DynaResearch from "./pages/DynaResearch";
 import BlogStory from "./pages/BlogStory";
 import NewBlog from "./pages/NewBlog";
 import NewBlog2 from "./pages/NewBlog2";
+import AcceptableUsePolicy from "./pages/AcceptableUsePolicy";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -56,6 +57,7 @@ const App = () => (
                 path="/admin/submission/:id"
                 element={<SubmissionDetail />}
               />
+              <Route path="/acceptable-use-policy" element={<AcceptableUsePolicy />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
