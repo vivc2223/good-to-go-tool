@@ -7,18 +7,18 @@ const Footer = () => {
     <footer className="w-full bg-black py-8">
       <div className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="flex items-center justify-between">
-          <div className="rounded-lg p-2">
-            <img
-              src="/lovable-uploads/dyna_logo_white_transparent.png"
-              alt="DYNA Logo"
-              className="md:h-6 h-5"
-            />
-          </div>
+          {/* Logo and Social Icons */}
+          <div className="flex items-center gap-4">
+            <div className="rounded-lg p-2">
+              <img
+                src="/lovable-uploads/dyna_logo_white_transparent.png"
+                alt="DYNA Logo"
+                className="md:h-6 h-5"
+              />
+            </div>
 
-          <div className="flex md:flex-row flex-col md:items-center items-end gap-6">
-            {/* Social Media Links */}
             {location.pathname !== "/research" && (
-              <div className="flex items-center gap-4">
+              <>
                 <a
                   href="https://x.com/dynarobotics"
                   target="_blank"
@@ -59,13 +59,20 @@ const Footer = () => {
                     />
                   </svg>
                 </a>
-              </div>
+              </>
             )}
+          </div>
 
-            {/* Copyright */}
-            <div className="text-xs text-white text-right">
-              DYNA Robotics Inc. All rights reserved.
-            </div>
+          {/* Copyright and Policy Link */}
+          <div className="flex items-center gap-4 text-xs text-white">
+            <span>DYNA Robotics Inc. All rights reserved.</span>
+            <span>|</span>
+            <a
+              href="/acceptable-use-policy"
+              className="hover:opacity-80 transition-opacity duration-300"
+            >
+              Acceptable Use Policy
+            </a>
           </div>
         </div>
       </div>
