@@ -77,13 +77,15 @@ const AutoPlayVideo: React.FC<AutoPlayVideoProps> = ({ src, title }) => {
       <video
         ref={videoRef}
         className="w-full h-full object-cover"
-        src={src}
-        title={title}
         muted
         loop
         playsInline
         controls
-      />
+        preload="metadata"
+      >
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 };
@@ -227,9 +229,9 @@ const OpenWorldDexterity = () => {
             Later that week, our team traveled to South Korea to attend the Conference on Robot Learning (CoRL), the annual premier academic conference on robot learning. There, we deployed the same model on a brand new Dynasaur robot during exhibition hours for 3 days straight.
           </p>
 
-          {/* Second YouTube Video - CoRL Conference */}
+          {/* Second Video - CoRL Conference */}
           <div className="mb-12">
-            <AutoPlayYouTube videoId="FT3LayT-wck" title="DYNA CoRL Conference Demo" />
+            <AutoPlayVideo src="/videos/Dyna_Robotics_x_CoRL_2025_comp.mp4" title="DYNA CoRL Conference Demo" />
           </div>
 
           <p
