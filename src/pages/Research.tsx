@@ -361,6 +361,7 @@ const Research = () => {
                       className="w-full h-[650px] transition-transform duration-500 group-hover:scale-105"
                       style={{
                         objectFit: "cover",
+                        objectPosition: "15% center",
                       }}
                       loading="lazy"
                       decoding="async"
