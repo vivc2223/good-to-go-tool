@@ -160,7 +160,7 @@ const OpenWorldDexterity = () => {
                   <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Duration</th>
                   <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Shirts Folded</th>
                   <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Throughput (shirts/hr)</th>
-                  <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Avg Quality</th>
+                  <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Average Quality</th>
                 </tr>
               </thead>
               <tbody>
