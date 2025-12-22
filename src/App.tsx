@@ -24,6 +24,7 @@ import NewBlog from "./pages/NewBlog";
 import NewBlog2 from "./pages/NewBlog2";
 import AcceptableUsePolicy from "./pages/AcceptableUsePolicy";
 import OpenWorldDexterity from "./pages/OpenWorldDexterity";
+import ScrollToTop from "./components/ScrollToTop";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -34,6 +35,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/research" element={<Research />} />
