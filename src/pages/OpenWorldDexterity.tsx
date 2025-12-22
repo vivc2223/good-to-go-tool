@@ -111,30 +111,30 @@ const OpenWorldDexterity = () => {
 
           {/* Results Table */}
           <div className="mb-12 overflow-x-auto">
-            <table className="w-full text-white border-collapse">
+            <table className="w-full text-white border-collapse border border-white/30">
               <thead>
-                <tr className="border-b border-white/30">
-                  <th className="text-left py-4 px-4 text-lg font-medium" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Environment</th>
-                  <th className="text-left py-4 px-4 text-lg font-medium" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Duration</th>
-                  <th className="text-left py-4 px-4 text-lg font-medium" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Shirts Folded</th>
-                  <th className="text-left py-4 px-4 text-lg font-medium" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Throughput (shirts/hr)</th>
-                  <th className="text-left py-4 px-4 text-lg font-medium" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Avg Quality</th>
+                <tr>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Environment</th>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Duration</th>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Shirts Folded</th>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Throughput (shirts/hr)</th>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Avg Quality</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-white/20">
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Seen (Office)</td>
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>30 min</td>
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>22</td>
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>~40/hr</td>
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>~3+</td>
+                <tr>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Seen (Office)</td>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>30 min</td>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>22</td>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>~40/hr</td>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>~3+</td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Unseen (Lobby / Parking / CoRL)</td>
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>30 min</td>
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>20</td>
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>~40/hr</td>
-                  <td className="py-4 px-4 text-lg" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>~3+</td>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Unseen (Lobby / Parking / CoRL)</td>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>30 min</td>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>20</td>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>~40/hr</td>
+                  <td className="py-4 px-4 text-lg border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>~3+</td>
                 </tr>
               </tbody>
             </table>
