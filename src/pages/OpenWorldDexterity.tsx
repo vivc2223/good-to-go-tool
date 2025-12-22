@@ -130,7 +130,7 @@ const OpenWorldDexterity = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            In our initial <Link to="/dyna-1/research" className="underline hover:opacity-80 transition-opacity">DYNA-1 release</Link>, we developed a training recipe for Vision-Language-Action models (VLAs) that achieves exceptional robustness, with a 99%+ success rate on complex manipulation tasks. However, VLA models, including our original DYNA-1 model, still suffer from performance degradation when deployed in environments not represented in the training data. In this short blog post, we share recent results on improving DYNA-1 to efficiently generalize its robust dexterity capabilities to completely unseen environments, bringing us closer to large-scale deployment.
+            In our initial <Link to="/dyna-1/research" className="text-blue-500 hover:opacity-80 transition-opacity">DYNA-1 release</Link>, we developed a training recipe for Vision-Language-Action models (VLAs) that achieves exceptional robustness, with a 99%+ success rate on complex manipulation tasks. However, VLA models, including our original DYNA-1 model, still suffer from performance degradation when deployed in environments not represented in the training data. In this short blog post, we share recent results on improving DYNA-1 to efficiently generalize its robust dexterity capabilities to completely unseen environments, bringing us closer to large-scale deployment.
           </p>
 
           <p
