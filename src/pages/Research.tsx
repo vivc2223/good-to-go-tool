@@ -379,7 +379,7 @@ const Research = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        Open-World Dexterity
+                        Open-World Dexterity and Live Demos around the World
                       </h2>
                       <div
                         style={{
@@ -404,7 +404,7 @@ const Research = () => {
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      DYNA-1i achieves cross-environment generalization, enabling robust dexterous manipulation in unseen environments with minimal training data.
+                      DYNA-1i extends DYNA-1's production-grade dexterity to open-world settings, achieving robust, data-efficient generalization across unseen environments and live public demos.
                     </p>
 
                     <button
@@ -617,7 +617,7 @@ const Research = () => {
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      Open-World Dexterity
+                      Open-World Dexterity and Live Demos around the World
                     </h2>
                   </div>
 
@@ -630,7 +630,7 @@ const Research = () => {
                       fontSize: "clamp(14px, 4vw, 20px)",
                     }}
                   >
-                    DYNA-1i achieves cross-environment generalization, enabling robust dexterous manipulation in unseen environments with minimal training data.
+                    DYNA-1i extends DYNA-1's production-grade dexterity to open-world settings, achieving robust, data-efficient generalization across unseen environments and live public demos.
                   </p>
 
                   <div
