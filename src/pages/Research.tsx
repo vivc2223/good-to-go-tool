@@ -356,8 +356,8 @@ const Research = () => {
                     }}
                   >
                     <img
-                      src="/lovable-uploads/researchnew.PNG"
-                      alt="DYNA Robot Multi-Task Learning"
+                      src="/lovable-uploads/open-world-dexterity-thumbnail.png"
+                      alt="DYNA Open-World Dexterity Demo"
                       className="w-full h-[650px] transition-transform duration-500 group-hover:scale-105"
                       style={{
                         objectFit: "cover",
@@ -597,8 +597,8 @@ const Research = () => {
                   }}
                 >
                   <img
-                    src="/lovable-uploads/researchnew.PNG"
-                    alt="DYNA Robot Multi-Task Learning"
+                    src="/lovable-uploads/open-world-dexterity-thumbnail.png"
+                    alt="DYNA Open-World Dexterity Demo"
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
