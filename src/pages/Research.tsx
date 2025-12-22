@@ -379,7 +379,7 @@ const Research = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        Multi-Task Generalization
+                        Open-World Dexterity
                       </h2>
                       <div
                         style={{
@@ -390,7 +390,7 @@ const Research = () => {
                             "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        AUG 22 '25
+                        DEC 20 '25
                       </div>
                     </div>
 
@@ -404,7 +404,7 @@ const Research = () => {
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      Exploring how DYNA achieves zero-shot transfer across diverse manipulation tasks using unified policy representations.
+                      DYNA-1i achieves cross-environment generalization, enabling robust dexterous manipulation in unseen environments with minimal training data.
                     </p>
 
                     <button
@@ -617,7 +617,7 @@ const Research = () => {
                           "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      Multi-Task Generalization
+                      Open-World Dexterity
                     </h2>
                   </div>
 
@@ -630,7 +630,7 @@ const Research = () => {
                       fontSize: "clamp(14px, 4vw, 20px)",
                     }}
                   >
-                    Exploring how DYNA achieves zero-shot transfer across diverse manipulation tasks using unified policy representations.
+                    DYNA-1i achieves cross-environment generalization, enabling robust dexterous manipulation in unseen environments with minimal training data.
                   </p>
 
                   <div
@@ -643,7 +643,7 @@ const Research = () => {
                         "UntitledSans, system-ui, -apple-system, sans-serif",
                     }}
                   >
-                    AUG 22 '25
+                    DEC 20 '25
                   </div>
 
                   <button

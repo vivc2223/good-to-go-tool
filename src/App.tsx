@@ -23,6 +23,7 @@ import BlogStory from "./pages/BlogStory";
 import NewBlog from "./pages/NewBlog";
 import NewBlog2 from "./pages/NewBlog2";
 import AcceptableUsePolicy from "./pages/AcceptableUsePolicy";
+import OpenWorldDexterity from "./pages/OpenWorldDexterity";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -50,7 +51,7 @@ const App = () => (
               <Route path="/fundraising" element={<Fundraising />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/dyna-1/research" element={<MoreResearch />} />
-              <Route path="/dyna-2/research" element={<DynaResearch />} />
+              <Route path="/dyna-2/research" element={<OpenWorldDexterity />} />
               <Route path="/admin/login" element={<AdminLogin />} />
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
               <Route
