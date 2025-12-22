@@ -46,6 +46,48 @@ const AutoPlayYouTube: React.FC<AutoPlayYouTubeProps> = ({ videoId, title }) => 
   );
 };
 
+interface AutoPlayVideoProps {
+  src: string;
+  title: string;
+}
+
+const AutoPlayVideo: React.FC<AutoPlayVideoProps> = ({ src, title }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && videoRef.current) {
+          videoRef.current.play();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className="w-full aspect-video rounded-lg overflow-hidden">
+      <video
+        ref={videoRef}
+        className="w-full h-full object-cover"
+        src={src}
+        title={title}
+        muted
+        loop
+        playsInline
+        controls
+      />
+    </div>
+  );
+};
+
 const OpenWorldDexterity = () => {
   return (
     <div className="min-h-screen bg-black">
@@ -171,9 +213,9 @@ const OpenWorldDexterity = () => {
             Encouraged by these internal results, we demonstrated the model's capabilities to a broader audience by performing live demos and evaluations at robotics conferences. We first demonstrated our model at the Actuate conference, where it performed laundry folding live on stage while our co-founder Jason delivered a keynote talk; see the whole talk here. As shown in the time lapse below, the live stage presents a particularly challenging deployment scenario, with lighting conditions that differ dramatically from typical office or home indoor environments.
           </p>
 
-          {/* First YouTube Video - Actuate Conference */}
+          {/* First Video - Actuate Conference */}
           <div className="mb-12">
-            <AutoPlayYouTube videoId="Q9HZAtOCjQk" title="DYNA Actuate Conference Keynote" />
+            <AutoPlayVideo src="/videos/20x_Speed_Jason_Actuate.mp4" title="DYNA Actuate Conference Keynote" />
           </div>
 
           <p
