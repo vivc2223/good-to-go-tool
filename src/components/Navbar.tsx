@@ -159,15 +159,15 @@ const Navbar = () => {
                 onMouseEnter={handleShowDropdown}
                 onMouseLeave={handleHideDropdown}
               >
-                <button
-                  onClick={handleCompanyClick}
-                  className="px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer bg-transparent border-none"
+                <Link
+                  to="/mission"
+                  className="px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
                   style={{
-                    color: showCompanyDropdown ? "#ffffff" : "#cccccc",
+                    color: isActive("/mission") || isActive("/blog") || isActive("/culture") ? "#ffffff" : "#cccccc",
                   }}
                 >
                   Company
-                </button>
+                </Link>
               </div>
               <Link
                 to="/careers"
