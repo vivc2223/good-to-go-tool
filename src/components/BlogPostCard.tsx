@@ -15,10 +15,11 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
 }) => {
   return (
     <div className="flex flex-col cursor-pointer group" onClick={onClick}>
+      {/* Fixed aspect ratio container - 4:3 landscape for consistency */}
       <div
-        className="relative overflow-hidden mb-4 hover-lift-enhanced"
+        className="relative overflow-hidden mb-4 hover-lift-enhanced bg-zinc-900"
         style={{
-          height: "280px",
+          aspectRatio: "4 / 3",
           width: "100%",
         }}
       >
@@ -28,6 +29,9 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
           decoding="async"
+          style={{
+            objectPosition: "center center",
+          }}
         />
       </div>
 
