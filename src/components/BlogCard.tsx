@@ -38,7 +38,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <div
         className="relative group overflow-hidden mb-4 hover-lift-enhanced"
         style={{
-          aspectRatio: "16/9",
+          aspectRatio: "4/5",
           width: "100%",
         }}
       >
