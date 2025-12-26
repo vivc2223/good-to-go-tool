@@ -1,10 +1,46 @@
 import Navbar from "@/components/Navbar";
+import BlogCard from "@/components/BlogCard";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
   const navigate = useNavigate();
+
+  const blogPosts = [
+    {
+      title: "Dyna Robotics Closes $120M Series A: How We Think About Scaling Robotic Foundation Models",
+      date: "SEP 15 '25",
+      imageUrl: "/lovable-uploads/founders.jpg",
+      imageAlt: "DYNA Fundraising",
+      navigateTo: "/blog/dyna-robotics-closes-120m-series-a",
+    },
+  ];
+
+  const storyPosts = [
+    {
+      title: "Exclusive: Instacart bought his self-checkout startup for $350M. Now he's teaming with a Google DeepMind alum to build low-cost robots",
+      date: "MAR 25 '25",
+      imageUrl: "/lovable-uploads/founders-future.jpg",
+      imageAlt: "DYNA Founders",
+      externalUrl: "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
+    },
+    {
+      title: "Dyna Robotics Closes $120 Million To Advance Robotic Foundation Models On The Path To Physical Artificial General Intelligence",
+      date: "SEP 15 '25",
+      imageUrl: "/lovable-uploads/dyna-robot.jpg",
+      imageAlt: "DYNA Robot",
+      externalUrl: "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
+    },
+    {
+      title: "How Monster Laundry Scaled Its Laundromat Operations with DYNA",
+      date: "OCT 10 '25",
+      imageUrl: "/lovable-uploads/monster-laundry-thumbnail.png",
+      imageAlt: "Monster Laundry with DYNA robots",
+      navigateTo: "/blog/monster-laundry",
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <Helmet>
@@ -30,19 +66,6 @@ const Blog = () => {
           content="Technical breakthroughs behind DYNA's foundation model built for autonomy at scale. Advanced vision-language-action systems trained in real environments."
         />
         <link rel="canonical" href="https://www.dyna.co/blog" />
-        {/* Preload critical images for faster loading */}
-        <link
-          rel="preload"
-          as="image"
-          href="/lovable-uploads/c2ef3d22-19b4-4693-9c17-ff0bcc54965f.webp"
-          type="image/webp"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/lovable-uploads/827da4e4-f5f8-47d7-b968-b290cead8b90.webp"
-          type="image/webp"
-        />
       </Helmet>
       <Navbar />
       <main className="mb-16">
@@ -96,914 +119,120 @@ const Blog = () => {
           </div>
         </section>
 
-        <div className="hidden lg:block">
-          <section className="w-full">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-                {/* Stories Title */}
-                <div className="text-left">
-                  <h1
-                    className="leading-tight"
-                    style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(28px, 5vw, 41px)",
-                      fontWeight: "normal",
-                      lineHeight: "1.1",
-                      color: "white",
-                    }}
-                  >
-                    Blog
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="w-full">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-              <div className="">
-                {/* Stories Subtitle */}
-                <div className="text-left">
-                  <p
-                    className="leading-relaxed"
-                    style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(14px, 4vw, 20px)",
-                      fontWeight: "normal",
-                      lineHeight: "1.6",
-                      color: "white",
-                    }}
-                  >
-                    Insights and updates from the DYNA team.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="w-full py-0">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-2 gap-16">
-                {/* Stories Card */}
-                <div className="flex flex-col">
-                  <div
-                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() =>
-                      navigate("/blog/dyna-robotics-closes-120m-series-a")
-                    }
-                    style={{
-                      height: "650px",
-                      width: "100%",
-                    }}
-                  >
-                    <img
-                      src="/lovable-uploads/founders.jpg"
-                      alt="DYNA Fundraising"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <div className="flex items-start justify-between mb-2 h-28">
-                      <h2
-                        className="leading-tight"
-                        style={{
-                          color: "white",
-                          margin: "0px",
-                          fontSize: "clamp(20px, 5vw, 24px)",
-                          fontWeight: "500",
-                          width: "70%",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        Dyna Robotics Closes $120M Series A: How We Think About
-                        Scaling Robotic Foundation Models
-                      </h2>
-                      <div
-                        style={{
-                          color: "white",
-                          fontWeight: "normal",
-                          fontSize: "clamp(20px, 5vw, 24px)",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        SEP 15 '25
-                      </div>
-                    </div>
-
-                    <p
-                      className="leading-relaxed mb-4 h-30"
-                      style={{
-                        color: "white",
-                        fontWeight: "normal",
-                        fontSize: "clamp(14px, 4vw, 20px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      DYNA raised $120M and unveiled five first principles for
-                      scaling embodied AI, combining generalization,
-                      distribution, ROI, data and iteration.
-                    </p>
-
-                    <button
-                      onClick={() =>
-                        navigate("/blog/dyna-robotics-closes-120m-series-a")
-                      }
-                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
-                    >
-                      <span
-                        style={{
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(14px, 4vw, 20px)",
-                          textDecoration: "underline",
-                          textUnderlineOffset: "4px",
-                          textDecorationThickness: "1px",
-                        }}
-                      >
-                        Read More
-                      </span>
-                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 3L11 8L6 13"
-                            stroke="white"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
-          {/* Header Section */}
-          <section className="w-full">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-                {/* Stories Title */}
-                <div className="text-left">
-                  <h1
-                    className="leading-tight"
-                    style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(28px, 5vw, 41px)",
-                      fontWeight: "normal",
-                      lineHeight: "1.1",
-                      color: "white",
-                    }}
-                  >
-                    Stories
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="w-full">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-              <div className="">
-                {/* Stories Subtitle */}
-                <div className="text-left">
-                  <p
-                    className="leading-relaxed"
-                    style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(14px, 4vw, 20px)",
-                      fontWeight: "normal",
-                      lineHeight: "1.6",
-                      color: "white",
-                    }}
-                  >
-                    Press features and media coverage of DYNA
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="w-full py-0">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-2 gap-16">
-                {/* Stories Card */}
-                <div className="flex flex-col">
-                  <div
-                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() =>
-                      window.open(
-                        "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
-                        "_blank"
-                      )
-                    }
-                    style={{
-                      height: "650px",
-                      width: "100%",
-                    }}
-                  >
-                    <img
-                      src="/lovable-uploads/founders-future.jpg"
-                      alt="DYNA Founders"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <div className="flex items-start justify-between  mb-2 h-28">
-                      <h2
-                        className=" leading-none"
-                        style={{
-                          color: "white",
-                          margin: "0px",
-                          fontSize: "clamp(20px, 5vw, 24px)",
-                          fontWeight: "500",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        DYNA Founders & Fortune Feature
-                      </h2>
-                      <div
-                        className=""
-                        style={{
-                          color: "white",
-                          fontWeight: "normal",
-                          fontSize: "clamp(20px, 5vw, 24px)",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        MAR 25 '25
-                      </div>
-                    </div>
-
-                    <p
-                      className="leading-relaxed mb-4 h-30"
-                      style={{
-                        color: "white",
-                        fontWeight: "normal",
-                        fontSize: "clamp(14px, 4vw, 20px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      Exclusive: Instacart bought his self-checkout startup for
-                      $350M. Now he's teaming with a Google DeepMind alum to
-                      build low-cost robots.
-                    </p>
-
-                    <button
-                      onClick={() =>
-                        window.open(
-                          "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
-                          "_blank"
-                        )
-                      }
-                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
-                    >
-                      <span
-                        style={{
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(14px, 4vw, 20px)",
-                          textDecoration: "underline",
-                          textUnderlineOffset: "4px",
-                          textDecorationThickness: "1px",
-                        }}
-                      >
-                        Read More
-                      </span>
-                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 3L11 8L6 13"
-                            stroke="white"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-
-                <div className="flex flex-col">
-                  <div
-                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() =>
-                      window.open(
-                        "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
-                        "_blank"
-                      )
-                    }
-                    style={{
-                      height: "650px",
-                      width: "100%",
-                    }}
-                  >
-                    <img
-                      src="/lovable-uploads/dyna-robot.jpg"
-                      alt="DYNA Founders"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <div className="flex items-start justify-between mb-2 h-28">
-                      <h2
-                        className="leading-tight"
-                        style={{
-                          width: "80%",
-                          color: "white",
-                          margin: "0px",
-                          fontSize: "clamp(20px, 5vw, 24px)",
-                          fontWeight: "500",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        Dyna Robotics Closes $120 Million To Advance Robotic
-                        Foundation Models On The Path To Pysical Artificial
-                        General Intelligence
-                      </h2>
-                      <div
-                        style={{
-                          color: "white",
-                          fontWeight: "normal",
-                          fontSize: "clamp(20px, 5vw, 24px)",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        SEP 15 '25
-                      </div>
-                    </div>
-
-                    <p
-                      className="leading-relaxed mb-4 h-30"
-                      style={{
-                        color: "white",
-                        fontWeight: "normal",
-                        fontSize: "clamp(14px, 4vw, 20px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      DYNA raised $120M led by Robostrategy, CRV, and First
-                      Round to scale embodied AI robots achieving 99%+
-                      commercial performance.
-                    </p>
-
-                    <button
-                      onClick={() =>
-                        window.open(
-                          "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
-                          "_blank"
-                        )
-                      }
-                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
-                    >
-                      <span
-                        style={{
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(14px, 4vw, 20px)",
-                          textDecoration: "underline",
-                          textUnderlineOffset: "4px",
-                          textDecorationThickness: "1px",
-                        }}
-                      >
-                        Read More
-                      </span>
-                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 3L11 8L6 13"
-                            stroke="white"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Monster Laundry Row - Under Stories */}
-          <section className="w-full py-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-2 gap-16">
-                {/* Monster Laundry Card */}
-                <div className="flex flex-col">
-                  <div
-                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() =>
-                      navigate("/blog/monster-laundry")
-                    }
-                    style={{
-                      height: "650px",
-                      width: "100%",
-                    }}
-                  >
-                    <img
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      src="/lovable-uploads/monster-laundry-thumbnail.png"
-                      alt="Monster Laundry with DYNA robots"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <div className="flex items-start justify-between mb-2 h-28">
-                      <h2
-                        className="leading-tight"
-                        style={{
-                          color: "white",
-                          margin: "0px",
-                          fontSize: "clamp(20px, 5vw, 24px)",
-                          fontWeight: "500",
-                          width: "80%",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        How Monster Laundry Scaled Its Laundromat Operations with DYNA
-                      </h2>
-                      <div
-                        style={{
-                          color: "white",
-                          fontWeight: "normal",
-                          fontSize: "clamp(20px, 5vw, 24px)",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                        }}
-                      >
-                        OCT 10 '25
-                      </div>
-                    </div>
-
-                    <p
-                      className="leading-relaxed mb-4 h-30"
-                      style={{
-                        color: "white",
-                        fontWeight: "normal",
-                        fontSize: "clamp(14px, 4vw, 20px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      Monster Laundry partnered with DYNA to automate towel folding, 
-                      achieving 99%+ accuracy and transforming their operations.
-                    </p>
-
-                    <button
-                      onClick={() =>
-                        navigate("/blog/monster-laundry")
-                      }
-                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
-                    >
-                      <span
-                        style={{
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
-                          fontSize: "clamp(14px, 4vw, 20px)",
-                          textDecoration: "underline",
-                          textUnderlineOffset: "4px",
-                          textDecorationThickness: "1px",
-                        }}
-                      >
-                        Read More
-                      </span>
-                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 3L11 8L6 13"
-                            stroke="white"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        {/* Mobile Layout - Hidden on desktop */}
-        <div className="block lg:hidden">
-          {/* Stories Section */}
-          <section className="w-full">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-              {/* Stories Title */}
-              <div className="text-left mb-6">
-                <h1
-                  className="leading-tight"
-                  style={{
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(28px, 5vw, 41px)",
-                    fontWeight: "normal",
-                    lineHeight: "1.1",
-                    color: "white",
-                  }}
-                >
-                  Blog
-                </h1>
-              </div>
-
-              {/* Stories Subtitle */}
-              <div className="text-left mb-8">
-                <p
-                  className="leading-relaxed"
-                  style={{
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
-                    fontSize: "clamp(14px, 4vw, 20px)",
-                    fontWeight: "normal",
-                    lineHeight: "1.6",
-                    color: "white",
-                  }}
-                >
-                  Insights and updates from the DYNA team.
-                </p>
-              </div>
-
-              <section className="w-full py-0">
-                <div className="">
-                  <div className="">
-                    {/* Stories Card */}
-                    <div className="flex flex-col mb-8">
-                      <div
-                        className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                        onClick={() =>
-                          navigate("/blog/dyna-robotics-closes-120m-series-a")
-                        }
-                        style={{
-                          width: "100%",
-                        }}
-                      >
-                        <img
-                          src="/lovable-uploads/founders.jpg"
-                          alt="DYNA Fundraising"
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-
-                      <div className="flex flex-col">
-                        <div className="mb-2">
-                          <h2
-                            style={{
-                              color: "white",
-                              margin: "0px",
-                              fontSize: "clamp(20px, 5vw, 24px)",
-                              fontWeight: "500",
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
-                            }}
-                          >
-                            Dyna Robotics Closes $120M Series A: How We Think
-                            About Scaling Robotic Foundation Models
-                          </h2>
-                        </div>
-
-                        <p
-                          className="leading-relaxed mb-4"
-                          style={{
-                            color: "white",
-                            fontWeight: "normal",
-                            fontSize: "clamp(14px, 4vw, 20px)",
-                            fontFamily:
-                              "UntitledSans, system-ui, -apple-system, sans-serif",
-                          }}
-                        >
-                          DYNA raised $120M and unveiled five first principles
-                          for scaling embodied AI, combining generalization,
-                          distribution, ROI, data and iteration.
-                        </p>
-
-                        <div
-                          className="mb-4"
-                          style={{
-                            color: "white",
-                            fontWeight: "normal",
-                            fontSize: "clamp(14px, 4vw, 20px)",
-                            fontFamily:
-                              "UntitledSans, system-ui, -apple-system, sans-serif",
-                          }}
-                        >
-                          SEP 15 '25
-                        </div>
-
-                        <button
-                          onClick={() =>
-                            navigate("/blog/dyna-robotics-closes-120m-series-a")
-                          }
-                          className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
-                        >
-                          <span
-                            style={{
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
-                              fontSize: "clamp(14px, 4vw, 20px)",
-                              textDecoration: "underline",
-                              textUnderlineOffset: "4px",
-                              textDecorationThickness: "1px",
-                            }}
-                          >
-                            Read More
-                          </span>
-                          <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                            <svg
-                              width="12"
-                              height="12"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M6 3L11 8L6 13"
-                                stroke="white"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-            </div>
-          </section>
-          <section className="w-full">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-              <div
-                className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                onClick={() =>
-                  window.open(
-                    "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
-                    "_blank"
-                  )
-                }
+        {/* Blog Section */}
+        <section className="w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+            <div className="text-left">
+              <h1
+                className="leading-tight"
                 style={{
-                  // height: "650px",
-                  width: "100%",
+                  fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+                  fontSize: "clamp(28px, 5vw, 41px)",
+                  fontWeight: "normal",
+                  lineHeight: "1.1",
+                  color: "white",
                 }}
               >
-                <img
-                  src="/lovable-uploads/dyna-robot.jpg"
-                  alt="DYNA Founders"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
+                Blog
+              </h1>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+            <div className="text-left">
+              <p
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+                  fontSize: "clamp(14px, 4vw, 20px)",
+                  fontWeight: "normal",
+                  lineHeight: "1.6",
+                  color: "white",
+                }}
+              >
+                Insights and updates from the DYNA team.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Blog Posts Grid - 3 columns */}
+        <section className="w-full py-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post, index) => (
+                <BlogCard
+                  key={index}
+                  title={post.title}
+                  date={post.date}
+                  imageUrl={post.imageUrl}
+                  imageAlt={post.imageAlt}
+                  navigateTo={post.navigateTo}
                 />
-              </div>
-
-              <div className="flex flex-col">
-                <div className="mb-2">
-                  <h2
-                    style={{
-                      color: "white",
-                      margin: "0px",
-                      fontSize: "clamp(20px, 5vw, 24px)",
-                      fontWeight: "500",
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                    }}
-                  >
-                    Dyna Robotics Closes $120 Million How We Scale Robotic
-                    Foundation Model On The Path To Pysical Artificial General
-                    Intelligence
-                  </h2>
-                </div>
-
-                <p
-                  className="leading-relaxed mb-4"
-                  style={{
-                    color: "white",
-                    fontWeight: "normal",
-                    fontSize: "clamp(14px, 4vw, 20px)",
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
-                  }}
-                >
-                  Dyna Robotics secures $120M in Series A funding from
-                  world-class investors to accelerate embodied AI and scale
-                  deployment-first robotics.
-                </p>
-
-                <div
-                  className="mb-4"
-                  style={{
-                    color: "white",
-                    fontWeight: "normal",
-                    fontSize: "clamp(14px, 4vw, 20px)",
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
-                  }}
-                >
-                  SEP 22 '25
-                </div>
-
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
-                      "_blank"
-                    )
-                  }
-                  className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
-                >
-                  <span
-                    style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                      fontSize: "clamp(14px, 4vw, 20px)",
-                      textDecoration: "underline",
-                      textUnderlineOffset: "4px",
-                      textDecorationThickness: "1px",
-                    }}
-                  >
-                    Read More
-                  </span>
-                  <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6 3L11 8L6 13"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </div>
+              ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Monster Laundry Card - Under Stories */}
-          <section className="w-full pt-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-              <div className="flex flex-col mb-8">
-                <div
-                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                  onClick={() =>
-                    navigate("/blog/monster-laundry")
-                  }
-                  style={{
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                    src="/lovable-uploads/monster-laundry-thumbnail.png"
-                    alt="Monster Laundry with DYNA robots"
-                    style={{ minHeight: "300px", objectFit: "cover" }}
-                  />
-                </div>
-
-                <div className="flex flex-col">
-                  <div className="mb-2">
-                    <h2
-                      style={{
-                        color: "white",
-                        margin: "0px",
-                        fontSize: "clamp(20px, 5vw, 24px)",
-                        fontWeight: "500",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                      }}
-                    >
-                      How Monster Laundry Scaled Its Laundromat Operations with DYNA
-                    </h2>
-                  </div>
-
-                  <p
-                    className="leading-relaxed mb-4"
-                    style={{
-                      color: "white",
-                      fontWeight: "normal",
-                      fontSize: "clamp(14px, 4vw, 20px)",
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                    }}
-                  >
-                    Monster Laundry partnered with DYNA to automate towel folding, 
-                    achieving 99%+ accuracy and transforming their operations.
-                  </p>
-
-                  <div
-                    className="mb-4"
-                    style={{
-                      color: "white",
-                      fontWeight: "normal",
-                      fontSize: "clamp(14px, 4vw, 20px)",
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
-                    }}
-                  >
-                    OCT 10 '25
-                  </div>
-
-                  <button
-                    onClick={() =>
-                      navigate("/blog/monster-laundry")
-                    }
-                    className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
-                  >
-                    <span
-                      style={{
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
-                        fontSize: "clamp(14px, 4vw, 20px)",
-                        textDecoration: "underline",
-                        textUnderlineOffset: "4px",
-                        textDecorationThickness: "1px",
-                      }}
-                    >
-                      Read More
-                    </span>
-                    <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6 3L11 8L6 13"
-                          stroke="white"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </button>
-                </div>
-              </div>
+        {/* Stories Section */}
+        <section className="w-full pt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+            <div className="text-left">
+              <h1
+                className="leading-tight"
+                style={{
+                  fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+                  fontSize: "clamp(28px, 5vw, 41px)",
+                  fontWeight: "normal",
+                  lineHeight: "1.1",
+                  color: "white",
+                }}
+              >
+                Stories
+              </h1>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+
+        <section className="w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+            <div className="text-left">
+              <p
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+                  fontSize: "clamp(14px, 4vw, 20px)",
+                  fontWeight: "normal",
+                  lineHeight: "1.6",
+                  color: "white",
+                }}
+              >
+                Press features and media coverage of DYNA
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Stories Grid - 3 columns */}
+        <section className="w-full py-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {storyPosts.map((post, index) => (
+                <BlogCard
+                  key={index}
+                  title={post.title}
+                  date={post.date}
+                  imageUrl={post.imageUrl}
+                  imageAlt={post.imageAlt}
+                  navigateTo={post.navigateTo}
+                  externalUrl={post.externalUrl}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
