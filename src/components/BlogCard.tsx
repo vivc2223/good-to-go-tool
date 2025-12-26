@@ -53,16 +53,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
 
       {/* Title and date */}
       <div className="flex flex-col gap-2">
-        <div
-          style={{
-            color: "white",
-            fontWeight: "normal",
-            fontSize: "clamp(14px, 3vw, 18px)",
-            fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
-          }}
-        >
-          {date}
-        </div>
         <h2
           className="leading-tight"
           style={{
@@ -76,6 +66,16 @@ const BlogCard: React.FC<BlogCardProps> = ({
         >
           {title}
         </h2>
+        <div
+          style={{
+            color: "white",
+            fontWeight: "normal",
+            fontSize: "clamp(14px, 3vw, 18px)",
+            fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+          }}
+        >
+          {date}
+        </div>
       </div>
     </div>
   );
