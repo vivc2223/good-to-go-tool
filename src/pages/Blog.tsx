@@ -21,7 +21,7 @@ const Blog = () => {
   const storyPosts = [
     {
       id: 1,
-      title: "DYNA Founders & Fortune Feature",
+      title: "Exclusive: Instacart bought his self-checkout startup for $350M. Now he's teaming with a Google DeepMind alum to build low-cost robots",
       date: "MAR 25 '25",
       imageUrl: "/lovable-uploads/founders-future.jpg",
       onClick: () =>

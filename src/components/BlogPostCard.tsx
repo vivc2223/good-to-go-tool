@@ -17,7 +17,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
     <div className="flex flex-col cursor-pointer group" onClick={onClick}>
       {/* Fixed aspect ratio container - 4:3 landscape for consistency */}
       <div
-        className="relative overflow-hidden mb-4 hover-lift-enhanced bg-zinc-900"
+        className="relative overflow-hidden hover-lift-enhanced bg-zinc-900"
         style={{
           aspectRatio: "4 / 3",
           width: "100%",
@@ -35,9 +35,9 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
         />
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-3">
         <h2
-          className="line-clamp-1 mb-2"
+          className="line-clamp-1"
           style={{
             color: "white",
             fontSize: "clamp(16px, 4vw, 20px)",
@@ -46,12 +46,14 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
+            width: "100%",
           }}
           title={title}
         >
           {title}
         </h2>
         <div
+          className="mt-2"
           style={{
             color: "rgba(255, 255, 255, 0.7)",
             fontSize: "clamp(12px, 3vw, 14px)",
