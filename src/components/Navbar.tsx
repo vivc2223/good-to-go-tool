@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
-  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
-    null
-  );
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
+  
+  const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -22,28 +22,64 @@ const Navbar = () => {
     return false;
   };
 
-  const handleShowDropdown = () => {
-    if (dropdownTimeout) {
-      clearTimeout(dropdownTimeout);
-      setDropdownTimeout(null);
+  // Clear any pending hide timeout
+  const clearHideTimeout = () => {
+    if (hideTimeoutRef.current) {
+      clearTimeout(hideTimeoutRef.current);
+      hideTimeoutRef.current = null;
     }
+  };
+
+  // Toggle dropdown on click
+  const handleCompanyClick = () => {
+    clearHideTimeout();
+    setShowCompanyDropdown((prev) => !prev);
+  };
+
+  // Show dropdown on hover with delay protection
+  const handleShowDropdown = () => {
+    clearHideTimeout();
     setShowCompanyDropdown(true);
   };
 
+  // Hide dropdown with generous delay (300ms)
   const handleHideDropdown = () => {
-    const timeout = setTimeout(() => {
+    clearHideTimeout();
+    hideTimeoutRef.current = setTimeout(() => {
       setShowCompanyDropdown(false);
-    }, 150);
-    setDropdownTimeout(timeout);
+    }, 300);
   };
 
   const handleOtherNavHover = () => {
-    if (dropdownTimeout) {
-      clearTimeout(dropdownTimeout);
-      setDropdownTimeout(null);
-    }
+    clearHideTimeout();
     setShowCompanyDropdown(false);
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowCompanyDropdown(false);
+      }
+    };
+
+    if (showCompanyDropdown) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showCompanyDropdown]);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (hideTimeoutRef.current) {
+        clearTimeout(hideTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -118,18 +154,20 @@ const Navbar = () => {
                 Research
               </Link>
               <div
+                ref={dropdownRef}
                 className="relative"
                 onMouseEnter={handleShowDropdown}
                 onMouseLeave={handleHideDropdown}
               >
-                <span
-                  className="px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+                <button
+                  onClick={handleCompanyClick}
+                  className="px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer bg-transparent border-none"
                   style={{
-                    color: "#cccccc",
+                    color: showCompanyDropdown ? "#ffffff" : "#cccccc",
                   }}
                 >
                   Company
-                </span>
+                </button>
               </div>
               <Link
                 to="/careers"
@@ -169,6 +207,7 @@ const Navbar = () => {
           }}
           onMouseEnter={handleShowDropdown}
           onMouseLeave={handleHideDropdown}
+          onClick={(e) => e.stopPropagation()}
         >
           <div
             className="absolute inset-0"
