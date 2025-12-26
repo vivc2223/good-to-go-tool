@@ -58,17 +58,20 @@ const Navbar = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setShowCompanyDropdown(false);
       }
     };
 
     if (showCompanyDropdown) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("click", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, [showCompanyDropdown]);
 
@@ -273,6 +276,7 @@ const Navbar = () => {
                     to="/blog"
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
+                    onClick={() => setShowCompanyDropdown(false)}
                   >
                     Stories
                   </Link>
@@ -280,6 +284,7 @@ const Navbar = () => {
                     to="/mission"
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
+                    onClick={() => setShowCompanyDropdown(false)}
                   >
                     Mission
                   </Link>
@@ -287,6 +292,7 @@ const Navbar = () => {
                     to="/culture"
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
+                    onClick={() => setShowCompanyDropdown(false)}
                   >
                     Culture
                   </Link>
