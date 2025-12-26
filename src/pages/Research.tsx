@@ -3,29 +3,59 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useScrollEffects } from "@/hooks/useScrollEffects";
+import { useUniversalScrollReveal } from "@/hooks/useUniversalScrollReveal";
 import { useNavigate } from "react-router-dom";
-import BlogPostCard from "@/components/BlogPostCard";
 
 const Research = () => {
   const navigate = useNavigate();
   useScrollEffects();
+  const { elementRef: mainTitleRef, style: mainTitleStyle } =
+    useUniversalScrollReveal();
+  const { elementRef: storiesTitleRef, style: storiesTitleStyle } =
+    useUniversalScrollReveal();
+  const { elementRef: mainDescRef, style: mainDescStyle } =
+    useUniversalScrollReveal();
+  const { elementRef: storiesDescRef, style: storiesDescStyle } =
+    useUniversalScrollReveal();
 
-  const researchPosts = [
+  const blogPosts = [
     {
       id: 1,
-      title: "DYNA-1 Model",
-      date: "JUN 15 '25",
-      imageUrl: "/lovable-uploads/newresearch.png",
-      onClick: () => navigate("/dyna-1/research"),
+      title: "Dyna-1: A Breakthrough in Real-World Dexterity",
+      date: "June 24, 2025",
+      summary:
+        "Dyna-1 sustained a 24-hour deployment folding 850+ napkins autonomously — holding a 99.4% success rate at 60% of human speed, with zero resets.",
+      slug: "dyna-1-breakthrough-real-world-dexterity",
+      externalUrl: "/dyna-1/research",
+      imageUrl: "/lovable-uploads/64eeb563-e7dc-4367-b1ae-7e649cae6e56.webp",
     },
     {
       id: 2,
-      title: "Open-World Dexterity and Live Demos around the World",
-      date: "DEC 20 '25",
-      imageUrl: "/lovable-uploads/open-world-dexterity-thumbnail.png",
-      onClick: () => navigate("/dyna-2/research"),
+      title: "Scaling Robotic Learning: From Simulation to Production",
+      date: "May 15, 2025",
+      summary:
+        "How we bridged the sim-to-real gap using foundation models and continual learning approaches that work in unstructured environments.",
+      slug: "scaling-robotic-learning-simulation-production",
+      imageUrl: "/lovable-uploads/64eeb563-e7dc-4367-b1ae-7e649cae6e56.webp",
+    },
+    {
+      id: 3,
+      title: "Error Recovery in Autonomous Systems",
+      date: "April 8, 2025",
+      summary:
+        "Deep dive into Dyna's real-time error detection and recovery mechanisms that enable 99.4% success rates in commercial deployments.",
+      slug: "error-recovery-autonomous-systems",
+      imageUrl: "/lovable-uploads/64eeb563-e7dc-4367-b1ae-7e649cae6e56.webp",
     },
   ];
+
+  const handleBlogClick = (post: (typeof blogPosts)[0]) => {
+    if (post.externalUrl) {
+      window.open(post.externalUrl, "_blank");
+    } else {
+      console.log(`Navigate to blog post: ${post.slug}`);
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -58,11 +88,18 @@ const Research = () => {
           content="Technical breakthroughs behind DYNA's foundation model built for autonomy at scale. Advanced vision-language-action systems trained in real environments."
         />
         <link rel="canonical" href="https://www.dyna.co/research" />
+        {/* Preload critical images for faster loading */}
         <link
           rel="preload"
           as="image"
-          href="/lovable-uploads/newresearch.png"
-          type="image/png"
+          href="/lovable-uploads/c2ef3d22-19b4-4693-9c17-ff0bcc54965f.webp"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/lovable-uploads/827da4e4-f5f8-47d7-b968-b290cead8b90.webp"
+          type="image/webp"
         />
       </Helmet>
       <Navbar />
@@ -117,65 +154,539 @@ const Research = () => {
           </div>
         </section>
 
-        {/* Header Section */}
-        <section className="w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-            <div className="text-left">
-              <h1
-                className="leading-tight"
-                style={{
-                  fontFamily:
-                    "UntitledSans, system-ui, -apple-system, sans-serif",
-                  fontSize: "clamp(28px, 5vw, 41px)",
-                  fontWeight: "normal",
-                  lineHeight: "1.1",
-                  color: "white",
-                }}
-              >
-                Research
-              </h1>
-            </div>
-          </div>
-        </section>
+        {/* Desktop Layout - Hidden on mobile */}
+        <div className="hidden lg:block">
+          {/* Header Section */}
+          <section className="w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+                {/* Research Title */}
+                <div className="text-left">
+                  <h1
+                    className="leading-tight"
+                    style={{
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(28px, 5vw, 41px)",
+                      fontWeight: "normal",
+                      lineHeight: "1.1",
+                      color: "white",
+                    }}
+                  >
+                    Research
+                  </h1>
+                </div>
 
-        {/* Subtitle Section */}
-        <section className="w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-            <div className="text-left">
-              <p
-                className="leading-relaxed"
-                style={{
-                  fontFamily:
-                    "UntitledSans, system-ui, -apple-system, sans-serif",
-                  fontSize: "clamp(14px, 4vw, 20px)",
-                  fontWeight: "normal",
-                  lineHeight: "1.6",
-                  color: "white",
-                }}
-              >
-                Explore the technical breakthroughs and real-world engineering
-                behind DYNA's foundation model — built for autonomy at scale.
-              </p>
+                {/* Stories Title */}
+                {/* <div className="text-left">
+                  <h1
+                    className="leading-tight"
+                    style={{
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(28px, 5vw, 41px)",
+                      fontWeight: "normal",
+                      lineHeight: "1.1",
+                      color: "white",
+                    }}
+                  >
+                    Blog
+                  </h1>
+                </div> */}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Blog Posts Grid - 3 columns */}
-        <section className="w-full py-0">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {researchPosts.map((post) => (
-                <BlogPostCard
-                  key={post.id}
-                  title={post.title}
-                  date={post.date}
-                  imageUrl={post.imageUrl}
-                  onClick={post.onClick}
-                />
-              ))}
+          {/* Subtitle Section */}
+          <section className="w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+              <div className="">
+                {/* Research Subtitle */}
+                <div className="text-left">
+                  <p
+                    className="leading-relaxed"
+                    style={{
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                      fontWeight: "normal",
+                      lineHeight: "1.6",
+                      color: "white",
+                    }}
+                  >
+                    Explore the technical breakthroughs and real-world
+                    engineering behind DYNA's foundation model — built for
+                    autonomy at scale.
+                  </p>
+                </div>
+
+                {/* Stories Subtitle */}
+                {/* <div className="text-left">
+                  <p
+                    className="leading-relaxed"
+                    style={{
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                      fontWeight: "normal",
+                      lineHeight: "1.6",
+                      color: "white",
+                    }}
+                  >
+                    The people, funding, and real-world ambition behind DYNA.
+                  </p>
+                </div> */}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+
+          {/* Content Cards Section */}
+          <section className="w-full py-0">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                {/* Research Card */}
+                <div className="flex flex-col">
+                  <div
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                    onClick={() => handleBlogClick(blogPosts[0])}
+                    style={{
+                      height: "650px",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      src="/lovable-uploads/newresearch.png"
+                      alt="DYNA Robot Research"
+                      className="w-full h-[650px] transition-transform duration-500 group-hover:scale-105"
+                      style={{
+                        objectFit: "cover",
+                      }}
+                      fetchPriority="high"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <div className="flex items-center justify-between mb-2">
+                      <h2
+                        style={{
+                          color: "white",
+                          margin: "0px",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        DYNA-1 Model
+                      </h2>
+                      <div
+                        style={{
+                          color: "white",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "normal",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        JUN 15 '25
+                      </div>
+                    </div>
+
+                    <p
+                      className="leading-relaxed mb-4"
+                      style={{
+                        color: "white",
+                        fontSize: "clamp(14px, 4vw, 20px)",
+                        fontWeight: "normal",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      DYNA-1 is built on advanced vision-language-action systems
+                      and trained directly in real environments — no simulation
+                      shortcuts.
+                    </p>
+
+                    <button
+                      onClick={() => navigate("/dyna-1/research")}
+                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                    >
+                      <span
+                        style={{
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontSize: "clamp(14px, 4vw, 20px)",
+                          textDecoration: "underline",
+                          textUnderlineOffset: "4px",
+                          textDecorationThickness: "1px",
+                        }}
+                      >
+                        Read More
+                      </span>
+                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 3L11 8L6 13"
+                            stroke="white"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Second Research Card - Dummy Content */}
+                <div className="flex flex-col">
+                  <div
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                    onClick={() => navigate("/dyna-2/research")}
+                    style={{
+                      height: "650px",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      src="/lovable-uploads/open-world-dexterity-thumbnail.png"
+                      alt="DYNA Open-World Dexterity Demo"
+                      className="w-full h-[650px] transition-transform duration-500 group-hover:scale-105"
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "15% center",
+                      }}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <div className="flex items-center justify-between mb-2">
+                      <h2
+                        style={{
+                          color: "white",
+                          margin: "0px",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        Open-World Dexterity and Live Demos around the World
+                      </h2>
+                      <div
+                        style={{
+                          color: "white",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "normal",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        DEC 20 '25
+                      </div>
+                    </div>
+
+                    <p
+                      className="leading-relaxed mb-4"
+                      style={{
+                        color: "white",
+                        fontSize: "clamp(14px, 4vw, 20px)",
+                        fontWeight: "normal",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      DYNA-1i extends DYNA-1's production-grade dexterity to open-world settings, achieving robust, data-efficient generalization across unseen environments and live public demos.
+                    </p>
+
+                    <button
+                      onClick={() => navigate("/dyna-2/research")}
+                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                    >
+                      <span
+                        style={{
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontSize: "clamp(14px, 4vw, 20px)",
+                          textDecoration: "underline",
+                          textUnderlineOffset: "4px",
+                          textDecorationThickness: "1px",
+                        }}
+                      >
+                        Read More
+                      </span>
+                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 3L11 8L6 13"
+                            stroke="white"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* Mobile Layout - Hidden on desktop */}
+        <div className="block lg:hidden">
+          {/* Research Section */}
+          <section className="w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+              {/* Research Title */}
+              <div className="text-left mb-6">
+                <h1
+                  className="leading-tight"
+                  style={{
+                    fontFamily:
+                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontSize: "clamp(28px, 5vw, 41px)",
+                    fontWeight: "normal",
+                    lineHeight: "1.1",
+                    color: "white",
+                  }}
+                >
+                  Research
+                </h1>
+              </div>
+
+              {/* Research Subtitle */}
+              <div className="text-left mb-8">
+                <p
+                  className="leading-relaxed"
+                  style={{
+                    fontFamily:
+                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontSize: "clamp(14px, 4vw, 20px)",
+                    fontWeight: "normal",
+                    lineHeight: "1.6",
+                    color: "white",
+                  }}
+                >
+                  Explore the technical breakthroughs and real-world engineering
+                  behind DYNA's foundation model — built for autonomy at scale.
+                </p>
+              </div>
+
+              {/* Research Card */}
+              <div className="flex flex-col mb-16">
+                <div
+                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                  onClick={() => handleBlogClick(blogPosts[0])}
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    src="/lovable-uploads/newresearch.png"
+                    alt="DYNA Robot Research"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <div className="mb-2">
+                    <h2
+                      style={{
+                        color: "white",
+                        margin: "0px",
+                        fontSize: "clamp(20px, 5vw, 24px)",
+                        fontWeight: "500",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      DYNA-1 Model
+                    </h2>
+                  </div>
+
+                  <p
+                    className="leading-relaxed mb-4"
+                    style={{
+                      color: "white",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                    }}
+                  >
+                    DYNA-1 is built on advanced vision-language-action systems
+                    and trained directly in real environments — no simulation
+                    shortcuts.
+                  </p>
+
+                  <div
+                    className="mb-4"
+                    style={{
+                      color: "white",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                      fontWeight: "normal",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    JUN 15 '25
+                  </div>
+
+                  <button
+                    onClick={() => navigate("/dyna-1/research")}
+                    className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                  >
+                    <span
+                      className="text-sm font-medium text-white"
+                      style={{
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        textDecoration: "underline",
+                        textUnderlineOffset: "4px",
+                        textDecorationThickness: "1px",
+                      }}
+                    >
+                      Read More
+                    </span>
+                    <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 3L11 8L6 13"
+                          stroke="white"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              {/* Second Research Card - Mobile */}
+              <div className="flex flex-col mb-16">
+                <div
+                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                  onClick={() => navigate("/dyna-2/research")}
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    src="/lovable-uploads/open-world-dexterity-thumbnail.png"
+                    alt="DYNA Open-World Dexterity Demo"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <div className="mb-2">
+                    <h2
+                      style={{
+                        color: "white",
+                        margin: "0px",
+                        fontSize: "clamp(20px, 5vw, 24px)",
+                        fontWeight: "500",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      Open-World Dexterity and Live Demos around the World
+                    </h2>
+                  </div>
+
+                  <p
+                    className="leading-relaxed mb-4"
+                    style={{
+                      color: "white",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                    }}
+                  >
+                    DYNA-1i extends DYNA-1's production-grade dexterity to open-world settings, achieving robust, data-efficient generalization across unseen environments and live public demos.
+                  </p>
+
+                  <div
+                    className="mb-4"
+                    style={{
+                      color: "white",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                      fontWeight: "normal",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    DEC 20 '25
+                  </div>
+
+                  <button
+                    onClick={() => navigate("/dyna-2/research")}
+                    className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                  >
+                    <span
+                      className="text-sm font-medium text-white"
+                      style={{
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        textDecoration: "underline",
+                        textUnderlineOffset: "4px",
+                        textDecorationThickness: "1px",
+                      }}
+                    >
+                      Read More
+                    </span>
+                    <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 3L11 8L6 13"
+                          stroke="white"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        </div>
       </main>
       <Footer />
     </div>
