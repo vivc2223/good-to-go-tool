@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Blog = () => {
   const navigate = useNavigate();
 
-  const allPosts = [
+  const blogPosts = [
     {
       title: "Dyna Robotics Closes $120M Series A: How We Think About Scaling Robotic Foundation Models",
       date: "SEP 15 '25",
@@ -15,6 +15,9 @@ const Blog = () => {
       imageAlt: "DYNA Fundraising",
       navigateTo: "/blog/dyna-robotics-closes-120m-series-a",
     },
+  ];
+
+  const storyPosts = [
     {
       title: "Exclusive: Instacart bought his self-checkout startup for $350M. Now he's teaming with a Google DeepMind alum to build low-cost robots",
       date: "MAR 25 '25",
@@ -116,9 +119,9 @@ const Blog = () => {
           </div>
         </section>
 
-        {/* Insights & Coverage Section */}
+        {/* Blog Section */}
         <section className="w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
             <div className="text-left">
               <h1
                 className="leading-tight"
@@ -130,10 +133,17 @@ const Blog = () => {
                   color: "white",
                 }}
               >
-                Insights & Coverage
+                Blog
               </h1>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+            <div className="text-left">
               <p
-                className="leading-relaxed mt-4"
+                className="leading-relaxed"
                 style={{
                   fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                   fontSize: "clamp(14px, 4vw, 20px)",
@@ -142,17 +152,74 @@ const Blog = () => {
                   color: "white",
                 }}
               >
-                Company updates and external media coverage of DYNA
+                Insights and updates from the DYNA team.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Posts Grid - 3 columns */}
+        {/* Blog Posts Grid - 3 columns */}
         <section className="w-full py-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {allPosts.map((post, index) => (
+              {blogPosts.map((post, index) => (
+                <BlogCard
+                  key={index}
+                  title={post.title}
+                  date={post.date}
+                  imageUrl={post.imageUrl}
+                  imageAlt={post.imageAlt}
+                  navigateTo={post.navigateTo}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Stories Section */}
+        <section className="w-full pt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+            <div className="text-left">
+              <h1
+                className="leading-tight"
+                style={{
+                  fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+                  fontSize: "clamp(28px, 5vw, 41px)",
+                  fontWeight: "normal",
+                  lineHeight: "1.1",
+                  color: "white",
+                }}
+              >
+                Stories
+              </h1>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+            <div className="text-left">
+              <p
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
+                  fontSize: "clamp(14px, 4vw, 20px)",
+                  fontWeight: "normal",
+                  lineHeight: "1.6",
+                  color: "white",
+                }}
+              >
+                Press features and media coverage of DYNA
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Stories Grid - 3 columns */}
+        <section className="w-full py-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {storyPosts.map((post, index) => (
                 <BlogCard
                   key={index}
                   title={post.title}
