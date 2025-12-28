@@ -162,7 +162,7 @@ const Blog = () => {
         <section className="w-full py-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {blogPosts.map((post, index) => (
+              {[...blogPosts, ...storyPosts].map((post, index) => (
                 <BlogCard
                   key={index}
                   title={post.title}
@@ -170,6 +170,7 @@ const Blog = () => {
                   imageUrl={post.imageUrl}
                   imageAlt={post.imageAlt}
                   navigateTo={post.navigateTo}
+                  externalUrl={'externalUrl' in post ? post.externalUrl : undefined}
                 />
               ))}
             </div>
