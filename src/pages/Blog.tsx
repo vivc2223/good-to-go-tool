@@ -158,10 +158,10 @@ const Blog = () => {
           </div>
         </section>
 
-        {/* All Posts Grid - 3 columns */}
+        {/* All Posts Grid - 4 columns */}
         <section className="w-full py-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {blogPosts.map((post, index) => (
                 <BlogCard
                   key={index}
@@ -170,17 +170,6 @@ const Blog = () => {
                   imageUrl={post.imageUrl}
                   imageAlt={post.imageAlt}
                   navigateTo={post.navigateTo}
-                />
-              ))}
-              {storyPosts.map((post, index) => (
-                <BlogCard
-                  key={`story-${index}`}
-                  title={post.title}
-                  date={post.date}
-                  imageUrl={post.imageUrl}
-                  imageAlt={post.imageAlt}
-                  navigateTo={post.navigateTo}
-                  externalUrl={post.externalUrl}
                 />
               ))}
             </div>
