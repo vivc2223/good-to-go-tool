@@ -177,24 +177,6 @@ const Blog = () => {
           </div>
         </section>
 
-        {/* Stories Grid - 3 columns */}
-        <section className="w-full py-0">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {storyPosts.map((post, index) => (
-                <BlogCard
-                  key={index}
-                  title={post.title}
-                  date={post.date}
-                  imageUrl={post.imageUrl}
-                  imageAlt={post.imageAlt}
-                  navigateTo={post.navigateTo}
-                  externalUrl={post.externalUrl}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
     </div>
   );
