@@ -46,50 +46,6 @@ const AutoPlayYouTube: React.FC<AutoPlayYouTubeProps> = ({ videoId, title }) => 
   );
 };
 
-interface AutoPlayVideoProps {
-  src: string;
-  title: string;
-}
-
-const AutoPlayVideo: React.FC<AutoPlayVideoProps> = ({ src, title }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && videoRef.current) {
-          videoRef.current.play();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div ref={containerRef} className="w-full aspect-video rounded-lg overflow-hidden">
-      <video
-        ref={videoRef}
-        className="w-full h-full object-cover"
-        muted
-        loop
-        playsInline
-        controls
-        preload="metadata"
-      >
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  );
-};
-
 const OpenWorldDexterity = () => {
   return (
     <div className="min-h-screen bg-black">
@@ -132,7 +88,7 @@ const OpenWorldDexterity = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            In our initial <Link to="/dyna-1/research" className="text-blue-500 hover:opacity-80 transition-opacity">DYNA-1 release</Link>, we developed a training recipe for Vision-Language-Action models (VLAs) that achieves exceptional robustness, with a 99%+ success rate on complex manipulation tasks. However, VLA models, including our original DYNA-1 model, still suffer from performance degradation when deployed in environments not represented in the training data. In this short blog post, we share recent results on improving DYNA-1 to efficiently generalize its robust dexterity capabilities to completely unseen environments, bringing us closer to large-scale deployment.
+            In our initial <Link to="/dyna-1/research" className="underline hover:opacity-80 transition-opacity">DYNA-1 release</Link>, we developed a training recipe for Vision-Language-Action models (VLAs) that achieves exceptional robustness, with a 99%+ success rate on complex manipulation tasks. However, VLA models, including our original DYNA-1 model, still suffer from performance degradation when deployed in environments not represented in the training data. In this short blog post, we share recent results on improving DYNA-1 to efficiently generalize its robust dexterity capabilities to completely unseen environments, bringing us closer to large-scale deployment.
           </p>
 
           <p
@@ -158,11 +114,11 @@ const OpenWorldDexterity = () => {
             <table className="w-full text-white border-collapse border border-white/30">
               <thead>
                 <tr>
-                  <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Environment</th>
-                  <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Duration</th>
-                  <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Shirts Folded</th>
-                  <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Throughput (shirts/hr)</th>
-                  <th className="text-left py-4 px-4 text-lg font-bold border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Average Quality</th>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Environment</th>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Duration</th>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Shirts Folded</th>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Throughput (shirts/hr)</th>
+                  <th className="text-left py-4 px-4 text-lg font-medium border border-white/30" style={{ fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif" }}>Avg Quality</th>
                 </tr>
               </thead>
               <tbody>
@@ -215,9 +171,9 @@ const OpenWorldDexterity = () => {
             Encouraged by these internal results, we demonstrated the model's capabilities to a broader audience by performing live demos and evaluations at robotics conferences. We first demonstrated our model at the Actuate conference, where it performed laundry folding live on stage while our co-founder Jason delivered a keynote talk; see the whole talk here. As shown in the time lapse below, the live stage presents a particularly challenging deployment scenario, with lighting conditions that differ dramatically from typical office or home indoor environments.
           </p>
 
-          {/* First Video - Actuate Conference */}
+          {/* First YouTube Video - Actuate Conference */}
           <div className="mb-12">
-            <AutoPlayVideo src="/videos/20x_Speed_Jason_Actuate.mp4" title="DYNA Actuate Conference Keynote" />
+            <AutoPlayYouTube videoId="Q9HZAtOCjQk" title="DYNA Actuate Conference Keynote" />
           </div>
 
           <p
@@ -229,9 +185,9 @@ const OpenWorldDexterity = () => {
             Later that week, our team traveled to South Korea to attend the Conference on Robot Learning (CoRL), the annual premier academic conference on robot learning. There, we deployed the same model on a brand new Dynasaur robot during exhibition hours for 3 days straight.
           </p>
 
-          {/* Second Video - CoRL Conference */}
+          {/* Second YouTube Video - CoRL Conference */}
           <div className="mb-12">
-            <AutoPlayVideo src="/videos/Dyna_Robotics_x_CoRL_2025_comp.mp4" title="DYNA CoRL Conference Demo" />
+            <AutoPlayYouTube videoId="FT3LayT-wck" title="DYNA CoRL Conference Demo" />
           </div>
 
           <p

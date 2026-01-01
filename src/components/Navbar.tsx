@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
+    null
+  );
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
-  
-  const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -22,67 +22,28 @@ const Navbar = () => {
     return false;
   };
 
-  // Clear any pending hide timeout
-  const clearHideTimeout = () => {
-    if (hideTimeoutRef.current) {
-      clearTimeout(hideTimeoutRef.current);
-      hideTimeoutRef.current = null;
-    }
-  };
-
-  // Toggle dropdown on click
-  const handleCompanyClick = () => {
-    clearHideTimeout();
-    setShowCompanyDropdown((prev) => !prev);
-  };
-
-  // Show dropdown on hover with delay protection
   const handleShowDropdown = () => {
-    clearHideTimeout();
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
     setShowCompanyDropdown(true);
   };
 
-  // Hide dropdown with generous delay (300ms)
   const handleHideDropdown = () => {
-    clearHideTimeout();
-    hideTimeoutRef.current = setTimeout(() => {
+    const timeout = setTimeout(() => {
       setShowCompanyDropdown(false);
-    }, 300);
+    }, 150);
+    setDropdownTimeout(timeout);
   };
 
   const handleOtherNavHover = () => {
-    clearHideTimeout();
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
     setShowCompanyDropdown(false);
   };
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setShowCompanyDropdown(false);
-      }
-    };
-
-    if (showCompanyDropdown) {
-      document.addEventListener("click", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [showCompanyDropdown]);
-
-  // Cleanup timeout on unmount
-  useEffect(() => {
-    return () => {
-      if (hideTimeoutRef.current) {
-        clearTimeout(hideTimeoutRef.current);
-      }
-    };
-  }, []);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -157,20 +118,18 @@ const Navbar = () => {
                 Research
               </Link>
               <div
-                ref={dropdownRef}
                 className="relative"
                 onMouseEnter={handleShowDropdown}
                 onMouseLeave={handleHideDropdown}
               >
-                <Link
-                  to="/mission"
+                <span
                   className="px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
                   style={{
-                    color: isActive("/mission") || isActive("/blog") || isActive("/culture") ? "#ffffff" : "#cccccc",
+                    color: "#cccccc",
                   }}
                 >
                   Company
-                </Link>
+                </span>
               </div>
               <Link
                 to="/careers"
@@ -210,7 +169,6 @@ const Navbar = () => {
           }}
           onMouseEnter={handleShowDropdown}
           onMouseLeave={handleHideDropdown}
-          onClick={(e) => e.stopPropagation()}
         >
           <div
             className="absolute inset-0"
@@ -276,7 +234,6 @@ const Navbar = () => {
                     to="/blog"
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
-                    onClick={() => setShowCompanyDropdown(false)}
                   >
                     Stories
                   </Link>
@@ -284,7 +241,6 @@ const Navbar = () => {
                     to="/mission"
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
-                    onClick={() => setShowCompanyDropdown(false)}
                   >
                     Mission
                   </Link>
@@ -292,7 +248,6 @@ const Navbar = () => {
                     to="/culture"
                     className="block text-white text-6xl font-light hover:text-white/80 transition-colors duration-300 leading-tight"
                     style={{ letterSpacing: "-0.02em" }}
-                    onClick={() => setShowCompanyDropdown(false)}
                   >
                     Culture
                   </Link>
