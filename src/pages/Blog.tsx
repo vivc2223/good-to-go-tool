@@ -526,11 +526,10 @@ const Blog = () => {
             </div>
           </section>
 
-          {/* Monster Laundry Row - Under Stories */}
+          {/* Monster Laundry Row - Under Stories - COMMENTED OUT UNTIL THUMBNAIL IS UPDATED
           <section className="w-full py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-2 gap-16">
-                {/* Monster Laundry Card */}
                 <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
@@ -633,6 +632,7 @@ const Blog = () => {
               </div>
             </div>
           </section>
+          */}
         </div>
 
         {/* Mobile Layout - Hidden on desktop */}
@@ -899,7 +899,7 @@ const Blog = () => {
             </div>
           </section>
 
-          {/* Monster Laundry Card - Under Stories */}
+          {/* Monster Laundry Card - Under Stories - COMMENTED OUT UNTIL THUMBNAIL IS UPDATED
           <section className="w-full pt-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
               <div className="flex flex-col mb-8">
@@ -1003,6 +1003,7 @@ const Blog = () => {
               </div>
             </div>
           </section>
+          */}
         </div>
       </main>
     </div>
