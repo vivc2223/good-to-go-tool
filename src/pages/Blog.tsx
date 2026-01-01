@@ -32,13 +32,6 @@ const Blog = () => {
       imageAlt: "DYNA Robot",
       externalUrl: "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
     },
-    {
-      title: "How Monster Laundry Scaled Its Laundromat Operations with DYNA",
-      date: "OCT 10 '25",
-      imageUrl: "/lovable-uploads/monster-laundry-thumbnail.png",
-      imageAlt: "Monster Laundry with DYNA robots",
-      navigateTo: "/blog/monster-laundry",
-    },
   ];
 
   return (
@@ -169,7 +162,7 @@ const Blog = () => {
                   date={post.date}
                   imageUrl={post.imageUrl}
                   imageAlt={post.imageAlt}
-                  navigateTo={post.navigateTo}
+                  navigateTo={'navigateTo' in post ? post.navigateTo : undefined}
                   externalUrl={'externalUrl' in post ? post.externalUrl : undefined}
                 />
               ))}
