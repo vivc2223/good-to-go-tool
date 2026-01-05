@@ -105,8 +105,7 @@ const Blog = () => {
                   <h1
                     className="leading-tight"
                     style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                       fontSize: "clamp(28px, 5vw, 41px)",
                       fontWeight: "normal",
                       lineHeight: "1.1",
@@ -128,8 +127,7 @@ const Blog = () => {
                   <p
                     className="leading-relaxed"
                     style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                       fontSize: "clamp(14px, 4vw, 20px)",
                       fontWeight: "normal",
                       lineHeight: "1.6",
@@ -149,9 +147,7 @@ const Blog = () => {
                 <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() =>
-                      navigate("/blog/dyna-robotics-closes-120m-series-a")
-                    }
+                    onClick={() => navigate("/blog/dyna-robotics-closes-120m-series-a")}
                     style={{
                       height: "650px",
                       width: "100%",
@@ -175,12 +171,10 @@ const Blog = () => {
                           margin: "0px",
                           fontSize: "clamp(20px, 5vw, 24px)",
                           fontWeight: "500",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        Dyna Robotics Closes $120M Series A: How We Think About
-                        Scaling Robotic Foundation Models
+                        Dyna Robotics Closes $120M Series A: How We Think About Scaling Robotic Foundation Models
                       </h2>
                       <div
                         className="whitespace-nowrap"
@@ -188,8 +182,7 @@ const Blog = () => {
                           color: "white",
                           fontWeight: "normal",
                           fontSize: "clamp(20px, 5vw, 24px)",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           flexShrink: 0,
                         }}
                       >
@@ -203,25 +196,20 @@ const Blog = () => {
                         color: "white",
                         fontWeight: "normal",
                         fontSize: "clamp(14px, 4vw, 20px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      DYNA raised $120M and unveiled five first principles for
-                      scaling embodied AI, combining generalization,
-                      distribution, ROI, data and iteration.
+                      DYNA raised $120M and unveiled five first principles for scaling embodied AI, combining
+                      generalization, distribution, ROI, data and iteration.
                     </p>
 
                     <button
-                      onClick={() =>
-                        navigate("/blog/dyna-robotics-closes-120m-series-a")
-                      }
+                      onClick={() => navigate("/blog/dyna-robotics-closes-120m-series-a")}
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
                         style={{
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           fontSize: "clamp(14px, 4vw, 20px)",
                           textDecoration: "underline",
                           textUnderlineOffset: "4px",
@@ -231,13 +219,7 @@ const Blog = () => {
                         Read More
                       </span>
                       <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M6 3L11 8L6 13"
                             stroke="white"
@@ -255,9 +237,7 @@ const Blog = () => {
                 <div className="flex flex-col">
                   <div
                     className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                    onClick={() =>
-                      navigate("/blog/monster-laundry")
-                    }
+                    onClick={() => navigate("/blog/monster-laundry")}
                     style={{
                       height: "650px",
                       width: "100%",
@@ -279,8 +259,7 @@ const Blog = () => {
                           margin: "0px",
                           fontSize: "clamp(20px, 5vw, 24px)",
                           fontWeight: "500",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
                         How Monster Laundry Scaled Its Laundromat Operations with DYNA
@@ -291,8 +270,7 @@ const Blog = () => {
                           color: "white",
                           fontWeight: "normal",
                           fontSize: "clamp(20px, 5vw, 24px)",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           flexShrink: 0,
                         }}
                       >
@@ -306,24 +284,20 @@ const Blog = () => {
                         color: "white",
                         fontWeight: "normal",
                         fontSize: "clamp(14px, 4vw, 20px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      Monster Laundry partnered with DYNA to automate towel folding,
-                      achieving 99%+ accuracy and transforming their operations.
+                      Monster Laundry partnered with DYNA to automate towel folding, achieving 99%+ accuracy and
+                      transforming their operations.
                     </p>
 
                     <button
-                      onClick={() =>
-                        navigate("/blog/monster-laundry")
-                      }
+                      onClick={() => navigate("/blog/monster-laundry")}
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
                         style={{
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           fontSize: "clamp(14px, 4vw, 20px)",
                           textDecoration: "underline",
                           textUnderlineOffset: "4px",
@@ -333,13 +307,7 @@ const Blog = () => {
                         Read More
                       </span>
                       <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M6 3L11 8L6 13"
                             stroke="white"
@@ -352,7 +320,6 @@ const Blog = () => {
                     </button>
                   </div>
                 </div>
-
               </div>
             </div>
           </section>
@@ -365,8 +332,7 @@ const Blog = () => {
                   <h1
                     className="leading-tight"
                     style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                       fontSize: "clamp(28px, 5vw, 41px)",
                       fontWeight: "normal",
                       lineHeight: "1.1",
@@ -388,8 +354,7 @@ const Blog = () => {
                   <p
                     className="leading-relaxed"
                     style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                       fontSize: "clamp(14px, 4vw, 20px)",
                       fontWeight: "normal",
                       lineHeight: "1.6",
@@ -412,7 +377,7 @@ const Blog = () => {
                     onClick={() =>
                       window.open(
                         "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
-                        "_blank"
+                        "_blank",
                       )
                     }
                     style={{
@@ -438,8 +403,7 @@ const Blog = () => {
                           margin: "0px",
                           fontSize: "clamp(20px, 5vw, 24px)",
                           fontWeight: "500",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
                         DYNA Founders & Fortune Feature
@@ -450,8 +414,7 @@ const Blog = () => {
                           color: "white",
                           fontWeight: "normal",
                           fontSize: "clamp(20px, 5vw, 24px)",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           flexShrink: 0,
                         }}
                       >
@@ -465,28 +428,25 @@ const Blog = () => {
                         color: "white",
                         fontWeight: "normal",
                         fontSize: "clamp(14px, 4vw, 20px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      Exclusive: Instacart bought his self-checkout startup for
-                      $350M. Now he's teaming with a Google DeepMind alum to
-                      build low-cost robots.
+                      Exclusive: Instacart bought his self-checkout startup for $350M. Now he's teaming with a Google
+                      DeepMind alum to build low-cost robots.
                     </p>
 
                     <button
                       onClick={() =>
                         window.open(
                           "https://fortune.com/2025/03/25/exclusive-instacart-smart-cart-startup-350m-google-deepmind-low-cost-robots/",
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
                         style={{
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           fontSize: "clamp(14px, 4vw, 20px)",
                           textDecoration: "underline",
                           textUnderlineOffset: "4px",
@@ -496,13 +456,7 @@ const Blog = () => {
                         Read More
                       </span>
                       <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M6 3L11 8L6 13"
                             stroke="white"
@@ -522,7 +476,7 @@ const Blog = () => {
                     onClick={() =>
                       window.open(
                         "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
-                        "_blank"
+                        "_blank",
                       )
                     }
                     style={{
@@ -548,13 +502,11 @@ const Blog = () => {
                           margin: "0px",
                           fontSize: "clamp(20px, 5vw, 24px)",
                           fontWeight: "500",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        Dyna Robotics Closes $120 Million To Advance Robotic
-                        Foundation Models On The Path To Pysical Artificial
-                        General Intelligence
+                        Dyna Robotics Closes $120 Million To Advance Robotic Foundation Models On The Path To Pysical
+                        Artificial General Intelligence
                       </h2>
                       <div
                         className="whitespace-nowrap"
@@ -562,8 +514,7 @@ const Blog = () => {
                           color: "white",
                           fontWeight: "normal",
                           fontSize: "clamp(20px, 5vw, 24px)",
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           flexShrink: 0,
                         }}
                       >
@@ -577,28 +528,25 @@ const Blog = () => {
                         color: "white",
                         fontWeight: "normal",
                         fontSize: "clamp(14px, 4vw, 20px)",
-                        fontFamily:
-                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                       }}
                     >
-                      DYNA raised $120M led by Robostrategy, CRV, and First
-                      Round to scale embodied AI robots achieving 99%+
-                      commercial performance.
+                      DYNA raised $120M led by Robostrategy, CRV, and First Round to scale embodied AI robots achieving
+                      99%+ commercial performance.
                     </p>
 
                     <button
                       onClick={() =>
                         window.open(
                           "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                     >
                       <span
                         style={{
-                          fontFamily:
-                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           fontSize: "clamp(14px, 4vw, 20px)",
                           textDecoration: "underline",
                           textUnderlineOffset: "4px",
@@ -608,13 +556,7 @@ const Blog = () => {
                         Read More
                       </span>
                       <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M6 3L11 8L6 13"
                             stroke="white"
@@ -642,8 +584,7 @@ const Blog = () => {
                 <h1
                   className="leading-tight"
                   style={{
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                     fontSize: "clamp(28px, 5vw, 41px)",
                     fontWeight: "normal",
                     lineHeight: "1.1",
@@ -659,8 +600,7 @@ const Blog = () => {
                 <p
                   className="leading-relaxed"
                   style={{
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                     fontSize: "clamp(14px, 4vw, 20px)",
                     fontWeight: "normal",
                     lineHeight: "1.6",
@@ -678,9 +618,7 @@ const Blog = () => {
                     <div className="flex flex-col mb-8">
                       <div
                         className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                        onClick={() =>
-                          navigate("/blog/dyna-robotics-closes-120m-series-a")
-                        }
+                        onClick={() => navigate("/blog/dyna-robotics-closes-120m-series-a")}
                         style={{
                           width: "100%",
                         }}
@@ -702,12 +640,10 @@ const Blog = () => {
                               margin: "0px",
                               fontSize: "clamp(20px, 5vw, 24px)",
                               fontWeight: "500",
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                             }}
                           >
-                            Dyna Robotics Closes $120M Series A: How We Think
-                            About Scaling Robotic Foundation Models
+                            Dyna Robotics Closes $120M Series A: How We Think About Scaling Robotic Foundation Models
                           </h2>
                         </div>
 
@@ -717,13 +653,11 @@ const Blog = () => {
                             color: "white",
                             fontWeight: "normal",
                             fontSize: "clamp(14px, 4vw, 20px)",
-                            fontFamily:
-                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           }}
                         >
-                          DYNA raised $120M and unveiled five first principles
-                          for scaling embodied AI, combining generalization,
-                          distribution, ROI, data and iteration.
+                          DYNA raised $120M and unveiled five first principles for scaling embodied AI, combining
+                          generalization, distribution, ROI, data and iteration.
                         </p>
 
                         <div
@@ -732,23 +666,19 @@ const Blog = () => {
                             color: "white",
                             fontWeight: "normal",
                             fontSize: "clamp(14px, 4vw, 20px)",
-                            fontFamily:
-                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           }}
                         >
                           SEP 15 '25
                         </div>
 
                         <button
-                          onClick={() =>
-                            navigate("/blog/dyna-robotics-closes-120m-series-a")
-                          }
+                          onClick={() => navigate("/blog/dyna-robotics-closes-120m-series-a")}
                           className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                         >
                           <span
                             style={{
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                               fontSize: "clamp(14px, 4vw, 20px)",
                               textDecoration: "underline",
                               textUnderlineOffset: "4px",
@@ -782,9 +712,7 @@ const Blog = () => {
                     <div className="flex flex-col mb-8">
                       <div
                         className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
-                        onClick={() =>
-                          navigate("/blog/monster-laundry")
-                        }
+                        onClick={() => navigate("/blog/monster-laundry")}
                         style={{
                           width: "100%",
                         }}
@@ -805,8 +733,7 @@ const Blog = () => {
                               margin: "0px",
                               fontSize: "clamp(20px, 5vw, 24px)",
                               fontWeight: "500",
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                             }}
                           >
                             How Monster Laundry Scaled Its Laundromat Operations with DYNA
@@ -819,12 +746,11 @@ const Blog = () => {
                             color: "white",
                             fontWeight: "normal",
                             fontSize: "clamp(14px, 4vw, 20px)",
-                            fontFamily:
-                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           }}
                         >
-                          Monster Laundry partnered with DYNA to automate towel folding,
-                          achieving 99%+ accuracy and transforming their operations.
+                          Monster Laundry partnered with DYNA to automate towel folding, achieving 99%+ accuracy and
+                          transforming their operations.
                         </p>
 
                         <div
@@ -833,23 +759,19 @@ const Blog = () => {
                             color: "white",
                             fontWeight: "normal",
                             fontSize: "clamp(14px, 4vw, 20px)",
-                            fontFamily:
-                              "UntitledSans, system-ui, -apple-system, sans-serif",
+                            fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                           }}
                         >
                           OCT 10 '25
                         </div>
 
                         <button
-                          onClick={() =>
-                            navigate("/blog/monster-laundry")
-                          }
+                          onClick={() => navigate("/blog/monster-laundry")}
                           className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                         >
                           <span
                             style={{
-                              fontFamily:
-                                "UntitledSans, system-ui, -apple-system, sans-serif",
+                              fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                               fontSize: "clamp(14px, 4vw, 20px)",
                               textDecoration: "underline",
                               textUnderlineOffset: "4px",
@@ -878,7 +800,6 @@ const Blog = () => {
                         </button>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </section>
@@ -891,7 +812,7 @@ const Blog = () => {
                 onClick={() =>
                   window.open(
                     "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
-                    "_blank"
+                    "_blank",
                   )
                 }
                 style={{
@@ -916,13 +837,11 @@ const Blog = () => {
                       margin: "0px",
                       fontSize: "clamp(20px, 5vw, 24px)",
                       fontWeight: "500",
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                     }}
                   >
-                    Dyna Robotics Closes $120 Million How We Scale Robotic
-                    Foundation Model On The Path To Pysical Artificial General
-                    Intelligence
+                    Dyna Robotics Closes $120 Million How We Scale Robotic Foundation Model On The Path To Pysical
+                    Artificial General Intelligence
                   </h2>
                 </div>
 
@@ -932,13 +851,11 @@ const Blog = () => {
                     color: "white",
                     fontWeight: "normal",
                     fontSize: "clamp(14px, 4vw, 20px)",
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                   }}
                 >
-                  Dyna Robotics secures $120M in Series A funding from
-                  world-class investors to accelerate embodied AI and scale
-                  deployment-first robotics.
+                  Dyna Robotics secures $120M in Series A funding from world-class investors to accelerate embodied AI
+                  and scale deployment-first robotics.
                 </p>
 
                 <div
@@ -947,8 +864,7 @@ const Blog = () => {
                     color: "white",
                     fontWeight: "normal",
                     fontSize: "clamp(14px, 4vw, 20px)",
-                    fontFamily:
-                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                   }}
                 >
                   SEP 22 '25
@@ -958,15 +874,14 @@ const Blog = () => {
                   onClick={() =>
                     window.open(
                       "https://www.prnewswire.com/news-releases/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence-302556817.html",
-                      "_blank"
+                      "_blank",
                     )
                   }
                   className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
                 >
                   <span
                     style={{
-                      fontFamily:
-                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                      fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                       fontSize: "clamp(14px, 4vw, 20px)",
                       textDecoration: "underline",
                       textUnderlineOffset: "4px",
@@ -976,13 +891,7 @@ const Blog = () => {
                     Read More
                   </span>
                   <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M6 3L11 8L6 13"
                         stroke="white"
