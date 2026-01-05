@@ -50,6 +50,7 @@ const Mission = () => {
           name="twitter:description"
           content="DYNA's mission to empower human potential through reliable robotics automation - building the future where robots handle repetitive tasks."
         />
+        <link rel="canonical" href="https://www.dyna.co/mission" />
       </Helmet>
       {/* Medium overlay for text readability while showing image */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
