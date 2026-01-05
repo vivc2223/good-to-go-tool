@@ -97,7 +97,6 @@ const Blog = () => {
         </section>
 
         <div className="hidden lg:block">
-<<<<<<< HEAD
           <section className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
@@ -324,8 +323,6 @@ const Blog = () => {
               </div>
             </div>
           </section>
-=======
->>>>>>> 52f0d0d (2-7 all updates(Company routes,SEO,Contact Us and Moving logos))
           {/* Header Section */}
           <section className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
@@ -813,7 +810,6 @@ const Blog = () => {
                       </div>
                     </div>
 
-<<<<<<< HEAD
                     {/* Blog Card 2 - Monster Laundry */}
                     <div className="flex flex-col mb-8">
                       <div
@@ -906,8 +902,6 @@ const Blog = () => {
                         </button>
                       </div>
                     </div>
-=======
->>>>>>> 52f0d0d (2-7 all updates(Company routes,SEO,Contact Us and Moving logos))
                   </div>
                 </div>
               </section>
