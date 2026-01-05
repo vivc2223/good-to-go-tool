@@ -35,10 +35,12 @@ const DynaResearch = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            "We nicknamed our DYNA robot 'Sophy Swiftfold.' Sophy adapts and learns how to fold to our customers'
-            specific needs with our highest standards. With Sophy folding over 200,000 garments from ten different
-            clients in the past 3 months, our team saved thousands of hours to focus on more complex operations and
-            ensure the best customer experience."
+            "We nicknamed our DYNA robot 'Sophy Swiftfold.' Sophy adapts and
+            learns how to fold to our customers' specific needs with our highest
+            standards. With Sophy folding over 200,000 garments from ten
+            different clients in the past 3 months, our team saved thousands of
+            hours to focus on more complex operations and ensure the best
+            customer experience."
           </p>
           <p
             className="text-base text-center leading-relaxed mb-12 text-white"
@@ -115,10 +117,12 @@ const DynaResearch = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            Monster Laundry processes over 1,600 lbs of laundry per week, much of which consists of commercial orders
-            for gyms, yoga studios, and medical offices. These clients require close attention to detail and consistent
-            processing. A typical commercial order might contain 300-500 towels that must be cleaned, folded, and packed
-            within 24 hours.
+            Monster Laundry processes over 1,600 lbs of laundry per week, much
+            of which consists of commercial orders for gyms, yoga studios, and
+            medical offices. These clients require close attention to detail and
+            consistent processing. A typical commercial order might contain
+            300-500 towels that must be cleaned, folded, and packed within 24
+            hours.
           </p>
           <p
             className="text-lg leading-relaxed mb-8 text-white"
@@ -136,9 +140,11 @@ const DynaResearch = () => {
             }}
           >
             <li>
-              <span className="font-medium">Labor Limits:</span> Before deploying DYNA, Monster Laundry had 4 shifts per
-              day with 1 Laundry Center Attendant per shift. Folding was a productivity bottleneck. While washing and
-              drying each takes under 30 minutes and requires minimal attention, folding demands the attendant's
+              <span className="font-medium">Labor Limits:</span> Before
+              deploying DYNA, Monster Laundry had 4 shifts per day with 1
+              Laundry Center Attendant per shift. Folding was a productivity
+              bottleneck. While washing and drying each takes under 30 minutes
+              and requires minimal attention, folding demands the attendant's
               undivided focus for over 70 minutes, capping same-day capacity.
             </li>
             <li>
@@ -165,8 +171,9 @@ const DynaResearch = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            Monster partnered with DYNA to deploy a production-ready robot for laundromats, known internally as Sophy
-            Swiftfold (kudos to Michelle!).
+            Monster partnered with DYNA to deploy a production-ready robot for
+            laundromats, known internally as Sophy Swiftfold (kudos to
+            Michelle!).
           </p>
           <p
             className="text-lg leading-relaxed mb-6 text-white"
@@ -174,8 +181,9 @@ const DynaResearch = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            As shown in the timelapse below, DYNA operates continuously in a live laundromat environment, folding at
-            production speed with consistent quality.
+            As shown in the timelapse below, DYNA operates continuously in a
+            live laundromat environment, folding at production speed with
+            consistent quality.
           </p>
           <p
             className="text-lg leading-relaxed mb-6 text-white"
@@ -183,9 +191,11 @@ const DynaResearch = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            Leveraging DYNA's Robotic Foundation Model (RFM), "Sophy" was able to learn Monster's specific folding
-            preferences of each customer and achieve consistent high-performance using only a small amount of customized
-            data. Unlike traditional automation, Sophy didn't require a facility remodel.
+            Leveraging DYNA's Robotic Foundation Model (RFM), "Sophy" was able
+            to learn Monster's specific folding preferences of each customer and
+            achieve consistent high-performance using only a small amount of
+            customized data. Unlike traditional automation, Sophy didn't require
+            a facility remodel.
           </p>
           <ul
             className="space-y-3 list-disc list-inside mb-12 ml-8 text-lg text-white"
@@ -227,28 +237,38 @@ const DynaResearch = () => {
             }}
           >
             <li>
-              <span className="font-medium">Increased Throughput & Productivity:</span> over the past 3 months since
-              Sophy was deployed, it has folded over 200,000 towels from 10 different customers, saving hundreds of
-              hours of attendant time.
+              <span className="font-medium">
+                Increased Throughput & Productivity:
+              </span>{" "}
+              over the past 3 months since Sophy was deployed, it has folded
+              over 200,000 towels from 10 different customers, saving hundreds
+              of hours of attendant time.
+            </li>
+            <li>
+              <span className="font-medium">
+                Unlocking more business capacity.
+              </span>{" "}
+              As attendants processed more loads per shift, Monster increased
+              commercial order capacity by 25%.
             </li>
             <li>
               <span className="font-medium">Unlocking more business capacity.</span> As attendants processed more loads
               per shift, Monster increased commercial order capacity by 25%.
             </li>
             <li>
-              <span className="font-medium">Scalability & Cost Efficiency:</span> With no significant CapEx requirement,
-              DYNA allows Monster to scale operations instantly. The system acts as an on-demand labor multiplier,
-              eliminating the costs and risks associated with hiring and turnover for repetitive tasks.
+              <span className="font-medium">Quality & Consistency:</span> Sophy
+              consistently matches Monster's signature fold standard at 99%
+              quality acceptance rate, ensuring commercial clients receive the
+              exact presentation they expect, every time.
             </li>
             <li>
-              <span className="font-medium">Quality & Consistency:</span> Sophy consistently matches Monster's signature
-              fold standard at 99% quality acceptance rate, ensuring commercial clients receive the exact presentation
-              they expect, every time.
-            </li>
-            <li>
-              <span className="font-medium">Employee Engagement & Customer Delight:</span> By removing the monotony of
-              folding, attendants can focus on high-value tasks like order preparation and customer service.
-              Additionally, the presence of cutting-edge robotics drove a 15% increase in store traffic.
+              <span className="font-medium">
+                Employee Engagement & Customer Delight:
+              </span>{" "}
+              By removing the monotony of folding, attendants can focus on
+              high-value tasks like order preparation and customer service.
+              Additionally, the presence of cutting-edge robotics drove a 15%
+              increase in store traffic.
             </li>
           </ul>
         </section>
@@ -269,9 +289,11 @@ const DynaResearch = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            Monster Laundry plans to expand at additional sites, with DYNA systems slated as standard equipment for
-            high-volume locations. The owners view general-purpose robots not just as a tool, but as a core investment
-            that expands store capacity, extends human capability, and safeguards quality as their business scales.
+            Monster Laundry plans to expand at additional sites, with DYNA
+            systems slated as standard equipment for high-volume locations. The
+            owners view general-purpose robots not just as a tool, but as a core
+            investment that expands store capacity, extends human capability,
+            and safeguards quality as their business scales.
           </p>
           <p
             className="text-lg leading-relaxed text-white"
@@ -279,8 +301,9 @@ const DynaResearch = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            With DYNA, Monster Laundry runs faster, smarter, and more consistently, turning its biggest bottleneck into
-            a reliable engine for growth.
+            With DYNA, Monster Laundry runs faster, smarter, and more
+            consistently, turning its biggest bottleneck into a reliable engine
+            for growth.
           </p>
         </section>
       </div>
