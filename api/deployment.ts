@@ -64,12 +64,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.log("Parsed files:", Object.keys(files));
 
     // Extract all form fields (handle both string and array cases)
+    const profileType = Array.isArray(fields.profileType)
+      ? fields.profileType[0]
+      : fields.profileType;
     const name = Array.isArray(fields.name) ? fields.name[0] : fields.name;
     const email = Array.isArray(fields.email) ? fields.email[0] : fields.email;
     const title = Array.isArray(fields.title) ? fields.title[0] : fields.title;
     const company = Array.isArray(fields.company)
       ? fields.company[0]
       : fields.company;
+    const companySize = Array.isArray(fields.companySize)
+      ? fields.companySize[0]
+      : fields.companySize;
+    const country = Array.isArray(fields.country)
+      ? fields.country[0]
+      : fields.country;
+    const message = Array.isArray(fields.message)
+      ? fields.message[0]
+      : fields.message;
+    const hasUseCase = Array.isArray(fields.hasUseCase)
+      ? fields.hasUseCase[0]
+      : fields.hasUseCase;
     const useCase = Array.isArray(fields.useCase)
       ? fields.useCase[0]
       : fields.useCase;
@@ -90,24 +105,31 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     console.log("Extracted form data:", {
+      profileType,
       name,
       email,
       title,
       company,
+      companySize,
+      country,
+      message,
+      hasUseCase,
       useCase,
       states,
       totalUnits,
     });
 
-    // Validate required fields
-    if (!name || !email || !company || !useCase) {
+    // Validate required fields (common to all profiles)
+    if (!profileType || !name || !email || !title || !company || !companySize) {
       return res.status(400).json({
         error: "Missing required fields",
         details: {
+          profileType: !!profileType,
           name: !!name,
           email: !!email,
+          title: !!title,
           company: !!company,
-          useCase: !!useCase,
+          companySize: !!companySize,
         },
       });
     }
@@ -125,7 +147,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     console.log("File keys found:", fileKeys);
 
-    if (fileKeys.length === 0) {
+    // Files are only required for Business Customer with a use case
+    const requiresFiles = profileType === "Business Customer" && (hasUseCase === "yes" || hasUseCase === "multiple");
+
+    if (requiresFiles && fileKeys.length === 0) {
       return res.status(400).json({ error: "No files were uploaded." });
     }
 
@@ -199,7 +224,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
       }
 
-      if (uploadedFiles.length === 0) {
+      if (requiresFiles && uploadedFiles.length === 0) {
         return res.status(400).json({ error: "Failed to upload any files." });
       }
 
@@ -209,14 +234,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         .from("deployment_submissions")
         .insert([
           {
+            profile_type: profileType,
             requester_name: name,
             email,
             title,
             company,
-            use_case: useCase,
-            states,
-            total_units: parseInt(totalUnits) || 0,
-            workflow_media: uploadedFiles,
+            company_size: companySize,
+            country: country || null,
+            message: message || null,
+            has_use_case: hasUseCase || null,
+            use_case: useCase || null,
+            states: states.length > 0 ? states : null,
+            total_units: totalUnits ? parseInt(totalUnits) : null,
+            workflow_media: uploadedFiles.length > 0 ? uploadedFiles : null,
             created_at: new Date().toISOString(),
           },
         ])
@@ -229,13 +259,31 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       console.log("Data inserted successfully");
 
+      // Send email notification based on profile type
+      try {
+        const emailRecipient =
+          profileType === "Media" ? "media@dynarobotics.ai" :
+          profileType === "Investor" ? "investors@dynarobotics.ai" :
+          "team@dynarobotics.ai"; // Business Customer and Other
+
+        console.log(`Sending email notification to ${emailRecipient} for profile type: ${profileType}`);
+
+        // Note: Email sending via FormSubmit is handled on the frontend
+        // This is just for logging and potential future email service integration
+
+      } catch (emailError) {
+        console.error("Email notification error (non-blocking):", emailError);
+        // Don't fail the request if email fails
+      }
+
       // Send success response
       res.status(200).json({
         success: true,
-        message: "Deployment request submitted successfully.",
+        message: "Contact form submitted successfully.",
         data: {
           submissionId: insertData?.[0]?.id,
           filesUploaded: uploadedFiles.length,
+          profileType,
         },
       });
     } catch (error) {

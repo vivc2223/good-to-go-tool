@@ -6,14 +6,19 @@ import axios from "axios";
 
 interface Submission {
   id: string;
+  profile_type?: string;
   requester_name: string;
   email: string;
   title: string;
   company: string;
-  use_case: string;
-  states: string[];
-  total_units: number;
-  workflow_media: Array<{
+  company_size?: string;
+  country?: string;
+  message?: string;
+  has_use_case?: string;
+  use_case?: string;
+  states?: string[];
+  total_units?: number;
+  workflow_media?: Array<{
     originalName: string;
     url: string;
     size: number;
@@ -122,10 +127,12 @@ const AdminDashboard = () => {
 
     const headers = [
       "Date",
+      "Profile Type",
       "Requester Name",
       "Email",
       "Title",
       "Company",
+      "Company Size",
       "Use Case",
       "States",
       "Total Units",
@@ -134,13 +141,15 @@ const AdminDashboard = () => {
 
     const csvData = submissions.map((submission) => [
       formatDate(submission.created_at),
+      submission.profile_type || "N/A",
       submission.requester_name,
       submission.email,
       submission.title,
       submission.company,
-      submission.use_case,
-      submission.states.join("; "),
-      submission.total_units,
+      submission.company_size || "N/A",
+      submission.use_case || "N/A",
+      submission.states?.join("; ") || "N/A",
+      submission.total_units || "N/A",
       submission.workflow_media?.length || 0,
     ]);
 
@@ -314,6 +323,9 @@ const AdminDashboard = () => {
                       Date
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Profile
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Requester
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -340,6 +352,16 @@ const AdminDashboard = () => {
                         {formatDate(submission.created_at)}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
+                        <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
+                          submission.profile_type === "Business Customer" ? "bg-blue-100 text-blue-800" :
+                          submission.profile_type === "Media" ? "bg-purple-100 text-purple-800" :
+                          submission.profile_type === "Investor" ? "bg-green-100 text-green-800" :
+                          "bg-gray-100 text-gray-800"
+                        }`}>
+                          {submission.profile_type || "N/A"}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
                         <div>
                           <div className="text-sm font-medium text-gray-900">
                             {submission.requester_name}
@@ -353,10 +375,10 @@ const AdminDashboard = () => {
                         {submission.company}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {submission.use_case}
+                        {submission.use_case || "N/A"}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {submission.total_units}
+                        {submission.total_units || "N/A"}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {submission.workflow_media?.length || 0} files

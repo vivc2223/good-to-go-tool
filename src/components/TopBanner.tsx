@@ -24,12 +24,11 @@ const TopBanner = () => {
 
         {/* Blog Link */}
         <div className="flex items-center gap-1">
-          Read more
           <a
             href="/blog/dyna-robotics-closes-120m-series-a"
             className="underline underline-offset-2 hover:opacity-80 transition-opacity duration-200"
           >
-            here.
+            Read the full story.
           </a>
           {/* <ArrowUpRight size={14} /> */}
         </div>

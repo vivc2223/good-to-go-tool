@@ -33,7 +33,7 @@ const Navbar = () => {
   const handleHideDropdown = () => {
     const timeout = setTimeout(() => {
       setShowCompanyDropdown(false);
-    }, 150);
+    }, 500);
     setDropdownTimeout(timeout);
   };
 
@@ -43,6 +43,16 @@ const Navbar = () => {
       setDropdownTimeout(null);
     }
     setShowCompanyDropdown(false);
+  };
+
+  const handleCompanyClick = (e: React.MouseEvent) => {
+    // Clean up dropdown timeout when navigating
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setShowCompanyDropdown(false);
+    // Allow Link navigation to proceed
   };
 
   useEffect(() => {
@@ -122,14 +132,16 @@ const Navbar = () => {
                 onMouseEnter={handleShowDropdown}
                 onMouseLeave={handleHideDropdown}
               >
-                <span
+                <Link
+                  to="/mission"
+                  onClick={handleCompanyClick}
                   className="px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
                   style={{
                     color: "#cccccc",
                   }}
                 >
                   Company
-                </span>
+                </Link>
               </div>
               <Link
                 to="/careers"

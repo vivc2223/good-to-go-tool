@@ -97,6 +97,7 @@ const Blog = () => {
         </section>
 
         <div className="hidden lg:block">
+<<<<<<< HEAD
           <section className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
@@ -323,6 +324,8 @@ const Blog = () => {
               </div>
             </div>
           </section>
+=======
+>>>>>>> 52f0d0d (2-7 all updates(Company routes,SEO,Contact Us and Moving logos))
           {/* Header Section */}
           <section className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
@@ -457,6 +460,108 @@ const Blog = () => {
                       </span>
                       <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                         <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M6 3L11 8L6 13"
+                            stroke="white"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Monster Laundry Story Card */}
+                <div className="flex flex-col">
+                  <div
+                    className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                    onClick={() =>
+                      navigate("/blog/monster-laundry")
+                    }
+                    style={{
+                      height: "650px",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      src="/lovable-uploads/monster-laundry-thumbnail.png"
+                      alt="Monster Laundry with DYNA robots"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <div className="flex items-start justify-between gap-6 mb-2 h-28">
+                      <h2
+                        className="leading-tight"
+                        style={{
+                          color: "white",
+                          margin: "0px",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontWeight: "500",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                        }}
+                      >
+                        How Monster Laundry Scaled Its Laundromat Operations with DYNA
+                      </h2>
+                      <div
+                        className="whitespace-nowrap"
+                        style={{
+                          color: "white",
+                          fontWeight: "normal",
+                          fontSize: "clamp(20px, 5vw, 24px)",
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          flexShrink: 0,
+                        }}
+                      >
+                        OCT 10 '25
+                      </div>
+                    </div>
+
+                    <p
+                      className="leading-relaxed mb-4 h-30"
+                      style={{
+                        color: "white",
+                        fontWeight: "normal",
+                        fontSize: "clamp(14px, 4vw, 20px)",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      Monster Laundry partnered with DYNA to automate towel folding,
+                      achieving 99%+ accuracy and transforming their operations.
+                    </p>
+
+                    <button
+                      onClick={() =>
+                        navigate("/blog/monster-laundry")
+                      }
+                      className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                    >
+                      <span
+                        style={{
+                          fontFamily:
+                            "UntitledSans, system-ui, -apple-system, sans-serif",
+                          fontSize: "clamp(14px, 4vw, 20px)",
+                          textDecoration: "underline",
+                          textUnderlineOffset: "4px",
+                          textDecorationThickness: "1px",
+                        }}
+                      >
+                        Read More
+                      </span>
+                      <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
                           <path
                             d="M6 3L11 8L6 13"
                             stroke="white"
@@ -708,6 +813,7 @@ const Blog = () => {
                       </div>
                     </div>
 
+<<<<<<< HEAD
                     {/* Blog Card 2 - Monster Laundry */}
                     <div className="flex flex-col mb-8">
                       <div
@@ -800,13 +906,153 @@ const Blog = () => {
                         </button>
                       </div>
                     </div>
+=======
+>>>>>>> 52f0d0d (2-7 all updates(Company routes,SEO,Contact Us and Moving logos))
                   </div>
                 </div>
               </section>
             </div>
           </section>
+
+          {/* Stories Section */}
           <section className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+              {/* Stories Title */}
+              <div className="text-left mb-6">
+                <h1
+                  className="leading-tight"
+                  style={{
+                    fontFamily:
+                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontSize: "clamp(28px, 5vw, 41px)",
+                    fontWeight: "normal",
+                    lineHeight: "1.1",
+                    color: "white",
+                  }}
+                >
+                  Stories
+                </h1>
+              </div>
+
+              {/* Stories Subtitle */}
+              <div className="text-left mb-8">
+                <p
+                  className="leading-relaxed"
+                  style={{
+                    fontFamily:
+                      "UntitledSans, system-ui, -apple-system, sans-serif",
+                    fontSize: "clamp(14px, 4vw, 20px)",
+                    fontWeight: "normal",
+                    lineHeight: "1.6",
+                    color: "white",
+                  }}
+                >
+                  Press features and media coverage of DYNA
+                </p>
+              </div>
+
+              {/* Monster Laundry Story Card */}
+              <div className="flex flex-col mb-8">
+                <div
+                  className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
+                  onClick={() =>
+                    navigate("/blog/monster-laundry")
+                  }
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                    src="/lovable-uploads/monster-laundry-thumbnail.png"
+                    alt="Monster Laundry with DYNA robots"
+                    style={{ minHeight: "300px", objectFit: "cover" }}
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <div className="mb-2">
+                    <h2
+                      style={{
+                        color: "white",
+                        margin: "0px",
+                        fontSize: "clamp(20px, 5vw, 24px)",
+                        fontWeight: "500",
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                      }}
+                    >
+                      How Monster Laundry Scaled Its Laundromat Operations with DYNA
+                    </h2>
+                  </div>
+
+                  <p
+                    className="leading-relaxed mb-4"
+                    style={{
+                      color: "white",
+                      fontWeight: "normal",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    Monster Laundry partnered with DYNA to automate towel folding,
+                    achieving 99%+ accuracy and transforming their operations.
+                  </p>
+
+                  <div
+                    className="mb-4"
+                    style={{
+                      color: "white",
+                      fontWeight: "normal",
+                      fontSize: "clamp(14px, 4vw, 20px)",
+                      fontFamily:
+                        "UntitledSans, system-ui, -apple-system, sans-serif",
+                    }}
+                  >
+                    OCT 10 '25
+                  </div>
+
+                  <button
+                    onClick={() =>
+                      navigate("/blog/monster-laundry")
+                    }
+                    className="group inline-flex items-center gap-2 transition-all duration-300 hover:gap-3 text-white self-start"
+                  >
+                    <span
+                      style={{
+                        fontFamily:
+                          "UntitledSans, system-ui, -apple-system, sans-serif",
+                        fontSize: "clamp(14px, 4vw, 20px)",
+                        textDecoration: "underline",
+                        textUnderlineOffset: "4px",
+                        textDecorationThickness: "1px",
+                      }}
+                    >
+                      Read More
+                    </span>
+                    <div className="w-6 h-6 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 3L11 8L6 13"
+                          stroke="white"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              {/* PR Newswire Story Card */}
               <div
                 className="relative group cursor-pointer overflow-hidden mb-4 hover-lift-enhanced"
                 onClick={() =>

@@ -24,6 +24,7 @@ import NewBlog from "./pages/NewBlog";
 import NewBlog2 from "./pages/NewBlog2";
 import AcceptableUsePolicy from "./pages/AcceptableUsePolicy";
 import OpenWorldDexterity from "./pages/OpenWorldDexterity";
+import ContactUs from "./pages/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
               {/* <Route path="/blog/new-blog-2" element={<NewBlog2 />} /> */}
               <Route path="/fundraising" element={<Fundraising />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/contact" element={<ContactUs />} />
               <Route path="/dyna-1/research" element={<MoreResearch />} />
               <Route path="/dyna-2/research" element={<OpenWorldDexterity />} />
               <Route path="/admin/login" element={<AdminLogin />} />

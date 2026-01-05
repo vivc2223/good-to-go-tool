@@ -171,13 +171,7 @@ const ScrollPinnedIndustries = forwardRef<ScrollPinnedIndustriesRef>(
                     <div className="flex justify-start lg:justify-end">
                       <button
                         onClick={() => {
-                          const deploymentSection =
-                            document.getElementById("deployment-form");
-                          if (deploymentSection) {
-                            deploymentSection.scrollIntoView({
-                              behavior: "smooth",
-                            });
-                          }
+                          window.location.href = '/contact';
                         }}
                         className="group inline-flex items-center gap-3 transition-all duration-300 hover:gap-4 text-white"
                       >

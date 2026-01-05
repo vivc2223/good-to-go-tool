@@ -14,14 +14,19 @@ import axios from "axios";
 
 interface Submission {
   id: string;
+  profile_type?: string;
   requester_name: string;
   email: string;
   title: string;
   company: string;
-  use_case: string;
-  states: string[];
-  total_units: string; // Changed to string to match the sample data
-  workflow_media: string[]; // Changed to string array to match the sample data
+  company_size?: string;
+  country?: string;
+  message?: string;
+  has_use_case?: string;
+  use_case?: string;
+  states?: string[];
+  total_units?: string;
+  workflow_media?: string[];
   created_at: string;
 }
 
@@ -196,6 +201,21 @@ const SubmissionDetail = () => {
               Contact Information
             </h2>
             <div className="space-y-4">
+              {submission.profile_type && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500 mb-2">
+                    Profile Type
+                  </label>
+                  <span className={`inline-flex px-3 py-1 text-sm font-semibold rounded-full ${
+                    submission.profile_type === "Business Customer" ? "bg-blue-100 text-blue-800" :
+                    submission.profile_type === "Media" ? "bg-purple-100 text-purple-800" :
+                    submission.profile_type === "Investor" ? "bg-green-100 text-green-800" :
+                    "bg-gray-100 text-gray-800"
+                  }`}>
+                    {submission.profile_type}
+                  </span>
+                </div>
+              )}
               <div>
                 <label className="block text-sm font-medium text-gray-500">
                   Requester Name
@@ -222,6 +242,22 @@ const SubmissionDetail = () => {
                 </label>
                 <p className="text-lg text-gray-900">{submission.company}</p>
               </div>
+              {submission.company_size && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500">
+                    Company Size
+                  </label>
+                  <p className="text-lg text-gray-900">{submission.company_size}</p>
+                </div>
+              )}
+              {submission.country && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500">
+                    Country
+                  </label>
+                  <p className="text-lg text-gray-900">{submission.country}</p>
+                </div>
+              )}
               <div>
                 <label className="block text-sm font-medium text-gray-500">
                   Submitted
@@ -233,41 +269,63 @@ const SubmissionDetail = () => {
             </div>
           </div>
 
-          {/* Project Information */}
+          {/* Project Information / Message */}
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              Project Details
+              {submission.profile_type === "Business Customer" ? "Project Details" : "Message"}
             </h2>
             <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-500">
-                  Use Case
-                </label>
-                <p className="text-lg text-gray-900">{submission.use_case}</p>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-500">
-                  Total Units Needed
-                </label>
-                <p className="text-lg text-gray-900">
-                  {submission.total_units}
-                </p>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-500">
-                  States
-                </label>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {submission.states.map((state, index) => (
-                    <span
-                      key={index}
-                      className="inline-flex items-center px-2 py-1 rounded bg-gray-100 text-sm text-gray-900"
-                    >
-                      {state}
-                    </span>
-                  ))}
+              {submission.message && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500">
+                    Message
+                  </label>
+                  <p className="text-lg text-gray-900">{submission.message}</p>
                 </div>
-              </div>
+              )}
+              {submission.has_use_case && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500">
+                    Has Use Case
+                  </label>
+                  <p className="text-lg text-gray-900">{submission.has_use_case}</p>
+                </div>
+              )}
+              {submission.use_case && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500">
+                    Use Case
+                  </label>
+                  <p className="text-lg text-gray-900">{submission.use_case}</p>
+                </div>
+              )}
+              {submission.total_units && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500">
+                    Total Units Needed
+                  </label>
+                  <p className="text-lg text-gray-900">
+                    {submission.total_units}
+                  </p>
+                </div>
+              )}
+              {submission.states && submission.states.length > 0 && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500">
+                    States / Locations
+                  </label>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {submission.states.map((state, index) => (
+                      <span
+                        key={index}
+                        className="inline-flex items-center px-2 py-1 rounded bg-gray-100 text-sm text-gray-900"
+                      >
+                        {state}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

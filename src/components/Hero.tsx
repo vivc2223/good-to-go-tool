@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Mock hooks for demo
 const useUniversalScrollReveal = () => ({
@@ -564,7 +565,7 @@ const Hero = () => {
             We raised $120M. Read our story <ArrowRight width={32} />
           </button> */}
             <button
-              onClick={scrollToFeatures}
+              onClick={() => window.location.href = '/contact'}
               className="group inline-flex items-center gap-3 transition-all duration-300 hover:gap-4 text-white"
               style={{
                 position: "static",
@@ -580,7 +581,7 @@ const Hero = () => {
                   textDecorationThickness: "1px",
                 }}
               >
-                Request A Demo
+                Contact Us
               </span>
               <div className="w-8 h-8 rounded-full border-white border flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                 <svg

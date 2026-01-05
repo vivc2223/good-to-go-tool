@@ -6,7 +6,7 @@ import TypewriterSection from "@/components/TypewriterSection";
 import ScrollPinnedIndustries from "@/components/ScrollPinnedIndustries";
 import ProductCarouselSection from "@/components/ProductCarouselSection";
 import ImageShowcaseSection from "@/components/ImageShowcaseSection";
-import DeploymentSection from "@/components/DeploymentSection";
+import Newsletter from "@/components/Newsletter";
 
 import Footer from "@/components/Footer";
 import { useScrollEffects } from "@/hooks/useScrollEffects";
@@ -55,6 +55,46 @@ const Index = () => {
           href="/sitemap.xml"
         />
         <link rel="canonical" href="https://www.dyna.co/" />
+
+        {/* Organization Schema - Establishes company identity for Google */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "DYNA Robotics",
+            "alternateName": "Dyna",
+            "url": "https://www.dyna.co",
+            "logo": "https://www.dyna.co/logo.png",
+            "description": "Commercial-grade robots for real-world automation, powered by foundation models and vision-language-action AI.",
+            "sameAs": [
+              "https://twitter.com/dynarobotics",
+              "https://www.linkedin.com/company/dyna-robotics"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Business Inquiries",
+              "email": "team@dynarobotics.ai"
+            }
+          })}
+        </script>
+
+        {/* WebSite Schema with SearchBox - Signals site structure to Google */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "DYNA Robotics",
+            "url": "https://www.dyna.co",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.dyna.co/blog?search={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
       </Helmet>
       <TopBanner />
       <Navbar />
@@ -65,7 +105,7 @@ const Index = () => {
         <ProductCarouselSection />
         <Banner />
         {/* <ImageShowcaseSection /> */}
-        <DeploymentSection />
+        <Newsletter />
       </main>
       <Footer />
     </div>
