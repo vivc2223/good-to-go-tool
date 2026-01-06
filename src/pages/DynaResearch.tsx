@@ -185,6 +185,18 @@ const DynaResearch = () => {
             live laundromat environment, folding at production speed with
             consistent quality.
           </p>
+          <div className="mb-8 flex justify-center">
+            <iframe
+              title="vimeo-player"
+              src="https://player.vimeo.com/video/1151991426?h=061c9f6957&autoplay=1&muted=1"
+              width="640"
+              height="360"
+              frameBorder="0"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
           <p
             className="text-lg leading-relaxed mb-6 text-white"
             style={{
