@@ -63,9 +63,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    // Fetch all submissions from the deployment-submissions table
+    // Fetch all Business Customer submissions from the business_customer_submissions table
     const { data: submissions, error } = await supabase
-      .from("deployment_submissions")
+      .from("business_customer_submissions")
       .select("*")
       .order("created_at", { ascending: false });
 

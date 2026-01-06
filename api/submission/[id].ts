@@ -73,9 +73,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    // Fetch specific submission by ID
+    // Fetch specific Business Customer submission by ID
     const { data: submission, error } = await supabase
-      .from("deployment_submissions")
+      .from("business_customer_submissions")
       .select("*")
       .eq("id", id)
       .single();

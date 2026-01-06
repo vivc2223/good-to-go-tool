@@ -2,11 +2,10 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
-import axios from "axios";
+import { supabase } from "@/lib/supabase";
 
 interface Submission {
   id: string;
-  profile_type?: string;
   requester_name: string;
   email: string;
   title: string;
@@ -43,6 +42,7 @@ const AdminDashboard = () => {
 
   const fetchDashboardData = useCallback(async () => {
     if (!session) {
+      console.error("No session found");
       toast({
         title: "Authentication Error",
         description: "No active session found.",
@@ -54,31 +54,42 @@ const AdminDashboard = () => {
     try {
       setLoading(true);
 
-      const authHeaders = {
-        Authorization: `Bearer ${session.access_token}`,
-      };
+      console.log("Fetching dashboard data directly from Supabase...");
 
-      const [submissionsResponse, newsletterResponse] = await Promise.all([
-        axios.get("/api/submissions", { headers: authHeaders }),
-        axios.get("/api/newsletter", { headers: authHeaders }),
-      ]);
+      // Fetch Business Customer submissions from business_customer_submissions table
+      const { data: allSubmissions, error: submissionsError } = await supabase
+        .from("business_customer_submissions")
+        .select("*")
+        .order("created_at", { ascending: false });
 
-      if (submissionsResponse.data?.success) {
-        setSubmissions(submissionsResponse.data.data);
-      } else {
-        throw new Error("Failed to fetch submissions");
+      if (submissionsError) {
+        console.error("Submissions error:", submissionsError);
+        throw submissionsError;
       }
 
-      if (newsletterResponse.data?.success) {
-        setNewsletter(newsletterResponse.data.data);
-      } else {
-        throw new Error("Failed to fetch newsletter subscribers");
+      // Fetch newsletter subscribers directly from Supabase
+      const { data: newsletterData, error: newsletterError } = await supabase
+        .from("newsletter")
+        .select("id, email, subscribed_at, is_active")
+        .order("subscribed_at", { ascending: false });
+
+      if (newsletterError) {
+        console.error("Newsletter error:", newsletterError);
+        throw newsletterError;
       }
+
+      console.log("Business Customer submissions fetched:", allSubmissions?.length || 0);
+      console.log("Newsletter subscribers fetched:", newsletterData?.length || 0);
+
+      // All submissions from business_customer_submissions are Business Customer type
+      setSubmissions(allSubmissions || []);
+      setNewsletter(newsletterData || []);
+
     } catch (error) {
       console.error("Error fetching dashboard data:", error);
       toast({
         title: "Error",
-        description: "Failed to load dashboard data",
+        description: error instanceof Error ? error.message : "Failed to load dashboard data",
         variant: "destructive",
       });
     } finally {
@@ -119,7 +130,7 @@ const AdminDashboard = () => {
     if (submissions.length === 0) {
       toast({
         title: "No Data",
-        description: "No submissions to export",
+        description: "No Business Customer submissions to export",
         variant: "destructive",
       });
       return;
@@ -127,7 +138,6 @@ const AdminDashboard = () => {
 
     const headers = [
       "Date",
-      "Profile Type",
       "Requester Name",
       "Email",
       "Title",
@@ -136,12 +146,11 @@ const AdminDashboard = () => {
       "Use Case",
       "States",
       "Total Units",
-      "Files Count",
+      "File URLs",
     ];
 
     const csvData = submissions.map((submission) => [
       formatDate(submission.created_at),
-      submission.profile_type || "N/A",
       submission.requester_name,
       submission.email,
       submission.title,
@@ -150,7 +159,7 @@ const AdminDashboard = () => {
       submission.use_case || "N/A",
       submission.states?.join("; ") || "N/A",
       submission.total_units || "N/A",
-      submission.workflow_media?.length || 0,
+      submission.workflow_media?.map((file) => file.url).join("; ") || "N/A",
     ]);
 
     const csvContent = [headers, ...csvData]
@@ -163,7 +172,7 @@ const AdminDashboard = () => {
     link.setAttribute("href", url);
     link.setAttribute(
       "download",
-      `submissions_${new Date().toISOString().split("T")[0]}.csv`
+      `business_customer_submissions_${new Date().toISOString().split("T")[0]}.csv`
     );
     link.style.visibility = "hidden";
     document.body.appendChild(link);
@@ -172,7 +181,7 @@ const AdminDashboard = () => {
 
     toast({
       title: "Export Successful",
-      description: "Submissions data exported to CSV",
+      description: "Business Customer submissions exported to CSV",
     });
   };
 
@@ -266,7 +275,7 @@ const AdminDashboard = () => {
                 {/* <h1 className="text-3xl font-bold text-white">
                   Admin Dashboard
                 </h1> */}
-                <p className="text-gray-300">Deployment Submissions</p>
+                <p className="text-gray-300">Business Customer Submissions</p>
               </div>
             </div>
             <button
@@ -282,7 +291,7 @@ const AdminDashboard = () => {
         <div className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
             <div className="text-white">
-              <h2 className="text-xl font-semibold mb-2">Total Submissions</h2>
+              <h2 className="text-xl font-semibold mb-2">Business Customer Submissions</h2>
               <p className="text-3xl font-bold">{submissions.length}</p>
             </div>
           </div>
@@ -300,7 +309,7 @@ const AdminDashboard = () => {
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="px-6 py-4 bg-gray-50 border-b flex justify-between items-center">
             <h3 className="text-lg font-semibold text-gray-900">
-              Recent Submissions
+              Business Customer Submissions
             </h3>
             <button
               onClick={exportSubmissionsToCSV}
@@ -323,9 +332,6 @@ const AdminDashboard = () => {
                       Date
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Profile
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Requester
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -340,9 +346,6 @@ const AdminDashboard = () => {
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Files
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Action
-                    </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
@@ -350,16 +353,6 @@ const AdminDashboard = () => {
                     <tr key={submission.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {formatDate(submission.created_at)}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                          submission.profile_type === "Business Customer" ? "bg-blue-100 text-blue-800" :
-                          submission.profile_type === "Media" ? "bg-purple-100 text-purple-800" :
-                          submission.profile_type === "Investor" ? "bg-green-100 text-green-800" :
-                          "bg-gray-100 text-gray-800"
-                        }`}>
-                          {submission.profile_type || "N/A"}
-                        </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div>
@@ -380,18 +373,25 @@ const AdminDashboard = () => {
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {submission.total_units || "N/A"}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {submission.workflow_media?.length || 0} files
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        <button
-                          onClick={() =>
-                            navigate(`/admin/submission/${submission.id}`)
-                          }
-                          className="text-blue-600 hover:text-blue-900"
-                        >
-                          View Details
-                        </button>
+                      <td className="px-6 py-4 text-sm text-gray-900">
+                        {submission.workflow_media && submission.workflow_media.length > 0 ? (
+                          <div className="flex flex-col gap-1">
+                            {submission.workflow_media.map((file, index) => (
+                              <a
+                                key={index}
+                                href={file.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:text-blue-800 hover:underline truncate max-w-[150px]"
+                                title={file.originalName}
+                              >
+                                {file.originalName}
+                              </a>
+                            ))}
+                          </div>
+                        ) : (
+                          <span className="text-gray-400">No files</span>
+                        )}
                       </td>
                     </tr>
                   ))}

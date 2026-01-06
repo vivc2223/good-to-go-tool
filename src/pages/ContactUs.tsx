@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import axios from "axios";
 import { toast } from "@/hooks/use-toast";
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from "@/lib/supabase";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import { Form } from "@/components/ui/form";
@@ -81,7 +82,7 @@ const ContactUs = () => {
     try {
       setIsSubmitting(true);
 
-      // Prepare form data for API
+      // Prepare form data for Supabase Edge Function
       const apiFormData = new FormData();
       apiFormData.append("profileType", data.profileType);
       apiFormData.append("name", data.fullName);
@@ -109,44 +110,97 @@ const ContactUs = () => {
         }
       }
 
-      // Submit to API
-      await axios.post("/api/deployment", apiFormData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      // Submit to Supabase Edge Function using fetch for proper FormData handling
+      const response = await fetch(
+        `${SUPABASE_URL}/functions/v1/deployment-submission`,
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+          },
+          body: apiFormData,
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to submit form");
+      }
 
       // Send email via FormSubmit based on profile type
       try {
-        const emailRecipient =
-          data.profileType === "Media" ? "media@dynarobotics.ai" :
-          data.profileType === "Investor" ? "investors@dynarobotics.ai" :
-          "team@dynarobotics.ai"; // Business Customer and Other
-
         const formSubmitData = new FormData();
-        formSubmitData.append("_subject", `[${data.profileType}] New Contact Form Submission`);
         formSubmitData.append("_template", "table");
         formSubmitData.append("_captcha", "false");
-        formSubmitData.append("Profile Type", data.profileType);
-        formSubmitData.append("Name", data.fullName);
-        formSubmitData.append("Work Email", data.workEmail);
-        formSubmitData.append("Title", data.title);
-        formSubmitData.append("Company", data.company);
-        formSubmitData.append("Company Size", data.companySize);
-        if (data.country) formSubmitData.append("Country", data.country);
-        formSubmitData.append("Message", data.message);
 
-        // Business Customer specific fields
-        if (data.profileType === "Business Customer" && (hasUseCase === "yes" || hasUseCase === "multiple")) {
-          formSubmitData.append("Has Use Case", hasUseCase);
-          if (data.useCases) formSubmitData.append("Use Cases", data.useCases);
-          if (data.locationOfSites) formSubmitData.append("Location of Sites", data.locationOfSites);
-          if (data.unitsNeeded) formSubmitData.append("Units Needed", data.unitsNeeded);
+        if (data.profileType === "Media") {
+          // Media-specific email format
+          formSubmitData.append("_subject", "Media Inquiry");
+          formSubmitData.append("Profile Type", "Media");
+          formSubmitData.append("Name", data.fullName);
+          formSubmitData.append("Company", data.company);
+          formSubmitData.append("Work Email", data.workEmail);
+          formSubmitData.append("Message", data.message);
+
+          await axios.post(
+            "https://formsubmit.co/ajax/abhik.reds@gmail.com",
+            formSubmitData,
+            { headers: { "Content-Type": "multipart/form-data" } }
+          );
+        } else if (data.profileType === "Investor") {
+          // Investor-specific email format
+          formSubmitData.append("_subject", "Investor Inquiry");
+          formSubmitData.append("Profile Type", "Investor");
+          formSubmitData.append("Name", data.fullName);
+          formSubmitData.append("Company", data.company);
+          formSubmitData.append("Work Email", data.workEmail);
+          formSubmitData.append("Message", data.message);
+
+          await axios.post(
+            "https://formsubmit.co/ajax/investors@dynarobotics.ai",
+            formSubmitData,
+            { headers: { "Content-Type": "multipart/form-data" } }
+          );
+        } else if (data.profileType === "Other") {
+          // General Inquiry - email only
+          formSubmitData.append("_subject", "General Inquiry");
+          formSubmitData.append("Profile Type", "General Inquiry");
+          formSubmitData.append("Name", data.fullName);
+          formSubmitData.append("Company", data.company);
+          formSubmitData.append("Work Email", data.workEmail);
+          formSubmitData.append("Message", data.message);
+
+          await axios.post(
+            "https://formsubmit.co/ajax/team@dynarobotics.ai",
+            formSubmitData,
+            { headers: { "Content-Type": "multipart/form-data" } }
+          );
+        } else {
+          // Business Customer - full details email
+          formSubmitData.append("_subject", `[${data.profileType}] New Contact Form Submission`);
+          formSubmitData.append("Profile Type", data.profileType);
+          formSubmitData.append("Name", data.fullName);
+          formSubmitData.append("Work Email", data.workEmail);
+          formSubmitData.append("Title", data.title);
+          formSubmitData.append("Company", data.company);
+          formSubmitData.append("Company Size", data.companySize);
+          if (data.country) formSubmitData.append("Country", data.country);
+          formSubmitData.append("Message", data.message);
+
+          // Business Customer specific fields
+          if (hasUseCase === "yes" || hasUseCase === "multiple") {
+            formSubmitData.append("Has Use Case", hasUseCase);
+            if (data.useCases) formSubmitData.append("Use Cases", data.useCases);
+            if (data.locationOfSites) formSubmitData.append("Location of Sites", data.locationOfSites);
+            if (data.unitsNeeded) formSubmitData.append("Units Needed", data.unitsNeeded);
+          }
+
+          await axios.post(
+            "https://formsubmit.co/ajax/team@dynarobotics.ai",
+            formSubmitData,
+            { headers: { "Content-Type": "multipart/form-data" } }
+          );
         }
-
-        await axios.post(
-          `https://formsubmit.co/ajax/${emailRecipient}`,
-          formSubmitData,
-          { headers: { "Content-Type": "multipart/form-data" } }
-        );
       } catch (e) {
         console.warn("FormSubmit AJAX failed (non-blocking):", e);
       }
