@@ -245,7 +245,7 @@ const Blog = () => {
                   >
                     <img
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      src="/lovable-uploads/monsterblogimage.png"
+                      src="/lovable-uploads/monsterlaundryimage.png"
                       alt="Monster Laundry with DYNA robots"
                     />
                   </div>
@@ -719,7 +719,7 @@ const Blog = () => {
                       >
                         <img
                           className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                          src="/lovable-uploads/monsterblogimage.png"
+                          src="/lovable-uploads/monsterlaundryimage.png"
                           alt="Monster Laundry with DYNA robots"
                           style={{ minHeight: "300px", objectFit: "cover" }}
                         />
