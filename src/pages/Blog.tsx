@@ -494,7 +494,7 @@ const Blog = () => {
                   </div>
 
                   <div className="flex flex-col">
-                    <div className="flex items-start justify-between gap-6 mb-2 h-28">
+                    <div className="flex items-start justify-between gap-6 mb-2 min-h-28">
                       <h2
                         className="leading-tight"
                         style={{
@@ -505,7 +505,7 @@ const Blog = () => {
                           fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
                         }}
                       >
-                        Dyna Robotics Closes $120 Million To Advance Robotic Foundation Models On The Path To Pysical
+                        Dyna Robotics Closes $120 Million To Advance Robotic Foundation Models On The Path To Physical
                         Artificial General Intelligence
                       </h2>
                       <div
@@ -523,7 +523,7 @@ const Blog = () => {
                     </div>
 
                     <p
-                      className="leading-relaxed mb-4 h-30"
+                      className="leading-relaxed mb-4"
                       style={{
                         color: "white",
                         fontWeight: "normal",
