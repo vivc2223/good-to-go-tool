@@ -23,7 +23,7 @@ const DynaResearch = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            How Monster Laundry Scaled Laundromat Operation with DYNA
+            How Monster Laundry Scaled Its Laundromat Operation with DYNA Robotics
           </h1>
         </div>
 
@@ -108,8 +108,7 @@ const DynaResearch = () => {
               fontFamily: "UntitledSans, system-ui, -apple-system, sans-serif",
             }}
           >
-            Folding remained the most labor-intensive bottleneck in the facility, limiting overall throughput even with
-            a highly trained staff.
+            Folding was the most labor-intensive bottleneck, limiting overall throughput even with highly trained staff.
           </p>
           <p
             className="text-lg leading-relaxed mb-6 text-white"
@@ -149,8 +148,8 @@ const DynaResearch = () => {
             </li>
             <li>
               <span className="font-medium">Space & Cost Constraints:</span> Traditional automated folding systems cost
-              over $300,000 and require 100+ square feet of floor space—making them unrealistic for a neighborhood
-              laundromat like Monster.
+              over $300,000 and require 100+ square feet of floor space—unrealistic for a neighborhood
+              laundromat like Monster Laundry.
             </li>
           </ul>
         </section>
@@ -185,17 +184,11 @@ const DynaResearch = () => {
             live laundromat environment, folding at production speed with
             consistent quality.
           </p>
-          <div className="mb-8 flex justify-center">
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/1151991426?h=061c9f6957&autoplay=1&muted=1"
-              width="640"
-              height="360"
-              frameBorder="0"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              allowFullScreen
-            ></iframe>
+          <div className="mb-8">
+            <video className="w-full h-auto rounded-lg" controls loop muted playsInline autoPlay>
+              <source src="/videos/Dyna_ML_Timelapse.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <p
             className="text-lg leading-relaxed mb-6 text-white"
@@ -264,8 +257,9 @@ const DynaResearch = () => {
               commercial order capacity by 25%.
             </li>
             <li>
-              <span className="font-medium">Unlocking more business capacity.</span> As attendants processed more loads
-              per shift, Monster increased commercial order capacity by 25%.
+              <span className="font-medium">Scalability & Cost Efficiency:</span> With no significant CapEx requirement,
+              DYNA allows Monster to scale operations instantly. The system acts as an on-demand labor multiplier,
+              eliminating the costs and risks associated with hiring and turnover for repetitive tasks.
             </li>
             <li>
               <span className="font-medium">Quality & Consistency:</span> Sophy

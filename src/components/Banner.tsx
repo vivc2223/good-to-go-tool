@@ -98,16 +98,7 @@ const Banner: React.FC<BannerProps> = ({ logos = defaultLogos }) => {
   return (
     <div className="py-6 lg:py-8 2xl:py-10">
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        {/* Logo marquee section - moved to top */}
-        <div className="logo-marquee-container relative py-12">
-          {/* fade masks */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-black to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-black to-transparent z-10" />
-
-          <div className="flex items-center">{renderTrack()}</div>
-        </div>
-
-        {/* Heading - updated text and reduced margin */}
+        {/* Heading - capitalized text */}
         <h2
           className="leading-tight mb-4"
           style={{
@@ -118,10 +109,19 @@ const Banner: React.FC<BannerProps> = ({ logos = defaultLogos }) => {
             color: "white",
           }}
         >
-          Our team brings experience from renowned universities and research labs.
+          Our Team Brings Experience From Renowned Universities and Research Labs
         </h2>
 
-        {/* View Careers button - reduced top margin */}
+        {/* Logo marquee section - between heading and View Careers button */}
+        <div className="logo-marquee-container relative py-12">
+          {/* fade masks */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-black to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-black to-transparent z-10" />
+
+          <div className="flex items-center">{renderTrack()}</div>
+        </div>
+
+        {/* View Careers button */}
         <div className="mt-4">
           <button
             onClick={() => navigate("/careers")}
