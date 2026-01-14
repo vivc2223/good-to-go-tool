@@ -143,7 +143,7 @@ const ContactUs = () => {
           formSubmitData.append("Message", data.message);
 
           await axios.post(
-            "https://formsubmit.co/ajax/abhik.reds@gmail.com",
+            "https://formsubmit.co/ajax/media@dynarobotics.ai",
             formSubmitData,
             { headers: { "Content-Type": "multipart/form-data" } }
           );
@@ -219,10 +219,16 @@ const ContactUs = () => {
       setFiles([]);
     } catch (error) {
       console.error("Error submitting contact form:", error);
+
+      // Extract error message from Error object
+      let errorMessage = "There was an error submitting your form. Please try again.";
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+
       toast({
         title: "Error",
-        description:
-          "There was an error submitting your form. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {

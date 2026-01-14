@@ -136,21 +136,6 @@ serve(async (req) => {
       }
     }
 
-    // Check if files are required for Business Customer with use case
-    const requiresFiles =
-      profileType === "Business Customer" &&
-      (hasUseCase === "yes" || hasUseCase === "multiple");
-
-    if (requiresFiles && uploadedFiles.length === 0) {
-      return new Response(
-        JSON.stringify({ error: "No files were uploaded." }),
-        {
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-          status: 400,
-        }
-      );
-    }
-
     // Handle submissions based on profile type
     if (profileType === "Media") {
       // Media submissions: Email only, no database storage needed
